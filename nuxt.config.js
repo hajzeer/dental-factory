@@ -54,7 +54,7 @@ server: {
     [
       'nuxt-mail', {
     message: {
-      to: process.env.EMAIL_TO
+      to: "hithere.development@gmial.com"
     },
       smtp: {
         service: 'gmail',

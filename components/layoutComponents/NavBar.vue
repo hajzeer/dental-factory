@@ -1,14 +1,15 @@
 <template>
 <div class="navbar">
-  <transition-group v-if="visible" appear tag="ul" name="links"  @before-enter="beforeEnter" @enter="enter">
-    <li v-for="(link, index) in links" :key="link.name" :data-index="index" ><button v-if="!link.slug" class="navi"  @click="openDiv(link.visibility, link.refer)">{{link.name}}<span ref="span" class="more__span"/></button>
-        <div v-if="!link.slug">
-          <ul v-for="inside in link.insideLinks" class="more__div">
-            <li ><NuxtLink :to="inside.slug"><button class="navi" @click="$emit('close')">{{inside.name}}</button></NuxtLink></li>
+  <transition-group v-if="visible" appear tag="ul" name="links"  @before-enter="beforeEnter" @enter="enter"  >
+    <li v-for="(link, index) in links" :key="link.name" :data-index="index" ><button v-if="!link.slug" ref="butt" class="navi" @click="openDiv(index)">{{link.name}}<span ref="span" class="more__span"/></button>
+        <div v-if="!link.slug" class="more__div" ref="second__div">
+          <button @click="openDiv(index)" class="close__button" v-if="index === currentIndex"/>
+          <ul>
+            <li v-for="inside in link.insideLinks" v-if="index === currentIndex" ><NuxtLink :to="inside.slug"><button class="navi" @click="$emit('close')">{{inside.name}}</button></NuxtLink></li>
           </ul>
         </div>
 
-      <NuxtLink v-if="link.slug" @click="$emit('handleClick')" :to="link.slug"><button class="navi" @click="$emit('close')">{{link.name}}</button></NuxtLink></li>
+      <NuxtLink v-if="link.slug" @click="$emit('handleClick')" :to="link.slug"><button class="navi" ref="butt"  @click="$emit('close')">{{link.name}}</button></NuxtLink></li>
   </transition-group>
   <button class="contact__button">Umów się</button>
 </div>
@@ -22,6 +23,13 @@ export default {
   props: {
     visible: {
       type: Boolean,
+    }
+  },
+  data() {
+    return {
+      vis: false,
+
+      currentIndex: null,
     }
   },
   setup() {
@@ -70,18 +78,26 @@ export default {
     return{links, beforeEnter, enter}
   },
   methods: {
-    openDiv(el, obj) {
+    openDiv(el) {
       const tl = gsap.timeline()
-      if (el === false) {
-          tl.to(this.$refs.span, {rotate: '135deg', duration: .5})
-          tl.fromTo(obj, { height: 0},{ height: "100%", duration: .5})
-          .to(obj, { display: 'flex', duration: .5})
-          //.fromTo(this.$refs.open__more__text, { opacity: 0},{ opacity: 1, duration: .5})
-        el = true
+      if (this.vis === false) {
+        tl.to(this.$refs.butt, {opacity: 0, duration: .2})
+        tl.to(this.$refs.butt, {display: "none", duration: .2})
+        tl.to(this.$refs.second__div, {left:0, duration: .4})
+
+        //.fromTo(this.$refs.open__more__text, { opacity: 0},{ opacity: 1, duration: .5})
+        this.vis = true
+        this.currentIndex = el
+
       } else {
-        tl.to(this.$refs.span, {rotate: 0, duration: .5})
-        tl.to(obj, { display: 'none'} )
-        el = false
+        tl.to(this.$refs.second__div, {left: "100%", duration: .4})
+        tl.to(this.$refs.butt, {display: "flex", duration: .2})
+        tl.to(this.$refs.butt, {opacity: 1, duration: .2})
+
+
+
+        this.vis = false
+
 
       }
     }
@@ -97,25 +113,30 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
 display: flex;
+  justify-content: center;
   flex-direction: column;
   padding: 20px;
 
   ul {
-    position: relative;
-    top: 15%;
     list-style: none;
     padding: 0;
+    z-index: 1;
+
+     a {
+       text-decoration: none;
+     }
   }
 
   .navi {
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     color: #ffffff;
     border: none;
     background: none;
+    margin-bottom: 10px;
 
     button {
       position: relative;
@@ -125,14 +146,50 @@ display: flex;
 
 .more__div {
   width: 100%;
-  height: auto;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 100%;
+  bottom: 180px;
+  z-index: 9999999;
+  background: #000000;
+
+
+
+}
+
+.close__button {
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
   position: relative;
-  left: 40px;
-  button {
-    font-size: 22px !important;
+  margin-bottom: 30px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 2px;
+    border-radius: 25px;
+    left: 20px;
+    rotate: 20deg;
+  }
+  &::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 20px;
+    border-radius: 25px;
+    bottom: 0px;
+    rotate: -20deg;
   }
 }
 
@@ -142,6 +199,7 @@ display: flex;
   height: 25px;
   right: 50%;
   background: #ffffff;
+  border-radius: 25px;
 
   &:after {
     content: '';
@@ -151,6 +209,7 @@ display: flex;
     right: 0;
     background: #ffffff;
     rotate: 90deg;
+    border-radius: 25px;
   }
 }
 .contact__button {

@@ -1,9 +1,15 @@
 <template>
 <div class="container">
+
   <div class="container__inner">
     <div class="image__container">
       <img src="/footerImg1.png" alt="cabinet__image" ref="image1" @mouseenter="grownFirst" @mouseleave="smallerFirst"/>
       <img src="/footerImg3.png" alt="cabinet__image" ref="image3" @mouseenter="grownThird" @mouseleave="smallerThird"/>
+    </div>
+    <div>
+      <p v-if="$fetchState.pending">Fetching mountains...</p>
+      <p v-else-if="$fetchState.error">An error occurred :(</p>
+      <div v-else ><h2>Dołącz do nas na instagramie</h2></div>
     </div>
     <contact-form/>
    <div class="rastr__image">
@@ -51,9 +57,22 @@
 
 import gsap from 'gsap'
 import ContactForm from "~/components/ContactForms/contactForm";
+const url = ``
 export default {
   name: "FooterComponents",
   components: {ContactForm},
+  data() {
+    return {
+      data: [],
+    }
+  },
+  async fetch() {
+    const res = await fetch(`https://graph.instagram.com/me?fields=id,username&access_token=${process.env.IG_KEY}`)
+    const data = await res.json()
+
+    this.data = data
+    console.log(this.data)
+  },
   methods: {
     grownFirst: function() {this.grown(this.$refs.image1, this.$refs.image2, this.$refs.image3, 1)},
     grownThird: function() {this.grown(this.$refs.image3, this.$refs.image1, this.$refs.image2, 3)},
@@ -99,7 +118,11 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-
+h2 {
+  font-family: "Termina", sans-serif;
+  color: #FFFFFF;
+  padding: 0 20px;
+}
 .finisher__container-inner {
   width: 100%;
   display: flex;

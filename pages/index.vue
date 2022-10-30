@@ -316,6 +316,17 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all .3s ease-out;
+
+  &:hover {
+    background: #000000;
+
+    span {
+      color: #FFFFFF !important;
+    }
+  }
+
+
 
     span {
       padding: 10px;

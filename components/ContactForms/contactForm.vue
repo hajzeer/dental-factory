@@ -80,7 +80,7 @@ export default {
 
 .container {
 
-  width: 80vw;
+  width: 100vw;
   background: #000000 !important;
   border-radius:  0 0 12px 12px;
 

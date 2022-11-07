@@ -10,14 +10,16 @@
 <form class="form__container">
   <input type="text" name="name" placeholder="Imię" v-model="name"/>
   <input type="text" name="surname" placeholder="Nazwisko" v-model="surname"/>
-  <input type="text" name="phoneNumber" placeholder="Numer telefonu" v-model="phoneNumber"/>
-  <input type="email" name="email" placeholder="Adres e-mail" v-model="email"/>
+  <div class="form__container num__mail__div">
+    <input type="text" name="phoneNumber" placeholder="Numer telefonu" v-model="phoneNumber"/>
+    <input type="email" name="email" placeholder="Adres e-mail" v-model="email"/>
+  </div>
 <textarea placeholder="Preferowana data i cel" v-model="message"/>
   <button class="submit__button" @click.prevent="send">Umów się na wizytę</button>
 </form>
 
     <div class="icons__container">
-      <h2>Udogodnienia</h2>
+      <h2 class="icons__title">Udogodnienia</h2>
       <div class="icons__container-inner">
         <div class="iconDiv" v-for="image in images">
           <img  :src="image.icon"/>
@@ -96,6 +98,13 @@ export default {
     font-family: "Termina", sans-serif;
     margin: 20px;
   }
+
+  @media (min-width: 1024px) {
+    h2 {
+      margin-left: 50px;
+      font-size: 60px;
+    }
+  }
 }
 
 .icons__container-inner {
@@ -112,6 +121,20 @@ width: 100%;
     font-family: "Termina", sans-serif;
     font-size: 8px;
     text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      margin-top: 30px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    p {
+      font-size: 15px;
+
+    }
   }
 }
 
@@ -192,6 +215,10 @@ width: 100%;
       border: 3px solid #FFFFFF;
       transform: scale(1.05);
     }
+
+    @media (min-width: 1024px) {
+      width: 70%;
+    }
     }
 
 
@@ -225,7 +252,20 @@ width: 100%;
       border: 3px solid #FFFFFF;
       transform: scale(1.05);
     }
+    @media (min-width: 1024px) {
+      width: 70%;
+    }
+  }
 
+
+}
+
+.num__mail__div {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 72%;
+    gap: 20px;
   }
 }
 
@@ -243,7 +283,15 @@ width: 100%;
   color: #000000;
 
 
+  @media (min-width: 1024px) {
+    width: 250px;
+    align-self: flex-end;
+    margin-right: 200px;
+    margin-top: 30px;
 
+  }
 }
+
+
 
 </style>

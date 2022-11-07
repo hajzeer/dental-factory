@@ -3,13 +3,13 @@
 
   <div class="container__inner">
     <div class="image__container">
-      <img src="/footerImg1.png" alt="cabinet__image" ref="image1" @mouseenter="grownFirst" @mouseleave="smallerFirst"/>
-      <img src="/footerImg3.png" alt="cabinet__image" ref="image3" @mouseenter="grownThird" @mouseleave="smallerThird"/>
+      <img class="footer__image" src="/footerImg1.png" alt="cabinet__image" ref="image1" @mouseenter="grownFirst" @mouseleave="smallerFirst"/>
+      <img class="footer__image" src="/footerImg3.png" alt="cabinet__image" ref="image3" @mouseenter="grownThird" @mouseleave="smallerThird"/>
     </div>
     <div>
-      <p v-if="$fetchState.pending">Fetching mountains...</p>
-      <p v-else-if="$fetchState.error">An error occurred :(</p>
-      <div v-else ><h2>Dołącz do nas na instagramie</h2></div>
+      <div>
+        <h2 class="social__title">Dołącz do nas na instagramie</h2>
+      </div>
     </div>
     <contact-form/>
    <div class="rastr__image">
@@ -17,35 +17,38 @@
    </div>
   </div>
   <div class="finisher__container">
-    <img class="logo__image" src="/logoFooter.png" alt="logo footer"/>
 
     <div class="finisher__container-inner">
-    <div class="info__div">
-      <p>Dental Factory Censtrum Stomatologiczne <br/> Dąbrowskiego 34/U4 <br/> 50-457, Wrocław</p>
-      <a class="links" href="https://g.page/dentalfactory?share">
-        <button class="active__button"><p><span>Dojazd</span></p></button>
-      </a>
-    </div>
       <div class="info__div">
-        <p>Godziny otwarcia:</p>
-        <ul>
-          <li>
-            <span>Pn</span> 9:00 - 20:00
-          </li>
-          <li>
-            <span>Wt</span> 9:00 - 20:00
-          </li>
-          <li>
-            <span>Śr</span> 9:00 - 20:00
-          </li>
-          <li>
-            <span>Czw</span> 9:00 - 20:00
-          </li>
-          <li>
-            <span>Pt</span> 9:00 - 20:00
-          </li>
-        </ul>
+        <div >
+          <img class="logo__image" src="/logoFooter.png" alt="logo footer"/>
+          <p>Dental Factory Censtrum Stomatologiczne <br/> Dąbrowskiego 34/U4 <br/> 50-457, Wrocław</p>
+          <a class="links" href="https://g.page/dentalfactory?share">
+            <button class="active__button"><p><span>Dojazd</span></p></button>
+          </a>
+        </div>
+        <div >
+          <p>Godziny otwarcia:</p>
+          <ul>
+            <li>
+              <span>Pn</span> 9:00 - 20:00
+            </li>
+            <li>
+              <span>Wt</span> 9:00 - 20:00
+            </li>
+            <li>
+              <span>Śr</span> 9:00 - 20:00
+            </li>
+            <li>
+              <span>Czw</span> 9:00 - 20:00
+            </li>
+            <li>
+              <span>Pt</span> 9:00 - 20:00
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
     <div class="contact__div"><a href="tel:+48-691-818-488">+48 691 81 84 88</a><a href="mailto:kontakt@dental-factory.pl">kontakt@dental-factory.pl</a></div>
     <div class="creator__div"><p>@{{new Date().getFullYear()}} Wszelkie prawa zastrzeżone BREATH DESIGN STUDIO by Krzysztof Hajder & Oliwia Dittrich</p></div>
@@ -80,13 +83,13 @@ export default {
     smallerThird: function() {this.smaller(this.$refs.image3, this.$refs.image1, this.$refs.image2)},
     grown: function (ref1, ref2, ref3, node) {
       if (node === 1) {
-        gsap.to(ref1, ({scale: 1.4,x: '20%', duration: 0.3, zIndex: 1}))
+        gsap.to(ref1, ({scale: 1.3,x: '20%', duration: 0.3, zIndex: 1}))
 
       } else if(node === 3) {
-        gsap.to(ref1, ({scale: 1.4, x: '-20%', duration: 0.3, zIndex: 1}))
+        gsap.to(ref1, ({scale: 1.3, x: '-20%', duration: 0.3, zIndex: 1}))
 
       } else {
-        gsap.to(ref1, ({scale: 1.4, duration: 0.3, zIndex: 1}))
+        gsap.to(ref1, ({scale: 1.3, duration: 0.3, zIndex: 1}))
 
       }
       gsap.to(ref2, ({scale: .9, opacity: 0.8, duration: 0.3, zIndex: 0}))
@@ -137,14 +140,13 @@ h2 {
     font-style: normal;
     font-weight: 600;
 
-    margin: 15px;
     width: 100%;
     height: 40px;
-    background: #B4F2CB;
+    background: #000;
     border-radius: 8px;
     border: 1px solid #000000;
     font-size: 16px;
-    color: #000000;
+    color: #fff;
     position: relative;
     transition: all 0.2s ease-out;
     overflow: hidden;
@@ -165,7 +167,7 @@ h2 {
       height: 100%;
       border-radius: 8px;
       transition: all 0.2s ease-out;
-      background: #000000;
+      background: #B4F2CB;
       z-index: 1;
 
 
@@ -193,10 +195,15 @@ h2 {
       transform: translateX(40px);
     }
     &:hover > p{
-      color: #B4F2CB;
+      color: #000;
     }
     &:hover:after{
       transform: translateX(100%);
+    }
+
+    @media (min-width: 1024px) {
+      width: 250px;
+      margin: 0;
     }
 
   }
@@ -215,6 +222,14 @@ h2 {
     width: 150px;
     height: auto;
   }
+  @media (min-width: 1024px) {
+    img {
+      margin-top: 50px;
+      width: 380px;
+      height: auto;
+    }
+  }
+
 }
 
 .rastr__image {
@@ -231,6 +246,19 @@ h2 {
     position: relative;
     top: -80px;
   }
+
+  @media (min-width: 1024px) {
+
+    img {
+      border-radius:  0 0 12px 12px;
+      z-index: -1;
+      width: 100%;
+      height: 400px;
+      position: relative;
+      top: -100px;
+    }
+
+  }
 }
 
 .finisher__container {
@@ -242,10 +270,18 @@ h2 {
 
   font-family: termina, sans-serif;
   font-style: normal;
+
+  @media (min-width: 1024px) {
+    top: 250px;
+  }
 }
 
 .logo__image {
   width: 300px;
+
+  @media (min-width: 1024px) {
+    width: 500px;
+  }
 }
 
 .info__div {
@@ -253,10 +289,38 @@ h2 {
   font-weight: 600;
   font-size: 12px;
   margin: 0 20px;
-
+  display: flex;
+  flex-direction: column;
   ul {
     list-style: none;
     padding: 0;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    p {
+      font-size: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+      }
+    }
+
   }
 }
 .contact__div {
@@ -277,6 +341,14 @@ h2 {
     }
   }
 
+  @media (min-width: 1024px) {
+    margin: 0 80px;
+
+    a {
+      font-size: 60px;
+    }
+  }
+
 }
 
 .creator__div {
@@ -291,4 +363,14 @@ h2 {
     padding: 10px;
   }
 }
+
+.social__title {
+  @media (min-width: 1024px) {
+    font-size: 60px;
+    width: 60%;
+    line-height: 65px;
+    margin-left: 50px;
+  }
+}
+
 </style>

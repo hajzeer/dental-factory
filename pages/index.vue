@@ -4,18 +4,27 @@
     <div class="hero__image" >
     <h2 class="hero__image__title">Twój uśmiech, <br/> twoje story.</h2>
     </div>
-    <button class="active__button">
-        Umów się na konsultacje
-    </button>
+    <div>
+      <h2 class="hero__image__title-desktop">Twój uśmiech, <br/> twoje story.</h2>
+      <NuxtLink to="/online">
+        <button class="active__button">
+          <p>
+            Umów się na konsultacje
+          </p>
+        </button>
+      </NuxtLink>
+    </div>
   </div>
   <div class="description__div">
     <h3 class="desc__title">
       Dlaczego zaufało nam już ponad 4 tysiące Pacjentów?
     </h3>
-    <p>
-      Cieszymy się, że jesteś! Leczymy tak, jak sami chcielibyśmy być leczeni.
+    <p class="paragraph__span">
+              Cieszymy się, że jesteś! Leczymy tak, jak sami chcielibyśmy być leczeni.
       To sprawia, że Pacjenci do nas wracają.
-      <br/><br/>
+    </p>
+    <p>
+      <br/>
       DENTAL FACTORY stworzyliśmy w samym centrum
       Wrocławia z myślą o Pacjentach szukających nowoczesnego i bezbolesnego leczenia stomatologicznego.
       Wykonujemy zabiegi z zakresu stomatologii estetycznej (wybielanie zębów, licówki i bondingi) i protetyki,
@@ -48,7 +57,7 @@
         Skupiamy się na tym, co dla Ciebie ważne! Proponujemy Ci wyłącznie te zabiegi, których potrzebujesz. Nigdy nie zaproponujemy Ci leczenia, które byłoby niepotrzebne, albo nieskuteczne.
         <br/>
         <br/>
-        <span>#kompleksowość</span> leczenia Oferujemy pełną gamę usług stomatologicznych oraz pełną diagnostykę RTG i TK.
+        <span>#kompleksowość leczenia</span>  Oferujemy pełną gamę usług stomatologicznych oraz pełną diagnostykę RTG i TK.
         <br/>
         <br/>
         <span>#bezbólu</span> Zamiast tradycyjnej strzykawki i igły znieczulamy komputerowo, za pomocą systemu The Wand.
@@ -98,7 +107,13 @@
           <span>Leczenie kanałowe</span>
         </p>
         <p class="grid__inner">
-          <span>Stomatologia ogólna</span>
+          <span>Leczenie próchnicy</span>
+        </p>
+        <p class="grid__inner">
+          <span>Higienizacja</span>
+        </p>
+        <p class="grid__inner">
+          <span>Leczenie bruksizmu</span>
         </p>
         <p class="grid__inner">
           <span>RTG i tomografia</span>
@@ -142,6 +157,15 @@ export default {
   align-items: center;
   border-bottom: 1px solid #000000;
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 80vh;
+    border-bottom: none;
+
+  }
+
 }
 .hero__image {
   position: relative;
@@ -167,6 +191,12 @@ export default {
   background: rgba(0,0,0,0.15);
   border-radius: 12px;
 }
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    height: 550px;
+    top: 40px;
+  }
 }
 
 .desc__title {
@@ -181,6 +211,11 @@ export default {
 
   margin: 20px;
 
+  @media (min-width: 1024px) {
+ font-size: 70px;
+    line-height: 72px;
+
+  }
 }
 
 .scroll__btn {
@@ -205,8 +240,20 @@ margin: 0 0 10px 0;
       transform: translateY(-5px);
     }
   }
+  @media (min-width: 1024px) {
+ display: none;
 
+  }
 }
+.paragraph__span {
+  @media (min-width: 1024px) {
+    width: 50% !important;
+    font-weight: 600;
+    margin-top: 60px;
+
+  }
+}
+
 p {
   font-family: termina, sans-serif;
   font-style: normal;
@@ -222,22 +269,86 @@ p {
 
   border-bottom: 1px solid #000000;
 
+  @media (min-width: 1024px) {
+    border-bottom: none;
+    p {
+      font-size: 20px;
+    }
+  }
 }
 
+a {
+  text-decoration: none;
+  width: 100%;
 
+}
 
 .active__button {
   font-family: termina, sans-serif;
   font-style: normal;
-  font-weight: 900;
-
-  width: 88%;
-  height: 45px;
+  font-weight: 600;
+  height: 40px;
   background: #B4F2CB;
   border-radius: 8px;
   border: 1px solid #000000;
-  font-size: 18px;
+  font-size: 16px;
   color: #000000;
+  position: relative;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
+    background: #000000;
+    z-index: 1;
+
+
+  }
+
+
+  p {
+    transition: all 0.2s ease-out;
+    z-index: 9;
+    text-decoration: none;
+
+  }
+
+  &:hover{
+    transform: scale(1.05);
+  }
+  &:hover > img{
+    transform: translateX(40px);
+  }
+  &:hover > p{
+    color: #B4F2CB;
+  }
+  &:hover:after{
+    transform: translateX(100%);
+  }
+
+  @media (min-width: 1024px) {
+    height: 60px;
+    font-size: 18px;
+    justify-self: center;
+    width: 85%;
+    position: relative;
+    left: 40px;
+    text-decoration: none;
+  }
 
 }
 
@@ -254,7 +365,25 @@ p {
 
   position: relative;
 
+  @media (min-width: 1024px) {
+    display: none;
+  }
 
+
+}
+
+.hero__image__title-desktop {
+  color: #000000;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    font-family: iskra, sans-serif;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 90px;
+
+  }
 }
 
 .info__div {
@@ -280,6 +409,14 @@ p {
 
     color: #000000;
   }
+
+  @media (min-width: 1024px) {
+
+    h2 {
+      font-size: 70px;
+      width: 55%;
+    }
+  }
 }
 
 .info__div__outer {
@@ -295,15 +432,32 @@ p {
       font-size: 18px;
       color: #041B8D;
     }
-}
+  }
 
-}
+  @media (min-width: 1024px) {
 
+    p {
+      font-size: 20px;
+      span {
+        font-size: 20px;
+      }
+    }
+
+  }
+}
 .grid__outer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   padding: 10px;
+
+  @media (min-width: 1024px) {
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+
+  }
 }
 
 .grid__inner {
@@ -335,6 +489,7 @@ p {
       font-weight: 600;
       font-size: 15px !important;
     }
+
 
 }
 

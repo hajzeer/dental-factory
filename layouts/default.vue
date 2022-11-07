@@ -33,5 +33,9 @@ p, h1, h2, a, li, span, input, textarea {
 
 .children {
   padding-top: 50px;
+
+  @media (min-width: 1024px) {
+    padding-top: 100px;
+  }
 }
 </style>

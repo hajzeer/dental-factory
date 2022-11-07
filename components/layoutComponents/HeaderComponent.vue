@@ -1,6 +1,6 @@
 <template>
 <header class="container">
-  <button class="active__button">
+  <button class="active__button contact">
     <img class="contact__btn" src="contactbtn.png" alt="contact button">
   </button>
   <div>
@@ -8,8 +8,25 @@
       <img class="logo" src="logo.png" alt="logo">
     </NuxtLink>
   </div>
+  <NavBarDesktop :visible="visible"/>
+  <div class="desktop__buttons">
+    <NuxtLink to="contact">
 
-  <button class="active__button" @click="handleClick" ref="button__nav">
+      <button class="contact__button-inner">
+        <img class="inner__image" src="/calender.png"/>
+        <span>
+                  Umów się
+        </span>
+      </button>
+    </NuxtLink>
+    <NuxtLink to="online">
+
+      <button class="contact__button-inner">
+        <img class="inner__image" src="/phone.png"/>
+        Konsulatacje on-line
+      </button>
+    </NuxtLink></div>
+  <button class="active__button nav__button" @click="handleClick" ref="button__nav">
     <span class="upper__line"  ref="upper__line"/>
     <span class="middle__line" ref="middle__line"/>
     <span class="lower__line"  ref="lower__line"/>
@@ -24,9 +41,10 @@
 
 import gsap from 'gsap'
 import NavBar from "~/components/layoutComponents/NavBar";
+import NavBarDesktop from "@/components/layoutComponents/NavBarDesktop";
 export default {
   name: "HeaderComponent",
-  components: {NavBar},
+  components: {NavBarDesktop, NavBar},
   data() {
     return {
       visible: false
@@ -61,6 +79,32 @@ export default {
 
 <style scoped lang="scss">
 
+.contact {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.nav__button {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+
+.desktop__buttons {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin-right: 60px;
+  }
+}
+
 .container {
   width: 100%;
   height: 70px;
@@ -74,6 +118,14 @@ export default {
   align-items: center;
   z-index: 9999;
   background: #FFFFFF;
+
+  @media (min-width: 1024px) {
+    height: 120px;
+    background: #B4F2CB;
+    position: absolute;
+
+
+  }
 }
 
 nav {
@@ -132,8 +184,51 @@ button {
   .lower__line {
     top: 40px;
   }
+  @media (min-width: 1024px) {
+ display: none;
+  }
+
 }
+
+.contact__button-inner {
+  display: none;
+
+
+  @media (min-width: 1024px) {
+    width: 230px;
+    height: 45px;
+    margin: 5px;
+    background: #000000;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-family: Termina;
+    font-size: 12px;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border: none;
+
+    span {
+      position: relative;
+      left: 18%;
+    }
+  }
+}
+
+.inner__image {
+  width: 50px;
+  height: 50px;
+}
+
 .logo {
 width: 100px;
+
+  @media (min-width: 1024px) {
+    width: 180px;
+    margin-left: 40px;
+  }
 }
 </style>

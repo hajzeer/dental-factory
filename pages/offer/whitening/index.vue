@@ -120,7 +120,6 @@
             przypadku silnych przebarwień i zębów, które nie dają się wybielić
             innymi metodami. Jest w pełni bezpieczna i łagodna dla zębów.
             <br />
-            <br />
             <span>CENA: 2550zł</span>
           </p>
           <p>
@@ -133,7 +132,6 @@
             odbudowuje szkliwo, nadaje mu połysk i jednocześnie zmniejsza
             nadwrażliwość po wybielaniu. Zabieg trwa najczęściej 2 godziny i
             rozjaśnia zęby o nawewt o 4 odcienie. Nie wymaga powtarzania.
-            <br />
             <br />
             <span>
               CENA: 1750zł
@@ -148,7 +146,6 @@
             dnia lub zakładać na noc. Żel wybielający ma znacznie niższe
             stężenie, niż w przypadku wybielania w gabinecie, dlatego całkowity
             proces wybielania trwa około dwóch do trzech tygodni.
-            <br />
             <br />
             <span>
               CENA: 1150zł

@@ -143,8 +143,7 @@ export default {
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: row-reverse;
-
-    width: 72%;
+    width: 71.4%;
     gap: 20px;
   }
 }

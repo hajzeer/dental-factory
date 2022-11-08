@@ -71,12 +71,11 @@ p {
 
 .head__text__contact {
   @media (min-width: 1024px) {
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-
-    margin: 50px 50px 70px 80px;
   }
 }
 

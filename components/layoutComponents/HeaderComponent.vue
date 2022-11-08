@@ -1,18 +1,50 @@
 <template>
   <header class="container">
     <button class="active__button contact">
-      <img class="contact__btn" src="contactbtn.png" alt="contact button"/>
+      <img class="contact__btn" src="contactbtn.png" alt="contact button" />
     </button>
     <div>
       <NuxtLink to="/">
-        <img class="logo" src="logo.png" alt="logo"/>
+        <img class="logo" src="logo.png" alt="logo" />
       </NuxtLink>
     </div>
-    <NavBarDesktop :visible="visible"/>
+    <NavBarDesktop
+      :visible="visible"
+      :links="links"
+      @indexCurrent="handleButton"
+    />
+    <div
+      class="desktop__nav__div"
+      ref="second__div"
+      v-if="currentIndex !== null"
+    >
+      <div ref="inner__div">
+        <p>sprawdź również:</p>
+        <NuxtLink
+          :to="item.slug"
+          v-for="item in links[currentIndex].insideLinks"
+        >
+          <button @click="closeNav">{{ item.name }}</button>
+        </NuxtLink>
+
+        <button class="close__button" @click="closeNav"></button>
+      </div>
+      <div ref="inner__div">
+        <p>NAJPOPULARNIEJSZE:</p>
+        <NuxtLink
+          :to="item.slug"
+          v-for="item in links[currentIndex].insideLinks"
+        >
+          <button @click="closeNav">
+            {{ item.name }}
+          </button>
+        </NuxtLink>
+      </div>
+    </div>
     <div class="desktop__buttons">
       <NuxtLink to="contact">
         <button class="contact__button-inner">
-          <img class="inner__image" src="/calender.png"/>
+          <img class="inner__image" src="/calender.png" />
           <span>
             Umów się
           </span>
@@ -20,7 +52,7 @@
       </NuxtLink>
       <NuxtLink to="online">
         <button class="contact__button-inner">
-          <img class="inner__image" src="/phone.png"/>
+          <img class="inner__image" src="/phone.png" />
           Konsulatacje on-line
         </button>
       </NuxtLink>
@@ -30,12 +62,12 @@
       @click="handleClick"
       ref="button__nav"
     >
-      <span class="upper__line" ref="upper__line"/>
-      <span class="middle__line" ref="middle__line"/>
-      <span class="lower__line" ref="lower__line"/>
+      <span class="upper__line" ref="upper__line" />
+      <span class="middle__line" ref="middle__line" />
+      <span class="lower__line" ref="lower__line" />
     </button>
     <nav ref="nav">
-      <NavBar :visible="visible" @close="closing"/>
+      <NavBar :visible="visible" @close="closing" :links="links" />
     </nav>
   </header>
 </template>
@@ -47,19 +79,91 @@ import NavBarDesktop from "@/components/layoutComponents/NavBarDesktop";
 
 export default {
   name: "HeaderComponent",
-  components: {NavBarDesktop, NavBar},
+  components: { NavBarDesktop, NavBar },
+
   data() {
     return {
       visible: false,
+      links: [
+        { name: "Strona główna", slug: "/" },
+        {
+          name: "O nas",
+          insideLinks: [
+            { name: "Centrum", slug: "/about/center" },
+            { name: "Pierwsza wizyta", slug: "/about/start" },
+            { name: "Nasz zespół", slug: "/about/team" },
+          ],
+          visibility: false,
+          refer: "more1",
+        },
+        {
+          name: "Leczenie",
+          insideLinks: [
+            { name: "Wybielanie zębów", slug: "/offer/whitening" },
+            { name: "Licówki porcelanowe", slug: "/offer/veeners" },
+            { name: "Protezy zębowe", slug: "/offer/denture" },
+            { name: "Implanty i chirurgia", slug: "/offer/implants" },
+            { name: "Korony i mosty", slug: "/offer/crown-and-bridges" },
+            { name: "Ortodoncja", slug: "/offer/ortodontics" },
+            { name: "Leczenie kanałowe", slug: "/offer/root-canal-therapy" },
+            { name: "Leczenie próchnicy", slug: "/offer/dental-caries" },
+            { name: "Higienizacja", slug: "/offer/hygiene" },
+            { name: "Szyny relaksacyjne", slug: "/offer/dental-guard" },
+            { name: "RTG o tomografia zębów", slug: "/offer/rtg-tomography" },
+            { name: "Medycyna estetyczna", slug: "/offer/aesthetic-medicine" },
+          ],
+          visibility: false,
+          refer: "more2",
+        },
+        {
+          name: "Ceny",
+          insideLinks: [
+            { name: "Cennik", slug: "/price/prices" },
+            { name: "Mediraty", slug: "/price/mediraty" },
+          ],
+          visibility: false,
+          refer: "more3",
+        },
+        { name: "Opinie", slug: "/reviews" },
+        { name: "Dental travel", slug: "/dental-travel" },
+        { name: "Przed i po", slug: "/" },
+        { name: "Kontakt", slug: "/contact" },
+        { name: "Konsultacja on-line", slug: "/online" },
+      ],
+      currentIndex: null,
+      vis: false,
     };
   },
   methods: {
+    closeNav() {
+      this.currentIndex = null;
+    },
+    handleButton({ index, slider }) {
+      this.currentIndex = index;
+      slider = this.openDiv(this.currentIndex);
+    },
+    openDiv(index) {
+      const tl = gsap.timeline();
+      if (this.vis === false) {
+        tl.to(this.$refs.second__div, { left: "0", duration: 0.4 }).to(
+          this.$refs.inner__div,
+          { left: "0", duration: 0.4, delay: 0.3 }
+        );
+
+        this.vis = true;
+        this.currentIndex = index;
+      } else {
+        tl.to(this.$refs.butt, { opacity: 1, duration: 0.2 });
+        this.vis = false;
+      }
+    },
     closing: function () {
       setTimeout(() => this.handleClick(), 200);
     },
+
     handleClick() {
       if (this.visible === false) {
-        gsap.to(this.$refs.button__nav, {rotate: "180deg", duration: 0.5});
+        gsap.to(this.$refs.button__nav, { rotate: "180deg", duration: 0.5 });
         gsap.to(this.$refs.upper__line, {
           rotate: "45deg",
           y: "10px",
@@ -80,7 +184,7 @@ export default {
         });
         gsap.fromTo(
           this.$refs.nav,
-          {x: "100%", y: "-100%", display: "block", opacity: 0},
+          { x: "100%", y: "-100%", display: "block", opacity: 0 },
           {
             x: "0",
             y: "0",
@@ -91,7 +195,7 @@ export default {
         );
         this.visible = true;
       } else if (this.visible === true) {
-        gsap.to(this.$refs.button__nav, {rotate: "-180deg", duration: 0.5});
+        gsap.to(this.$refs.button__nav, { rotate: "-180deg", duration: 0.5 });
         gsap.to(this.$refs.upper__line, {
           rotate: "0",
           y: "0",
@@ -125,6 +229,96 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.desktop__nav__div {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  background: #b4f2cb;
+  position: fixed;
+  top: 120px;
+  width: 100vw;
+  height: 500px;
+  left: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  p {
+    font-size: 23px;
+    font-weight: 600;
+    font-family: Termina;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    text-transform: uppercase;
+  }
+
+  button {
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-family: Termina;
+    margin-left: 100px;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.2) translateX(-10px);
+      color: #1e1d1d;
+    }
+  }
+}
+
+.close__button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+
+  &::after {
+    background: #000000;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    rotate: 45deg;
+  }
+
+  &::before {
+    background: #000000;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    rotate: -45deg;
+  }
+}
+
+.active {
+  transition: all 0.5s ease-out;
+  transform: translateX(0);
+}
+
+.disactive {
+  transition: all 0.5s ease-out;
+  transform: translateX(0);
+}
+
 .contact {
   @media (min-width: 1024px) {
     display: none;

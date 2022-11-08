@@ -6,31 +6,10 @@
           v-if="!link.slug"
           ref="butt"
           class="navi"
-          @click="openDiv(index)"
+          @click="handleButton(index)"
         >
           {{ link.name }}
         </button>
-        <div v-if="!link.slug" class="more__div" ref="second__div">
-          <button
-            v-if="index === currentIndex"
-            :class="{ isCurrent: index === currentIndex }"
-            class="close__button"
-            @click="openDiv(index)"
-          />
-          <ul>
-            <li
-              v-for="inside in link.insideLinks"
-              v-if="index === currentIndex"
-              :class="{ isCurrent: index === currentIndex }"
-            >
-              <NuxtLink :to="inside.slug">
-                <button class="nav__inner" @click="$emit('close')">
-                  {{ inside.name }}
-                </button>
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
 
         <NuxtLink
           v-if="link.slug"
@@ -55,82 +34,19 @@ export default {
     visible: {
       type: Boolean,
     },
+    links: {
+      type: [],
+    },
   },
   data() {
     return {
-      vis: false,
-
       currentIndex: null,
     };
   },
-  setup() {
-    const links = ref([
-      { name: "Strona główna", slug: "/" },
-      {
-        name: "O nas",
-        insideLinks: [
-          { name: "Centrum", slug: "/about/center" },
-          { name: "Pierwsza wizyta", slug: "/about/start" },
-          { name: "Nasz zespół", slug: "/about/team" },
-        ],
-        visibility: false,
-        refer: "more1",
-      },
-      {
-        name: "Leczenie",
-        insideLinks: [
-          { name: "Wybielanie zębów", slug: "/offer/whitening" },
-          { name: "Licówki porcelanowe", slug: "/offer/veeners" },
-          { name: "Protezy zębowe", slug: "/offer/denture" },
-          { name: "Implanty i chirurgia", slug: "/offer/implants" },
-          { name: "Korony i mosty", slug: "/offer/crown-and-bridges" },
-          { name: "Ortodoncja", slug: "/offer/ortodontics" },
-          { name: "Leczenie kanałowe", slug: "/offer/root-canal-therapy" },
-          { name: "Leczenie próchnicy", slug: "/offer/dental-caries" },
-          { name: "Higienizacja", slug: "/offer/hygiene" },
-          { name: "Szyny relaksacyjne", slug: "/offer/dental-guard" },
-          { name: "RTG o tomografia zębów", slug: "/offer/rtg-tomography" },
-          { name: "Medycyna estetyczna", slug: "/offer/aesthetic-medicine" },
-        ],
-        visibility: false,
-        refer: "more2",
-      },
-      {
-        name: "Ceny",
-        insideLinks: [
-          { name: "Cennik", slug: "/price/prices" },
-          { name: "Mediraty", slug: "/price/mediraty" },
-        ],
-        visibility: false,
-        refer: "more3",
-      },
-      { name: "Opinie", slug: "/reviews" },
-      { name: "Dental travel", slug: "/dental-travel" },
-      { name: "Przed i po", slug: "/" },
-      { name: "Kontakt", slug: "/contact" },
-      { name: "Konsultacja on-line", slug: "/online" },
-    ]);
-
-    return { links };
-  },
   methods: {
-    openDiv(el) {
-      const tl = gsap.timeline();
-      if (this.vis === false) {
-        tl.to(this.$refs.butt, { opacity: 0, duration: 0.2 });
-        tl.to(this.$refs.butt, { display: "none", duration: 0.2 });
-        tl.to(this.$refs.second__div, { left: "-50%", duration: 0.4 });
-
-        //.fromTo(this.$refs.open__more__text, { opacity: 0},{ opacity: 1, duration: .5})
-        this.vis = true;
-        this.currentIndex = el;
-      } else {
-        tl.to(this.$refs.second__div, { left: "100%", duration: 0.4 });
-        tl.to(this.$refs.butt, { display: "flex", duration: 0.2 });
-        tl.to(this.$refs.butt, { opacity: 1, duration: 0.2 });
-
-        this.vis = false;
-      }
+    handleButton(el) {
+      this.currentIndex = el;
+      this.$emit("indexCurrent", { index: this.currentIndex, slider: null });
     },
   },
 };

@@ -1,38 +1,40 @@
 <template>
   <div>
-    <div class="title__nav__div"> <p>Leczenie / Higienizacja</p></div>
+    <div class="title__nav__div"><p>Leczenie / Higienizacja</p></div>
     <div class="container__inner">
       <div class="inner">
-        <h2>Higienizacja</h2>
-        <img src="/9.png">
-        <p>
-          Doskonale wiemy, że lepiej zapobiegać, niż leczyć.
-          Szczególną rolę przykładamy do regularnie wykonywanych
-          zabiegów profilaktycznych. Mają one na celu wzmocnienie
-          zębów i dziąseł oraz ich ochronę przed
-          próchnicą i chorobami przyzębia - paradontozą.
-          <br/>
-          <br/>
-          Polecamy zabieg kompleksowego oczyszczania
-          zębów z kamienia nazębnego (skaling metodą EMS NO-PAIN),
-          osadów i przebarwień (piaskowanie AIR-FLOW)
-          oraz remineralizacji. W Dental Factory
-          dysponujemy całą gamą rozwiązań dostosowanych do
-          Twoich potrzeb i oczekiwań.
-        </p>
+        <h2 class="page__title">Higienizacja</h2>
+        <div class="first__div">
+          <img src="/9.png" />
+          <p>
+            Doskonale wiemy, że lepiej zapobiegać, niż leczyć. Szczególną rolę
+            przykładamy do regularnie wykonywanych zabiegów profilaktycznych.
+            Mają one na celu wzmocnienie zębów i dziąseł oraz ich ochronę przed
+            próchnicą i chorobami przyzębia - paradontozą.
+            <br />
+            <br />
+            Polecamy zabieg kompleksowego oczyszczania zębów z kamienia
+            nazębnego (skaling metodą EMS NO-PAIN), osadów i przebarwień
+            (piaskowanie AIR-FLOW) oraz remineralizacji. W Dental Factory
+            dysponujemy całą gamą rozwiązań dostosowanych do Twoich potrzeb i
+            oczekiwań.
+          </p>
+        </div>
       </div>
       <div class="info__div">
         <div class="info__div__outer border__top__div">
-          <div class="info__div__inner" >
+          <div class="info__div__inner">
             <h2>Co nas wyróżnia?</h2>
           </div>
-            <p>
-              <span>
-                KOMFORT & LECZENIE BEZ BÓLU
-              </span>
-            </p>
           <p>
-            Ultrawygodne fotele, które pozwolą Ci się odprężyć. Pacjentom bojącym się tradycyjnych znieczuleń proponujemy znieczulenie komputerowe WAND.
+            <span>
+              KOMFORT & LECZENIE BEZ BÓLU
+            </span>
+          </p>
+          <p>
+            Ultrawygodne fotele, które pozwolą Ci się odprężyć. Pacjentom
+            bojącym się tradycyjnych znieczuleń proponujemy znieczulenie
+            komputerowe WAND.
           </p>
           <p>
             <span>
@@ -48,7 +50,8 @@
             </span>
           </p>
           <p>
-            Mikroskop, lupy i kamery powiększające pozwalają nam dostrzec najmniejsze szczegóły.
+            Mikroskop, lupy i kamery powiększające pozwalają nam dostrzec
+            najmniejsze szczegóły.
           </p>
           <p>
             <span>
@@ -56,7 +59,8 @@
             </span>
           </p>
           <p>
-            I najważniejsze... Nigdy nie polecimy Ci zabiegów, których nie potrzebujesz.
+            I najważniejsze... Nigdy nie polecimy Ci zabiegów, których nie
+            potrzebujesz.
           </p>
         </div>
         <div class="info__div__outer">
@@ -64,12 +68,20 @@
             <h2>Nowoczesne znieczulenia</h2>
           </div>
           <p>
-            Doskonale wiemy, że wizyta u dentysty wiąże się ze stresem. Nie musisz bać się zabiegu! Od początku naszego istnienia dokładamy wszelkich starań, aby leczenie przebiegało bezboleśnie. Nie używamy igieł. Tradycyjną strzykawkę z igłą zastąpiliśmy komputerowym znieczuleniem The Wand STA.
+            Doskonale wiemy, że wizyta u dentysty wiąże się ze stresem. Nie
+            musisz bać się zabiegu! Od początku naszego istnienia dokładamy
+            wszelkich starań, aby leczenie przebiegało bezboleśnie. Nie używamy
+            igieł. Tradycyjną strzykawkę z igłą zastąpiliśmy komputerowym
+            znieczuleniem The Wand STA.
           </p>
         </div>
-        <div class="info__div__outer" ref="info__div__outer__third" @click="handleOpenThird">
+        <div
+          ref="info__div__outer__third"
+          class="info__div__outer"
+          @click="handleOpenThird"
+        >
           <div class="info__div__inner">
-            <h2>Poznaj najczęściej wykonywane zabiegi </h2>
+            <h2>Poznaj najczęściej wykonywane zabiegi</h2>
           </div>
           <p>
             <span>
@@ -77,7 +89,10 @@
             </span>
           </p>
           <p>
-            Pozwala pozbyć się twardych złogów kamienia, powodujących krwawienie, stan zapalny dziąseł i paradontozę. Wykorzystujemy do tego celu sprzęt pracujący w technologii NO-PAIN, dzięki czemu zabieg jest dużo bardziej komfortowy.
+            Pozwala pozbyć się twardych złogów kamienia, powodujących
+            krwawienie, stan zapalny dziąseł i paradontozę. Wykorzystujemy do
+            tego celu sprzęt pracujący w technologii NO-PAIN, dzięki czemu
+            zabieg jest dużo bardziej komfortowy.
           </p>
           <p>
             <span>
@@ -85,8 +100,12 @@
             </span>
           </p>
           <p>
-            Pozwala usunąć osady po kawie, herbacie, nikotynie, czy czerwonym winie. Piasek dociera w miejsca, których oczyszczenie jest niemożliwe innymi metodami - np. w wąskie przestrzenie między zębami i bruzdy.
-            Do piaskowania wykorzystujemy ultradelikatny piasek AIR-FLOW, który bardzo skutecznie usuwa przebarwienia, a jednocześnie nie drażni dziąseł i śluzówki.
+            Pozwala usunąć osady po kawie, herbacie, nikotynie, czy czerwonym
+            winie. Piasek dociera w miejsca, których oczyszczenie jest
+            niemożliwe innymi metodami - np. w wąskie przestrzenie między zębami
+            i bruzdy. Do piaskowania wykorzystujemy ultradelikatny piasek
+            AIR-FLOW, który bardzo skutecznie usuwa przebarwienia, a
+            jednocześnie nie drażni dziąseł i śluzówki.
           </p>
           <p>
             <span>
@@ -94,11 +113,11 @@
             </span>
           </p>
           <p>
-            Nieodłączny element higienizacji. Wzmacnia szkliwo zębów, zmniejsza ich wrażliwość i chroni przed próchnicą.
+            Nieodłączny element higienizacji. Wzmacnia szkliwo zębów, zmniejsza
+            ich wrażliwość i chroni przed próchnicą.
           </p>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -113,75 +132,93 @@ export default {
       visibleFirst: true,
       visibleSecond: true,
       visibleThird: true,
-    }
+    };
   },
   methods: {
     handleOpenFirst: function () {
-      const tl = gsap.timeline()
-
+      const tl = gsap.timeline();
 
       if (this.visibleFirst === false) {
-        tl.to(this.$refs.main__text__first, ({opacity: 0, duration: 0.1}))
-          .to(this.$refs.first__arrow, ({rotate: "0", duration: 0.1}))
-          .to(this.$refs.info__div__outer__first, ({height: "100px", duration: 0.1}))
-          .to(this.$refs.main__text__first, ({display: "none", duration: 0.1}))
-        this.visibleFirst = !this.visibleFirst
-
+        tl.to(this.$refs.main__text__first, { opacity: 0, duration: 0.1 })
+          .to(this.$refs.first__arrow, { rotate: "0", duration: 0.1 })
+          .to(this.$refs.info__div__outer__first, {
+            height: "100px",
+            duration: 0.1,
+          })
+          .to(this.$refs.main__text__first, { display: "none", duration: 0.1 });
+        this.visibleFirst = !this.visibleFirst;
       } else {
-        tl.to(this.$refs.main__text__first, ({display: "block", duration: 0.1}))
-          .to(this.$refs.first__arrow, ({rotate: "180deg", duration: 0.1}))
-          .to(this.$refs.info__div__outer__first, ({height: "auto", duration: 0.2}))
-          .to(this.$refs.main__text__first, ({opacity: 1, delay:0.2, duration: 0.2}))
+        tl.to(this.$refs.main__text__first, { display: "block", duration: 0.1 })
+          .to(this.$refs.first__arrow, { rotate: "180deg", duration: 0.1 })
+          .to(this.$refs.info__div__outer__first, {
+            height: "auto",
+            duration: 0.2,
+          })
+          .to(this.$refs.main__text__first, {
+            opacity: 1,
+            delay: 0.2,
+            duration: 0.2,
+          });
 
-        this.visibleFirst = !this.visibleFirst
-
+        this.visibleFirst = !this.visibleFirst;
       }
     },
     handleOpenSecond: function () {
-      const tl = gsap.timeline()
-
+      const tl = gsap.timeline();
 
       if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, ({opacity: 0, duration: 0.1}))
-          .to(this.$refs.second__arrow, ({rotate: "0", duration: 0.2}))
-          .to(this.$refs.info__div__outer__second, ({height: "100px", duration: 0.2}))
-          .to(this.$refs.main__text__second, ({display: "none", duration: 0.2}))
+        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
+          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
+          .to(this.$refs.info__div__outer__second, {
+            height: "100px",
+            duration: 0.2,
+          })
+          .to(this.$refs.main__text__second, {
+            display: "none",
+            duration: 0.2,
+          });
 
-        this.visibleSecond = !this.visibleSecond
-
+        this.visibleSecond = !this.visibleSecond;
       } else {
-        tl.to(this.$refs.second__arrow, ({rotate: "180deg", duration: 0.2}))
-          .to(this.$refs.main__text__second, ({display: "block", duration: 0.1}))
-          .to(this.$refs.info__div__outer__second, ({height: "auto", duration: 0.2}))
-          .to(this.$refs.main__text__second, ({opacity: 1, duration: 0.2}))
-        this.visibleSecond = !this.visibleSecond
+        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
+          .to(this.$refs.main__text__second, {
+            display: "block",
+            duration: 0.1,
+          })
+          .to(this.$refs.info__div__outer__second, {
+            height: "auto",
+            duration: 0.2,
+          })
+          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
+        this.visibleSecond = !this.visibleSecond;
       }
     },
     handleOpenThird: function () {
-      const tl = gsap.timeline()
-
+      const tl = gsap.timeline();
 
       if (this.visibleThird === false) {
-        tl.to(this.$refs.main__text__third, ({opacity: 0, duration: 0.1}))
-          .to(this.$refs.third__arrow, ({rotate: "0", duration: 0.2}))
-          .to(this.$refs.info__div__outer__third, ({height: "100px", duration: 0.2}))
-          .to(this.$refs.main__text__third, ({display: "none", duration: 0.2}))
+        tl.to(this.$refs.main__text__third, { opacity: 0, duration: 0.1 })
+          .to(this.$refs.third__arrow, { rotate: "0", duration: 0.2 })
+          .to(this.$refs.info__div__outer__third, {
+            height: "100px",
+            duration: 0.2,
+          })
+          .to(this.$refs.main__text__third, { display: "none", duration: 0.2 });
 
-        this.visibleThird = !this.visibleThird
-
+        this.visibleThird = !this.visibleThird;
       } else {
-        tl.to(this.$refs.third__arrow, ({rotate: "180deg", duration: 0.2}))
-          .to(this.$refs.main__text__third, ({display: "block", duration: 0.1}))
-          .to(this.$refs.info__div__outer__third, ({height: "auto", duration: 0.2}))
-          .to(this.$refs.main__text__third, ({opacity: 1, duration: 0.2}))
-        this.visibleThird = !this.visibleThird
-
+        tl.to(this.$refs.third__arrow, { rotate: "180deg", duration: 0.2 })
+          .to(this.$refs.main__text__third, { display: "block", duration: 0.1 })
+          .to(this.$refs.info__div__outer__third, {
+            height: "auto",
+            duration: 0.2,
+          })
+          .to(this.$refs.main__text__third, { opacity: 1, duration: 0.2 });
+        this.visibleThird = !this.visibleThird;
       }
     },
-
   },
-
-}
+};
 </script>
 
 <style scoped lang="scss" src="../index.scss"></style>

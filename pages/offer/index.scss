@@ -5,89 +5,116 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+
+  @media (min-width: 1024px) {
+
+    img {
+      width: 50%;
+      align-self: flex-start;
+      margin-left: 50px;
+    }
+  }
 }
 
-.links {
-  width: 100%;
+.prices__paragraph__head {
+  @media (min-width: 1024px) {
+    width: 60% !important;
+    align-self: flex-end;
+  }
+}
+
+.medi__image {
+  @media (min-width: 1024px) {
+    width: 40% !important;
+  }
+}
+
+.image {
+  @media (min-width: 1024px) {
+    width: 200% !important;
+  }
+}
+
+
+.active__button {
+  font-family: termina, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  width: 90%;
+  height: 40px;
+  background: #b4f2cb;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  font-size: 16px;
+  color: #000000;
+  position: relative;
+  transition: all 0.2s ease-out;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   text-decoration: none;
+  cursor: pointer;
 
-  .active__button {
-    font-family: termina, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-
-    margin: 15px;
-    width: 90%;
-    height: 53px;
-    background: #B4F2CB;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
-    border: 1px solid #000000;
-    font-size: 16px;
-    color: #000000;
-    position: relative;
     transition: all 0.2s ease-out;
-    overflow: hidden;
+    background: #000000;
+    z-index: 1;
+  }
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  p {
+    transition: all 0.2s ease-out;
+    z-index: 9;
+    text-decoration: none;
+  }
 
+  &:hover {
+    transform: scale(1.05);
+  }
 
+  &:hover > img {
+    transform: translateX(40px);
+  }
 
-    &::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      border-radius: 8px;
-      transition: all 0.2s ease-out;
-      background: #000000;
-      z-index: 1;
+  &:hover > p {
+    color: #b4f2cb;
+  }
 
+  &:hover:after {
+    transform: translateX(100%);
+  }
 
-    }
-    img {
-      position: absolute;
-      right: 15px;
-      transition: all 0.2s ease-out;
-      transition-delay: 0.05s;
-
-
-    }
-
-    p {
-      transition: all 0.2s ease-out;
-      z-index: 9;
-      text-decoration: none;
-
-    }
-
-    &:hover{
-      transform: scale(1.05);
-    }
-    &:hover > img{
-      transform: translateX(40px);
-    }
-    &:hover > p{
-      color: #B4F2CB;
-    }
-    &:hover:after{
-      transform: translateX(100%);
-    }
-
+  @media (min-width: 1024px) {
+    height: 60px;
+    font-size: 15px;
+    justify-self: center;
+    width: 60%;
+    position: relative;
+    left: 40px;
+    top: 20px;
+    text-decoration: none;
   }
 }
 
 img {
   width: 90%;
 }
+
 .title__nav__div {
   border-bottom: 1px solid #000000;
   padding: 20px 0 0 0;
 }
+
 .container__inner {
   width: 100%;
   height: auto;
@@ -104,7 +131,16 @@ h1, h2 {
   font-size: 30px;
   align-self: flex-start;
   margin: 20px 0 0 20px;
+
+  @media (min-width: 1024px) {
+    width: 70%;
+    margin-top: 100px;
+    margin-left: 50px;
+    font-size: 70px;
+    line-height: 75px;
+  }
 }
+
 a {
   text-decoration: none;
 }
@@ -133,6 +169,57 @@ p {
   img {
     width: 90%;
   }
+
+  @media (min-width: 1024px) {
+    p {
+      width: 60%;
+      align-self: flex-end;
+    }
+    img {
+      width: 60%;
+      align-self: flex-start;
+      margin-left: 50px;
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+
+  }
+}
+
+.first__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 90%;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    margin: 0 50px;
+
+
+    img {
+      width: 80%;
+    }
+    div {
+    }
+    p {
+      width: 80% !important;
+      align-self: center !important;
+
+    }
+
+    ul {
+      width: 90% !important;
+      align-self: center !important;
+
+    }
+  }
 }
 
 .info__div {
@@ -142,6 +229,7 @@ p {
   padding-bottom: 50px;
 
 }
+
 h3 {
   font-family: termina, sans-serif;
   font-style: normal;
@@ -154,11 +242,13 @@ h3 {
 
   margin: 0;
 }
+
 .info__div__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:  0 20px;
+  padding: 0 20px;
+
   h2 {
     font-family: termina, sans-serif;
     font-style: normal;
@@ -170,9 +260,27 @@ h3 {
     color: #000000;
 
     margin: 0;
+
+    @media (min-width: 1024px) {
+      width: 70%;
+      margin-top: 100px;
+      margin-left: 50px;
+      font-size: 70px;
+      line-height: 75px;
+    }
+  }
+
+  h3 {
+    @media (min-width: 1024px) {
+      width: 60%;
+      align-self: flex-end;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
   }
 
 }
+
 ul {
   font-family: termina, sans-serif;
   font-style: normal;
@@ -180,7 +288,13 @@ ul {
   list-style-type: none;
   padding: 0 20px;
   list-style-position: outside;
+
+  @media (min-width: 1024px) {
+    width: 60%;
+    align-self: flex-end;
+  }
 }
+
 .open__btn {
   background: transparent;
   border: none;
@@ -199,15 +313,197 @@ ul {
   flex-direction: column;
   transition: all .2s ease-out;
 
- img {
-   padding: 20px;
- }
+  img {
+    padding: 20px;
+  }
 
   p {
+    @media (min-width: 1024px) {
+      width: 60%;
+      align-self: flex-end;
+      margin-bottom: 20px;
+    }
 
     span {
       font-size: 15px;
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+
+      }
     }
   }
 
+  li {
+    span {
+      font-size: 15px;
+      font-weight: 900;
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        margin-bottom: 20px;
+
+      }
+    }
+  }
+}
+
+.page__title {
+  @media (min-width: 1024px) {
+    width: 80%;
+    margin-top: 40px;
+    font-size: 80px;
+    line-height: 85px;
+    margin-left: 50px;
+  }
+}
+
+.travel__image {
+  @media (min-width: 1024px) {
+    position: relative;
+    top: 100px;
+  }
+}
+
+.trvel__paragraph {
+  @media (min-width: 1024px) {
+    width: 60%;
+    align-self: flex-end;
+  }
+}
+
+.asking__div__outer {
+  border-top: 1px solid #000000;
+}
+
+.asking__div__inner {
+  border-bottom: 1px solid #000000;
+
+  p {
+    width: 70%;
+    margin-left: 20px;
+
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      width: 70%;
+      margin-left: 50px;
+
+    }
+  }
+}
+
+.asking__div {
+  color: #041b8d !important;
+  background: transparent;
+  font-family: Termina;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  width: 70%;
+  text-align: left;
+
+  @media (min-width: 1024px) {
+    font-size: 30px;
+    margin: 20px 0 20px 50px;
+  }
+}
+
+.close__button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  right: 50px;
+
+  &::after {
+    background: #FFFFFF;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    rotate: 45deg;
+  }
+
+  &::before {
+    background: #FFFFFF;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    rotate: -45deg;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 30px;
+    right: 70px;
+    top: 10px;
+  }
+}
+
+.active {
+
+  transition: all .4s ease-out;
+  height: 680px;
+  opacity: 1;
+  color: #FFFFFF;
+
+  @media (min-width: 1024px) {
+    height: 200px;
+
+  }
+
+}
+
+.disactive {
+  transition: all .4s ease-out;
+  height: 0;
+  opacity: 0;
+
+
+}
+
+.activetable {
+  transition: all .4s ease-out;
+  background: #000000;
+
+}
+
+.display__active {
+  transition: all .5s ease-out;
+  display: inline;
+
+
+}
+
+.display__disactive {
+  transition: all .5s ease-out;
+  display: none;
+
+}
+
+.desactivetable {
+  transition: all .4s ease-out;
+  background: #FFFFFF;
+}
+
+.activ {
+  transition: all .4s ease-out;
+  color: #FFFFFF !important;
+
+}
+
+.deactiv {
+  transition: all .4s ease-out;
+  color: #041b8d !important;
 }

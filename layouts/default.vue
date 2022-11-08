@@ -1,20 +1,21 @@
 <template>
-<div>
-  <HeaderComponent/>
-  <div class="children">
-  <Nuxt/>
+  <div>
+    <HeaderComponent />
+    <div class="children">
+      <Nuxt />
+    </div>
+    <FooterComponent />
   </div>
-  <FooterComponent/>
-</div>
 </template>
 
 <script>
 import HeaderComponent from "~/components/layoutComponents/HeaderComponent";
 import FooterComponent from "~/components/layoutComponents/FooterComponent";
+
 export default {
   name: "default",
-  components: {FooterComponent, HeaderComponent}
-}
+  components: { FooterComponent, HeaderComponent },
+};
 </script>
 
 <style lang="scss">
@@ -25,9 +26,17 @@ body {
   scroll-behavior: smooth;
 }
 
-p, h1, h2, a, li, span, input, textarea {
+p,
+h1,
+h2,
+a,
+li,
+span,
+input,
+textarea {
   &::selection {
-    background: #B4F2CB;
+    background: rgba(180, 242, 203, 0.5);
+    opacity: 0.3;
   }
 }
 

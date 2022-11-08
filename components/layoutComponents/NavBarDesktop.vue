@@ -1,113 +1,149 @@
 <template>
   <div class="navbar">
     <ul>
-      <li v-for="(link, index) in links" :key="link.name" :data-index="index" ><button v-if="!link.slug" ref="butt" class="navi" @click="openDiv(index)">{{link.name}}</button>
+      <li v-for="(link, index) in links" :key="link.name" :data-index="index">
+        <button
+          v-if="!link.slug"
+          ref="butt"
+          class="navi"
+          @click="openDiv(index)"
+        >
+          {{ link.name }}
+        </button>
         <div v-if="!link.slug" class="more__div" ref="second__div">
-          <button @click="openDiv(index)" class="close__button" v-if="index === currentIndex" :class="{isCurrent: index === currentIndex}"/>
+          <button
+            v-if="index === currentIndex"
+            :class="{ isCurrent: index === currentIndex }"
+            class="close__button"
+            @click="openDiv(index)"
+          />
           <ul>
-            <li v-for="inside in link.insideLinks" v-if="index === currentIndex" :class="{isCurrent: index === currentIndex}"><NuxtLink :to="inside.slug"><button class="nav__inner" @click="$emit('close')">{{inside.name}}</button></NuxtLink></li>
+            <li
+              v-for="inside in link.insideLinks"
+              v-if="index === currentIndex"
+              :class="{ isCurrent: index === currentIndex }"
+            >
+              <NuxtLink :to="inside.slug">
+                <button class="nav__inner" @click="$emit('close')">
+                  {{ inside.name }}
+                </button>
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
-        <NuxtLink v-if="link.slug" @click="$emit('handleClick')" :to="link.slug"><button class="navi" ref="butt"  @click="$emit('close')">{{link.name}}</button></NuxtLink></li>
+        <NuxtLink
+          v-if="link.slug"
+          :to="link.slug"
+          @click="$emit('handleClick')"
+        >
+          <button ref="butt" class="navi" @click="$emit('close')">
+            {{ link.name }}
+          </button>
+        </NuxtLink>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-import gsap from 'gsap'
-import {ref} from "vue";
+import gsap from "gsap";
+import { ref } from "vue";
 
 export default {
   props: {
     visible: {
       type: Boolean,
-    }
+    },
   },
   data() {
     return {
       vis: false,
 
       currentIndex: null,
-    }
+    };
   },
   setup() {
     const links = ref([
-      {name: "Home", slug: "/"},
-      {name: "O nas", insideLinks: [
-          {name: "Centrum", slug: "/about/center"},
-          {name: "Pierwsza wizyta", slug: "/about/start"},
-          {name: "Nasz zespół", slug: "/about/team"},
-        ], visibility: false, refer: "more1"},
-      {name: "Leczenie", insideLinks:  [
-          {name: "Wybielanie zębów", slug: "/offer/whitening"},
-          {name: "Licówki porcelanowe", slug: "/offer/veeners"},
-          {name: "Protezy zębowe", slug: "/offer/denture"},
-          {name: "Implanty i chirurgia", slug: "/offer/implants"},
-          {name: "Korony i mosty", slug: "/offer/crown-and-bridges"},
-          {name: "Ortodoncja", slug: "/offer/ortodontics"},
-          {name: "Leczenie kanałowe", slug: "/offer/root-canal-therapy"},
-          {name: "Leczenie próchnicy", slug: "/offer/dental-caries"},
-          {name: "Higienizacja", slug: "/offer/hygiene"},
-          {name: "Szyny relaksacyjne", slug: "/offer/dental-guard"},
-          {name: "RTG o tomografia zębów", slug: "/offer/rtg-tomography"},
-          {name: "Medycyna estetyczna", slug: "/offer/aesthetic-medicine"},
-        ], visibility: false, refer: "more2"},
-      {name: "Ceny", insideLinks: [
-          {name: "Cennik", slug: "/price/prices"},
-          {name: "Mediraty", slug: "/price/mediraty"},
-        ], visibility: false, refer: "more3"},
-      {name: "Opinie", slug: "/reviews"},
-      {name: "Dental travel", slug: "/dental-travel"},
-      {name: "Przed i po", slug: "/"},
-      {name: "Kontakt", slug: "/contact"},
-      {name: "Konsultacja on-line", slug: "/online"},
+      { name: "Strona główna", slug: "/" },
+      {
+        name: "O nas",
+        insideLinks: [
+          { name: "Centrum", slug: "/about/center" },
+          { name: "Pierwsza wizyta", slug: "/about/start" },
+          { name: "Nasz zespół", slug: "/about/team" },
+        ],
+        visibility: false,
+        refer: "more1",
+      },
+      {
+        name: "Leczenie",
+        insideLinks: [
+          { name: "Wybielanie zębów", slug: "/offer/whitening" },
+          { name: "Licówki porcelanowe", slug: "/offer/veeners" },
+          { name: "Protezy zębowe", slug: "/offer/denture" },
+          { name: "Implanty i chirurgia", slug: "/offer/implants" },
+          { name: "Korony i mosty", slug: "/offer/crown-and-bridges" },
+          { name: "Ortodoncja", slug: "/offer/ortodontics" },
+          { name: "Leczenie kanałowe", slug: "/offer/root-canal-therapy" },
+          { name: "Leczenie próchnicy", slug: "/offer/dental-caries" },
+          { name: "Higienizacja", slug: "/offer/hygiene" },
+          { name: "Szyny relaksacyjne", slug: "/offer/dental-guard" },
+          { name: "RTG o tomografia zębów", slug: "/offer/rtg-tomography" },
+          { name: "Medycyna estetyczna", slug: "/offer/aesthetic-medicine" },
+        ],
+        visibility: false,
+        refer: "more2",
+      },
+      {
+        name: "Ceny",
+        insideLinks: [
+          { name: "Cennik", slug: "/price/prices" },
+          { name: "Mediraty", slug: "/price/mediraty" },
+        ],
+        visibility: false,
+        refer: "more3",
+      },
+      { name: "Opinie", slug: "/reviews" },
+      { name: "Dental travel", slug: "/dental-travel" },
+      { name: "Przed i po", slug: "/" },
+      { name: "Kontakt", slug: "/contact" },
+      { name: "Konsultacja on-line", slug: "/online" },
+    ]);
 
-    ])
-
-
-
-
-    return{links}
+    return { links };
   },
   methods: {
     openDiv(el) {
-      const tl = gsap.timeline()
+      const tl = gsap.timeline();
       if (this.vis === false) {
-        tl.to(this.$refs.butt, {opacity: 0, duration: .2})
-        tl.to(this.$refs.butt, {display: "none", duration: .2})
-        tl.to(this.$refs.second__div, {left:"-50%", duration: .4})
+        tl.to(this.$refs.butt, { opacity: 0, duration: 0.2 });
+        tl.to(this.$refs.butt, { display: "none", duration: 0.2 });
+        tl.to(this.$refs.second__div, { left: "-50%", duration: 0.4 });
 
         //.fromTo(this.$refs.open__more__text, { opacity: 0},{ opacity: 1, duration: .5})
-        this.vis = true
-        this.currentIndex = el
-
+        this.vis = true;
+        this.currentIndex = el;
       } else {
-        tl.to(this.$refs.second__div, {left: "100%", duration: .4})
-        tl.to(this.$refs.butt, {display: "flex", duration: .2})
-        tl.to(this.$refs.butt, {opacity: 1, duration: .2})
+        tl.to(this.$refs.second__div, { left: "100%", duration: 0.4 });
+        tl.to(this.$refs.butt, { display: "flex", duration: 0.2 });
+        tl.to(this.$refs.butt, { opacity: 1, duration: 0.2 });
 
-
-
-        this.vis = false
-
-
+        this.vis = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
-
 .navbar {
-
   @media (max-width: 1024px) {
     display: none;
   }
 
-  width: 600px;
-  height: 120px;
+  width: 700px;
+  height: auto;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -115,10 +151,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 20px;
   z-index: 99999;
-
-
 
   ul {
     list-style: none;
@@ -131,9 +164,10 @@ export default {
     flex-wrap: wrap;
 
     li {
-      width: 20%;
+      width: 28%;
       text-align: center;
     }
+
     a {
       text-decoration: none;
     }
@@ -148,7 +182,6 @@ export default {
     color: #000000;
     border: none;
     background: none;
-    margin-bottom: 10px;
     cursor: pointer;
 
     button {
@@ -177,7 +210,6 @@ export default {
   }
 }
 
-
 .more__div {
   width: 100vw;
   height: 100vh;
@@ -188,9 +220,6 @@ export default {
   position: absolute;
   left: 100%;
   bottom: 30px;
-
-
-
 }
 
 .close__button {
@@ -203,21 +232,22 @@ export default {
   cursor: pointer;
 
   &::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 4px;
-    background: #FFFFFF;
+    background: #ffffff;
     position: absolute;
     top: 2px;
     border-radius: 25px;
     left: 20px;
     rotate: 20deg;
   }
+
   &::before {
-    content: '';
+    content: "";
     width: 100%;
     height: 4px;
-    background: #FFFFFF;
+    background: #ffffff;
     position: absolute;
     left: 20px;
     border-radius: 25px;
@@ -235,7 +265,7 @@ export default {
   border-radius: 25px;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 3px;
     height: 25px;
@@ -247,7 +277,7 @@ export default {
 }
 
 .isCurrent {
- z-index: 9999999999;
+  z-index: 9999999999;
 }
 
 .contact__button {
@@ -260,14 +290,10 @@ export default {
   margin-left: -44%;
   width: 88%;
   height: 65px;
-  background: #B4F2CB;
+  background: #b4f2cb;
   border-radius: 8px;
   border: 1px solid #000000;
   font-size: 25px;
   color: #000000;
-
-
-
 }
-
 </style>

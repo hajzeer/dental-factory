@@ -134,7 +134,7 @@ export default {
         },
         { name: "Opinie", slug: "/reviews" },
         { name: "Dental travel", slug: "/dental-travel" },
-        { name: "Przed i po", slug: "/" },
+        { name: "Przed i po", slug: "/before-after" },
         { name: "Kontakt", slug: "/contact" },
         { name: "Konsultacja on-line", slug: "/online" },
       ],

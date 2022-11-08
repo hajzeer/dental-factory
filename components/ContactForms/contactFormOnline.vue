@@ -269,8 +269,9 @@ export default {
   @media (min-width: 1024px) {
     width: 250px;
     align-self: flex-end;
-    margin-right: 200px;
     margin-top: 30px;
+    position: relative;
+    right: 14.5%;
   }
 }
 </style>

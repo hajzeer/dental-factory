@@ -76,12 +76,22 @@ p {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
+    align-self: center;
+    div {
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
   }
 }
 
 .page__title {
   @media (min-width: 1024px) {
-    width: 80%;
+    width: 100%;
     font-size: 80px;
     line-height: 85px;
     text-transform: uppercase;

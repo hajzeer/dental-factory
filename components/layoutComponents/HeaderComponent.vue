@@ -13,12 +13,8 @@
       :links="links"
       @indexCurrent="handleButton"
     />
-    <div
-      class="desktop__nav__div"
-      ref="second__div"
-      v-if="currentIndex !== null"
-    >
-      <div ref="inner__div">
+    <div class="desktop__nav__div" ref="second__div">
+      <div ref="inner__div" v-if="currentIndex !== null">
         <p>sprawdź również:</p>
         <NuxtLink
           :to="item.slug"
@@ -29,7 +25,7 @@
 
         <button class="close__button" @click="closeNav"></button>
       </div>
-      <div ref="inner__div" v-if="currentIndex === 2">
+      <div ref="inner__div" v-if="currentIndex === 2 && currentIndex !== null">
         <p>NAJPOPULARNIEJSZE:</p>
         <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
           <button @click="closeNav">
@@ -148,7 +144,14 @@ export default {
   },
   methods: {
     closeNav() {
-      this.currentIndex = null;
+      const tl = gsap.timeline();
+      setTimeout(() => {
+        if (this.vis === true) {
+          this.currentIndex = null;
+          tl.to(this.$refs.second__div, { left: "100%", duration: 0.4 });
+          this.vis = false;
+        }
+      }, 200);
     },
     handleButton({ index, slider }) {
       this.currentIndex = index;
@@ -157,16 +160,10 @@ export default {
     openDiv(index) {
       const tl = gsap.timeline();
       if (this.vis === false) {
-        tl.to(this.$refs.second__div, { left: "0", duration: 0.4 }).to(
-          this.$refs.inner__div,
-          { left: "0", duration: 0.4, delay: 0.3 }
-        );
+        tl.to(this.$refs.second__div, { left: "0", duration: 0.4 });
 
         this.vis = true;
         this.currentIndex = index;
-      } else {
-        tl.to(this.$refs.butt, { opacity: 1, duration: 0.2 });
-        this.vis = false;
       }
     },
     closing: function () {
@@ -251,7 +248,7 @@ export default {
   position: absolute;
   top: 120px;
   width: 100%;
-  height: 500px;
+  height: 530px;
   left: 100%;
 
   display: flex;
@@ -269,7 +266,7 @@ export default {
 
   p {
     font-size: 23px;
-    font-weight: 600;
+    font-weight: 800;
     font-family: Termina;
     margin-bottom: 5px;
     margin-left: 100px;

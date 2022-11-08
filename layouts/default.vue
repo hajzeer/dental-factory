@@ -24,6 +24,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 p,

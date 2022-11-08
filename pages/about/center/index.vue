@@ -4,7 +4,10 @@
       <p>O nas / O centrum</p>
     </div>
     <div>
-      <h1 class="page__title">Witaj w Dental Factory!</h1>
+      <h1 class="page__title">
+        Witaj w Dental <br />
+        Factory!
+      </h1>
       <div class="container__inner">
         <div class="inner__info">
           <img class="about__image" src="/about_1.png" />
@@ -29,9 +32,18 @@
         <div class="info__div">
           <div></div>
         </div>
-        <h2 class="page__title__smaller">W trosce o Twój komfort</h2>
+        <h2 class="page__title__smaller">
+          W trosce o Twój <br />
+          komfort
+        </h2>
         <div class="inner__info__second">
-          <img class="about__image__second" src="/about_2.png" />
+          <div>
+            <img class="about__image__second" src="/about_2.png" />
+            <p class="last__about__p desktopView">
+              Jesteśmy świadomi tego, jak leczymy, dlatego dajemy Ci gwarancję.
+              Większość zabiegów objęta jest gwarancją o przedłużonym terminie.
+            </p>
+          </div>
           <div class="inner__info__div">
             <p>
               Robimy wszystko, aby leczenie przebiegło dla Ciebie sprawnie i
@@ -66,7 +78,7 @@
                 <img src="/path 25.svg" />
               </button>
             </NuxtLink>
-            <p class="last__about__p">
+            <p class="last__about__p mobileView">
               Jesteśmy świadomi tego, jak leczymy, dlatego dajemy Ci gwarancję.
               Większość zabiegów objęta jest gwarancją o przedłużonym terminie.
             </p>
@@ -108,6 +120,7 @@ export default {
 .inner__info__div {
   @media (min-width: 1024px) {
     width: 35%;
+    margin-left: 100px;
   }
 }
 
@@ -123,6 +136,11 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  img {
+    border-radius: 20px;
+    border: 2px solid #000000;
+  }
 }
 
 .inner__info {
@@ -148,10 +166,24 @@ export default {
   justify-content: center;
   align-items: center;
 
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (min-width: 1024px) {
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
+
+    div {
+      width: 50%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
@@ -178,8 +210,9 @@ h2 {
   width: 90%;
 
   @media (min-width: 1024px) {
-    width: 45%;
+    width: 640px;
     margin-top: 20px;
+    margin-right: 100px;
   }
 }
 
@@ -237,6 +270,7 @@ button {
     right: 15px;
     transition: all 0.2s ease-out;
     transition-delay: 0.05s;
+    border: none !important;
   }
 
   p {
@@ -349,9 +383,21 @@ p {
 
 .last__about__p {
   @media (min-width: 1024px) {
-    position: relative;
-    left: 125%;
-    top: -80px;
+    width: 80%;
+  }
+}
+
+.desktopView {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: inline;
+  }
+}
+
+.mobileView {
+  @media (min-width: 1024px) {
+    display: none;
   }
 }
 </style>

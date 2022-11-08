@@ -12,8 +12,8 @@
         </h3>
         <p>
           <span>
-            Chcesz się dowiedzieć, jak możemy Ci pomóc? Skorzystaj z bezpłatnej
-            konsultacji on-line!
+            Chcesz się dowiedzieć, jak możemy Ci pomóc? <br />
+            Skorzystaj z bezpłatnej konsultacji on-line!
           </span>
         </p>
       </div>
@@ -82,7 +82,7 @@ p {
   @media (min-width: 1024px) {
     width: 80%;
     position: relative;
-    left: 20%;
+    left: 25%;
     font-size: 30px;
     h3 {
       font-size: 35px;
@@ -112,6 +112,15 @@ p {
     line-height: 85px;
     text-transform: uppercase;
     margin-left: 120px;
+  }
+}
+
+.title__nav__div {
+  border-bottom: 1px solid #000000;
+  padding: 20px 0 0 0;
+
+  p {
+    margin: 20px;
   }
 }
 </style>

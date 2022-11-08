@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">ORTODONCJA</h2>
         <div class="first__div">
-          <img class="image" src="/6.png" />
+          <img src="/6.png" />
           <div>
             <ul>
               <li>

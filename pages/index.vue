@@ -222,7 +222,7 @@ export default {
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 12px;
   }
 

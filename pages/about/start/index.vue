@@ -114,6 +114,8 @@ export default {
 
 img {
   width: 90%;
+  border-radius: 20px;
+  border: 2px solid #000000;
 }
 
 .subject {

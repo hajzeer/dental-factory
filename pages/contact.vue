@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="title__nav__div"><p>Kontakt</p></div>
     <div class="head__text__contact">
       <h2 class="page__title">
         Umów się <br />
@@ -85,6 +86,15 @@ p {
     font-size: 80px;
     line-height: 85px;
     text-transform: uppercase;
+  }
+}
+
+.title__nav__div {
+  border-bottom: 1px solid #000000;
+  padding: 20px 0 0 0;
+
+  p {
+    margin: 20px;
   }
 }
 </style>

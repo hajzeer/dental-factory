@@ -29,14 +29,26 @@
 
         <button class="close__button" @click="closeNav"></button>
       </div>
-      <div ref="inner__div">
+      <div ref="inner__div" v-if="currentIndex === 2">
         <p>NAJPOPULARNIEJSZE:</p>
-        <NuxtLink
-          :to="item.slug"
-          v-for="item in links[currentIndex].insideLinks"
-        >
+        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
           <button @click="closeNav">
-            {{ item.name }}
+            {{ links[currentIndex].insideLinks[0].name }}
+          </button>
+        </NuxtLink>
+        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
+          <button @click="closeNav">
+            {{ links[currentIndex].insideLinks[0].name }}
+          </button>
+        </NuxtLink>
+        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
+          <button @click="closeNav">
+            {{ links[currentIndex].insideLinks[0].name }}
+          </button>
+        </NuxtLink>
+        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
+          <button @click="closeNav">
+            {{ links[currentIndex].insideLinks[0].name }}
           </button>
         </NuxtLink>
       </div>
@@ -236,9 +248,9 @@ export default {
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
   background: #b4f2cb;
-  position: fixed;
+  position: absolute;
   top: 120px;
-  width: 100vw;
+  width: 100%;
   height: 500px;
   left: 100%;
 

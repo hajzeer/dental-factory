@@ -52,7 +52,7 @@
     <div class="desktop__buttons">
       <NuxtLink to="contact">
         <button class="contact__button-inner">
-          <img class="inner__image" src="/calender.png" />
+          <img class="inner__image" src="/calender.svg" />
           <span>
             Umów się
           </span>
@@ -60,7 +60,7 @@
       </NuxtLink>
       <NuxtLink to="online">
         <button class="contact__button-inner">
-          <img class="inner__image" src="/phone.png" />
+          <img class="inner__image" src="/phone.svg" />
           Konsulatacje on-line
         </button>
       </NuxtLink>
@@ -468,8 +468,10 @@ button {
 }
 
 .inner__image {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .logo {

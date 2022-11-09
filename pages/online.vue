@@ -80,16 +80,22 @@ p {
 
 .info__div {
   @media (min-width: 1024px) {
-    width: 80%;
-    position: relative;
-    left: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     font-size: 30px;
     h3 {
       font-size: 35px;
-      margin: 50px 0 0 80px !important;
+      margin: 50px 190px 0 80px !important;
+      align-self: flex-end;
+      text-align: right;
     }
     p {
-      margin: 25px 0 40px 80px !important;
+      margin: 25px 190px 40px 80px !important;
+      align-self: flex-end;
+      text-align: right;
     }
   }
 }

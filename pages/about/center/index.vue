@@ -29,8 +29,21 @@
           </p>
         </div>
 
-        <div class="info__div">
-          <div></div>
+        <div class="info__div__numbers" v-if="loading">
+          <div v-for="(item, index) in infoNumbers">
+            <h2 v-if="index === 2">
+              {{ specialist.data.catalogue.children[0].children.length }}
+            </h2>
+            <h2 v-else>{{ item.number }}</h2>
+            <div>
+              <p>{{ item.text }}</p>
+            </div>
+          </div>
+        </div>
+        <div v-else>
+          <p>
+            POCZEKAJ, LICZYMY PACJĘTÓW :)
+          </p>
         </div>
         <h2 class="page__title__smaller">
           W trosce o Twój <br />
@@ -66,7 +79,7 @@
                   Dowiedz się jak wygląda <br />
                   pierwsza wizyta
                 </p>
-                <img src="/path 25.svg" />
+                <img src="/Path 25.svg" />
               </button>
             </NuxtLink>
             <NuxtLink class="links" to="/price/mediraty">
@@ -75,7 +88,7 @@
                   Poznaj szczegóły <br />
                   leczenia na raty!
                 </p>
-                <img src="/path 25.svg" />
+                <img src="/Path 25.svg" />
               </button>
             </NuxtLink>
             <p class="last__about__p mobileView">
@@ -92,6 +105,12 @@
             >Tu zaczyna się Twój zdrowy i piękny uśmiech!</span
           >
           <span class="outline"
+            >Tu zaczyna się Twój zdrowy i piękny uśmiech!</span
+          >
+          <span class="outline desktop"
+            >Tu zaczyna się Twój zdrowy i piękny uśmiech!</span
+          >
+          <span class="outline desktop"
             >Tu zaczyna się Twój zdrowy i piękny uśmiech!</span
           >
         </div>
@@ -111,8 +130,42 @@
 </template>
 
 <script>
+import { getData } from "~/lib/graph/get-data";
+
 export default {
   name: "index",
+  data() {
+    return {
+      specialist: [],
+      loading: false,
+      infoNumbers: [
+        { number: 4, text: "Nowoczesne gabinety" },
+        { number: new Date().getFullYear() - 2015, text: "Lat na rynku" },
+        { number: 5, text: "Doświadczonych lekarzy" },
+        { number: "6000+", text: "Zadowolonych pacjentów" },
+      ],
+    };
+  },
+  async fetch() {
+    this.specialist = await getData({
+      query: `query GET_ALL_CATALOGUE_ITEMS {
+        catalogue(language: "en", path: "/") {
+          children {
+            children {
+              name
+            }
+          }
+  }
+}
+`,
+    });
+    if (this.specialist) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    console.log(this.specialist);
+  },
 };
 </script>
 
@@ -203,6 +256,7 @@ h2 {
 
   @media (min-width: 1024px) {
     width: 30%;
+    margin-bottom: 100px;
   }
 }
 
@@ -213,6 +267,67 @@ h2 {
     width: 640px;
     margin-top: 20px;
     margin-right: 100px;
+  }
+}
+
+.info__div__numbers {
+  background: #041b8d;
+  color: #ffffff !important;
+
+  padding-bottom: 30px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 65px;
+      font-weight: 600;
+      position: relative;
+      left: 20px;
+      top: 40px;
+    }
+
+    div {
+      border: 3px solid #ffffff;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    padding-top: 0;
+    margin-bottom: 50px;
+
+    div {
+      width: 50%;
+
+      h2 {
+        position: relative;
+        left: 65px;
+        top: 50px;
+        font-size: 80px;
+      }
+
+      div {
+        width: 600px;
+        font-size: 25px;
+      }
+    }
   }
 }
 
@@ -318,12 +433,20 @@ p {
   width: 100%;
   height: 50px;
   overflow: hidden;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 50px;
+  }
 }
 
 .carousel__content {
   height: 100%;
   display: flex;
   animation: scrolling 10s linear infinite;
+
+  @media (min-width: 1024px) {
+    animation: scrollingDesktop 5s linear infinite;
+  }
 }
 
 @keyframes scrolling {
@@ -332,6 +455,15 @@ p {
   }
   100% {
     transform: translateX(-280vw);
+  }
+}
+
+@keyframes scrollingDesktop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-72vw);
   }
 }
 
@@ -351,6 +483,10 @@ p {
   font-weight: 900;
   font-size: 30px;
   text-transform: uppercase;
+
+  @media (min-width: 1024px) {
+    width: 72vw;
+  }
 }
 
 .info__div {
@@ -367,7 +503,7 @@ p {
     margin-top: 40px;
     font-size: 100px;
     line-height: 110px;
-    margin-left: 100px;
+    margin-left: 120px;
   }
 }
 
@@ -377,13 +513,14 @@ p {
     margin-top: 40px;
     font-size: 70px;
     line-height: 75px;
-    margin-left: 90px;
+    margin-left: 120px;
   }
 }
 
 .last__about__p {
   @media (min-width: 1024px) {
     width: 80%;
+    margin-bottom: 100px;
   }
 }
 
@@ -397,6 +534,12 @@ p {
 
 .mobileView {
   @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.desktop {
+  @media (max-width: 1024px) {
     display: none;
   }
 }

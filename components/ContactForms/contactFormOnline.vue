@@ -24,27 +24,37 @@
       </div>
       <textarea placeholder="Preferowana data i cel" v-model="message" />
       <div class="num__mail__div">
-        <input
-          class="attach__input"
-          type="file"
-          name="file"
-          @change="createFile"
-          accept="image/*"
-        />
-        <input
-          class="attach__input"
-          type="file"
-          name="file"
-          @change="createFile"
-          accept="image/*"
-        />
-        <input
-          class="attach__input"
-          type="file"
-          name="file"
-          @change="createFile"
-          accept="image/*"
-        />
+        <label class="attach__input">
+          {{ fileName }}
+          <input
+            type="file"
+            name="file"
+            @change="createFile"
+            accept="image/*"
+          />
+        </label>
+
+        <label class="attach__input">
+          {{ fileName }}
+
+          <input
+            type="file"
+            name="file"
+            @change="createFile"
+            accept="image/*"
+          />
+        </label>
+
+        <label class="attach__input">
+          {{ fileName }}
+
+          <input
+            type="file"
+            name="file"
+            @change="createFile"
+            accept="image/*"
+          />
+        </label>
       </div>
 
       <button class="submit__button" @click.prevent="send">
@@ -65,6 +75,7 @@ export default {
       phoneNumber: "",
       message: "",
       file: "",
+      fileName: "Wgraj plik",
       item: {
         image: null,
         imageUrl: null,
@@ -76,6 +87,7 @@ export default {
     async createFile(e) {
       const file = e.target.files[0];
       this.item.image = file;
+      this.fileName = this.item.image.name;
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = (e) => {
@@ -158,26 +170,27 @@ export default {
     border: 2px solid #041b8d;
     border-radius: 10px;
     color: #041b8d !important;
+    cursor: pointer;
+    font-family: Termina;
+    font-weight: 900;
+    padding: 6px 10px;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      border: 3px solid #041b8d;
+      transform: scale(1.05);
+    }
 
     @media (min-width: 1024px) {
-      width: 200px !important;
+      width: 100% !important;
     }
 
-    &::-webkit-file-upload-button {
-      visibility: hidden;
-    }
+    input {
+      display: none;
 
-    &::before {
-      content: "Wgraj plik";
-      color: #041b8d;
-      display: inline-block;
-      padding: 6px 10px;
-      outline: none;
-      white-space: nowrap;
-      -webkit-user-select: none;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 12pt;
+      &::-webkit-file-upload-button {
+        display: none;
+      }
     }
   }
 
@@ -265,6 +278,12 @@ export default {
   border: 1px solid #000000;
   font-size: 18px;
   color: #000000;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (min-width: 1024px) {
     width: 250px;

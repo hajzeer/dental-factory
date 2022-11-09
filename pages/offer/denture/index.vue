@@ -30,7 +30,10 @@
             <h2>Wszystko co musisz wiedzieć o protezach</h2>
           </div>
           <p>
-            Kiedy wykonujemy protezy zębowe? <br />
+            <span>
+              Kiedy wykonujemy protezy zębowe?
+            </span>
+            <br />
             Protezy będą najlepszym rozwiązaniem, jeśli brakuje Ci wielu zębów,
             a także kiedy:
           </p>
@@ -45,10 +48,13 @@
               ~ szukasz ekonomicznych rozwiązań
             </li>
           </ul>
-          <p>
-            Jakie są korzyści ze stosowania protez zębowych?
-          </p>
+
           <ul>
+            <li>
+              <span>
+                Jakie są korzyści ze stosowania protez zębowych?
+              </span>
+            </li>
             <li>
               ~ naśladują naturalne zęby
             </li>

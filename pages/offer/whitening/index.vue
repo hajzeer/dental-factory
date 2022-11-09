@@ -3,7 +3,10 @@
     <div class="title__nav__div"><p>Leczenie / Wybielanie zębów</p></div>
     <div class="container__inner">
       <div class="inner">
-        <h2 class="page__title">Wybielanie zębów WE WROCŁAWIU</h2>
+        <h2 class="page__title">
+          Wybielanie zębów <br />
+          WE WROCŁAWIU
+        </h2>
         <div class="first__div">
           <img src="/whitening1.png" />
 

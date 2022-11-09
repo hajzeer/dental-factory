@@ -314,7 +314,7 @@ export default {
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: row-reverse;
-    width: 72%;
+    width: 71.5%;
     gap: 20px;
   }
 }
@@ -341,8 +341,9 @@ export default {
   @media (min-width: 1024px) {
     width: 250px;
     align-self: flex-end;
-    margin-right: 200px;
     margin-top: 30px;
+    position: relative;
+    right: 14.5%;
   }
 }
 </style>

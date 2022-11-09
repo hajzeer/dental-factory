@@ -181,6 +181,12 @@ export default {
   border: 1px solid #000000;
   font-size: 18px;
   color: #000000;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media (min-width: 1024px) {
     width: 250px;

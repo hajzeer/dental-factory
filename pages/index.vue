@@ -246,6 +246,7 @@ export default {
   margin: 20px;
 
   @media (min-width: 1024px) {
+    margin-top: 100px;
     font-size: 70px;
     line-height: 72px;
   }
@@ -434,7 +435,8 @@ a {
     font-size: 30px;
     line-height: 35px;
     padding: 5px 20px;
-    margin: 0;
+    margin-top: 80px;
+    margin-bottom: 10px;
 
     color: #000000;
   }
@@ -519,7 +521,7 @@ a {
   margin-bottom: 30px !important;
 
   @media (min-width: 1024px) {
-    margin-bottom: 80px !important;
+    margin-bottom: 0 !important;
   }
 }
 </style>

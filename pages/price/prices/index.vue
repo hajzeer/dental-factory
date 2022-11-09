@@ -2,7 +2,7 @@
   <div>
     <div class="title__nav__div"><p>Cennik / Cennik</p></div>
     <div class="container__inner">
-      <h2>CENNIK</h2>
+      <h1 class="page__title">CENNIK</h1>
       <p class="prices__paragraph__head">
         Poniżej znajdziesz ceny najczęstszych zabiegów w Dental Factory. Cennik
         ma charakter orientacyjny. Z pełnym cennikiem i kosztami leczenia
@@ -362,6 +362,9 @@
             indywidualnie i indywidualnie dobieramy najskuteczniejszą metodę.
           </p>
         </div>
+        <h1 class="aestetic__title">
+          MEDYCYNA ESTETYCZNA
+        </h1>
         <div class="info__div__outer">
           <h2>
             Botoks, likwidacja zmarszczek

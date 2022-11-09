@@ -30,12 +30,18 @@
           </h2>
           <NuxtLink class="links" to="/about/start">
             <button class="active__button">
-              <p>Dowiedz się jak wygląda pierwsza wizyta</p>
+              <p>
+                Dowiedz się jak wygląda <br />
+                pierwsza wizyta
+              </p>
             </button>
           </NuxtLink>
           <NuxtLink class="links" to="/contact">
             <button class="active__button">
-              <p>Umów się na termin pierwszej wizyty</p>
+              <p>
+                Umów się na termin <br />
+                pierwszej wizyty
+              </p>
             </button>
           </NuxtLink>
         </div>

@@ -1,8 +1,11 @@
 <template>
   <header class="container">
-    <button class="active__button contact">
-      <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
-    </button>
+    <a href="tel:+48-691-81-84-88">
+      <button class="active__button contact">
+        <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
+      </button>
+    </a>
+
     <div>
       <NuxtLink to="/">
         <img class="logo" src="/logo.png" alt="logo" />

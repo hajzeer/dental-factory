@@ -12,12 +12,13 @@
         estetyczną.
       </p>
     </div>
-    <div class="team__div">
-      <div v-for="item in specialist.data.catalogue.children">
+    <div class="team__div" v-if="loading">
+      <div v-for="item in specialist">
         <img :src="item.components[2].content.images[0].url" />
         <p>{{ item.name }}</p>
       </div>
     </div>
+    <div v-else><p>NASI SPECJALIŚCI JUŻ DO CIEBIE IDĄ :)</p></div>
   </div>
 </template>
 
@@ -33,7 +34,7 @@ export default {
     };
   },
   async fetch() {
-    this.specialist = await getData({
+    const data = await getData({
       query: `query GET_ALL_CATALOGUE_ITEMS {
                 catalogue(language: "en", path: "/specialists") {
             children {
@@ -68,12 +69,10 @@ export default {
 }
 `,
     });
-    if (this.specialist) {
+    this.specialist = data.data.catalogue.children;
+    if (this.specialist !== null) {
       this.loading = true;
     }
-  },
-  mounted() {
-    console.log(this.specialist);
   },
 };
 </script>

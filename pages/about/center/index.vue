@@ -32,7 +32,7 @@
         <div class="info__div__numbers" v-if="loading">
           <div v-for="(item, index) in infoNumbers">
             <h2 v-if="index === 2">
-              {{ specialist.data.catalogue.children[0].children.length }}
+              {{ specialist.children[0].children.length }}
             </h2>
             <h2 v-else>{{ item.number }}</h2>
             <div>
@@ -147,7 +147,7 @@ export default {
     };
   },
   async fetch() {
-    this.specialist = await getData({
+    const data = await getData({
       query: `query GET_ALL_CATALOGUE_ITEMS {
         catalogue(language: "en", path: "/") {
           children {
@@ -159,12 +159,10 @@ export default {
 }
 `,
     });
-    if (this.specialist) {
+    this.specialist = data.data.catalogue;
+    if (this.specialist !== null) {
       this.loading = true;
     }
-  },
-  mounted() {
-    console.log(this.specialist);
   },
 };
 </script>

@@ -281,6 +281,7 @@ h2 {
       width: 95%;
       font-size: 65px;
       font-weight: 600;
+      position: relative;
       top: 40px;
 
       @media (min-width: 1480px) {

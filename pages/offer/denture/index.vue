@@ -294,7 +294,6 @@
           </ul>
         </div>
       </div>
-      <img src="/whitening2.png" />
     </div>
   </div>
 </template>

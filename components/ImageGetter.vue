@@ -67,8 +67,12 @@ export default {
     flex-direction: row;
     margin-left: 20px;
     height: 300px;
-    width: 90%;
+    width: 95%;
     gap: 20px;
+
+    @media (min-width: 1024px) {
+      width: 100%;
+    }
 
     img {
       width: 250px;

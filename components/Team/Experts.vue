@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div class="title__nav__div"><p>O nas / Zespół</p></div>
     <div class="container__inner">
-      <h2 class="page__title">Nasz zespół</h2>
+      <h2 class="page__title">Nasi Eksperci</h2>
       <p>
         Najważniejsi są ludzie. To oni sprawiają, że wizyta u nas daje Ci powody
         do uśmiechu! Sebastian Burdeński dentysta, założyciel Dental Factory
@@ -124,7 +123,6 @@ export default {
     }
 
     @media (min-width: 1024px) {
-      width: 40%;
     }
   }
 
@@ -133,12 +131,9 @@ export default {
     font-size: 25px;
     position: relative;
     align-self: flex-start;
+    bottom: 150px;
     left: 20px;
-    color: #000000;
-
-    @media (min-width: 1024px) {
-      align-self: center;
-    }
+    color: #b4f2cb;
   }
 }
 

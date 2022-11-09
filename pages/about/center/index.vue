@@ -278,11 +278,14 @@ h2 {
     align-items: center;
 
     h2 {
+      width: 95%;
       font-size: 65px;
       font-weight: 600;
-      position: relative;
-      left: 20px;
       top: 40px;
+
+      @media (min-width: 1480px) {
+        margin-left: 100px;
+      }
     }
 
     div {
@@ -307,7 +310,7 @@ h2 {
 
       h2 {
         position: relative;
-        left: 65px;
+        left: 100px;
         top: 50px;
         font-size: 80px;
       }

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="title__nav__div"><p>O nas / Zespół</p></div>
     <div class="container__inner">
       <h2 class="page__title">Nasz zespół</h2>
       <p>

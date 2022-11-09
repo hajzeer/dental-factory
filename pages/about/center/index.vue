@@ -115,16 +115,7 @@
           >
         </div>
       </div>
-      <div>
-        <h2>Nasz zespół</h2>
-        <p>
-          <span
-            >Najważniejsi są ludzie. To oni sprawiają, że wizyta u nas daje Ci
-            powody do uśmiechu!</span
-          >
-        </p>
-        <div></div>
-      </div>
+      <Team />
     </div>
   </div>
 </template>

@@ -87,21 +87,6 @@ export default {
       dataGoogle: [],
     };
   },
-  async fetch() {
-    const resIg = await fetch(
-      `https://graph.instagram.com/me?fields=id,username&access_token=${process.env.IG_KEY}`
-    );
-    const dataIg = await resIg.json();
-
-    const resGoogle = await fetch(
-      `https://mybusiness.googleapis.com/v4/accounts/16766770178064265042/locations/ChIJY7o4ymTCD0cRcCJ4rEgtx0U/reviews`
-    );
-    const dataGoogle = await resGoogle.json();
-
-    this.dataIg = dataIg;
-    this.dataGoogle = dataGoogle;
-    console.log(this.dataGoogle);
-  },
   methods: {
     grownFirst: function () {
       this.grown(this.$refs.image1, this.$refs.image2, this.$refs.image3, 1);

@@ -12,6 +12,7 @@
       :visible="visible"
       :links="links"
       @indexCurrent="handleButton"
+      @close="closeNav"
     />
     <div class="desktop__nav__div" ref="second__div">
       <div ref="inner__div" v-if="currentIndex !== null">

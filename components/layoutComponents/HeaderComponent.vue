@@ -121,7 +121,7 @@ export default {
             { name: "Leczenie próchnicy", slug: "/offer/dental-caries" },
             { name: "Higienizacja", slug: "/offer/hygiene" },
             { name: "Szyny relaksacyjne", slug: "/offer/dental-guard" },
-            { name: "RTG o tomografia zębów", slug: "/offer/rtg-tomography" },
+            { name: "RTG i tomografia zębów", slug: "/offer/rtg-tomography" },
             { name: "Medycyna estetyczna", slug: "/offer/aesthetic-medicine" },
           ],
           visibility: false,

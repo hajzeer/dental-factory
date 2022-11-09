@@ -373,6 +373,7 @@
           </li>
         </ul>
       </div>
+      <Experts path="/specjalizacje/medytacja-estetyczna" />
     </div>
   </div>
 </template>
@@ -386,6 +387,7 @@ export default {
     return {
       visibleFirst: true,
       visibleSecond: true,
+      path: "",
     };
   },
   methods: {

@@ -1,0 +1,240 @@
+<template>
+  <div class="experts__container">
+    <h2>Nasi eksperci</h2>
+    <p>
+      Najważniejsi są ludzie. To oni sprawiają, że wizyta u nas daje Ci powody
+      do uśmiechu! Leczymy tak, jak sami chcielibyśmy być leczeni. To sprawia,
+      że pacjenci do nas wracają.
+    </p>
+    <div v-if="moreThan">
+      second
+      <!--              <div><img /></div>-->
+      <!--              <div>-->
+      <!--                <h3></h3>-->
+      <!--                <p></p>-->
+      <!--                <p></p>-->
+      <!--              </div>-->
+    </div>
+    <div
+      class="single__person"
+      v-else
+      v-for="item in specialist.components[0].content.items"
+    >
+      <div>
+        <div class="inner__div">
+          <img :src="item.components[2].content.images[0].url" />
+          <div>
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.components[1].content.text }}</p>
+            <p v-for="text in item.components[0].content.plainText">
+              {{ text }}
+            </p>
+          </div>
+        </div>
+
+        <div class="property__class">
+          <div
+            v-for="property in item.components[3].content.sections[0]
+              .properties"
+          >
+            <h2>{{ property.key }}</h2>
+            <div>
+              <p>{{ property.value }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { simplyFetchFromGraph } from "~/lib/graph";
+
+export default {
+  name: "experts",
+  props: {
+    path: {
+      type: String,
+    },
+  },
+  data() {
+    return {
+      loading: false,
+      specialist: [],
+      moreThan: false,
+    };
+  },
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query GET_ALL_CATALOGUE_ITEMS($specPath: String!)  {
+                catalogue(language: "en", path: $specPath) {
+                name
+            ...on Folder {
+              components {
+                content {
+                  ...on ItemRelationsContent {
+                    items {
+                      name
+
+                      components{
+                        content {
+                           ...on SingleLineContent {
+                    text
+                  }
+                  ...on ImageContent {
+                    images {
+                      url
+                    }
+                  }
+                \t...on PropertiesTableContent {
+                    sections {
+                      properties {
+                       value
+                        key
+                      }
+                    }
+                  }
+                  ...on RichTextContent {
+                    plainText
+                  }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+  \t\t\t\t\t}
+            }
+
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+    this.specialist = data.data.catalogue;
+    this.moreThan = this.specialist.components[0].content.items.length > 1;
+    if (this.specialist !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    console.log(this.path);
+
+    if (this.loading) {
+      console.log(this.specialist);
+    }
+  },
+};
+</script>
+
+<style scoped lang="scss">
+.experts__container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-family: Termina;
+    font-size: 40px;
+    align-self: flex-start;
+  }
+
+  h3 {
+    font-family: Termina;
+    font-size: 25px;
+    align-self: flex-start;
+  }
+
+  p {
+    font-family: Termina;
+    font-weight: 600;
+  }
+}
+
+.single__person {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    border-radius: 25px;
+    border: 2px solid #000000;
+  }
+}
+
+.property__class {
+  color: #041b8d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 95%;
+    font-size: 18px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      width: 95%;
+      font-size: 65px;
+      font-weight: 600;
+      position: relative;
+      text-align: left;
+      left: 20px;
+      top: 50px !important;
+      margin: 0;
+    }
+
+    div {
+      border: 2px solid #041b8d;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      width: 50%;
+
+      h2 {
+        left: 170px;
+      }
+    }
+  }
+}
+
+.inner__div {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 35%;
+      margin-right: 80px !important;
+    }
+
+    p {
+      width: 70%;
+    }
+    h2 {
+    }
+  }
+}
+</style>

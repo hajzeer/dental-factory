@@ -204,8 +204,8 @@ export default {
 
 .hero__image {
   position: relative;
-  background-image: url("~assets/heroImage.png");
-  background-position: center;
+  background-image: url("~assets/about_1.png");
+  background-position: 0 20%;
   background-size: cover;
   width: 90%;
   height: 285px;
@@ -228,7 +228,7 @@ export default {
 
   @media (min-width: 1024px) {
     width: 50%;
-    height: 550px;
+    height: 600px;
     top: 40px;
   }
 }

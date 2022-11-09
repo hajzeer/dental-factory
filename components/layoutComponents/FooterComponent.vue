@@ -23,10 +23,11 @@
         <div>
           <h2 class="social__title">Dołącz do nas na instagramie</h2>
         </div>
+        <ImageGetter />
       </div>
       <contact-form />
       <div class="rastr__image">
-        <img alt="rastr image" src="/rastrFooter.png" />
+        <img alt="rastr image" src="/rastrFooter.jpg" />
       </div>
     </div>
     <div class="finisher__container">
@@ -252,6 +253,7 @@ h2 {
   height: 80px;
   border-radius: 0 0 12px 12px;
   background: transparent;
+  position: relative;
 
   img {
     border-radius: 0 0 12px 12px;
@@ -267,9 +269,13 @@ h2 {
       border-radius: 0 0 12px 12px;
       z-index: -1;
       width: 100%;
-      height: 400px;
-      position: relative;
-      top: -100px;
+      position: absolute;
+      top: -650px;
+    }
+  }
+  @media (min-width: 1480px) {
+    img {
+      top: -950px;
     }
   }
 }

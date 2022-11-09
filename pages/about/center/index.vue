@@ -271,7 +271,7 @@ h2 {
   align-items: center;
 
   div {
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

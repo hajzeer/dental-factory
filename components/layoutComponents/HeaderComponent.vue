@@ -1,11 +1,11 @@
 <template>
   <header class="container">
     <button class="active__button contact">
-      <img class="contact__btn" src="contactbtn.png" alt="contact button" />
+      <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
     </button>
     <div>
       <NuxtLink to="/">
-        <img class="logo" src="logo.png" alt="logo" />
+        <img class="logo" src="/logo.png" alt="logo" />
       </NuxtLink>
     </div>
     <NavBarDesktop

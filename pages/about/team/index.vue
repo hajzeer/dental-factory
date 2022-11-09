@@ -12,8 +12,8 @@
         estetyczną.
       </p>
     </div>
-    <div v-for="item in specialist.data.catalogue.children" class="team__div">
-      <div>
+    <div class="team__div">
+      <div v-for="item in specialist.data.catalogue.children">
         <img :src="item.components[2].content.images[0].url" />
         <p>{{ item.name }}</p>
       </div>
@@ -86,12 +86,23 @@ export default {
   justify-content: center;
   align-items: center;
 
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
   div {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: 1024px) {
+      width: 40% !important;
+    }
   }
 
   img {
@@ -111,6 +122,9 @@ export default {
       z-index: -1;
       background: rgba(0, 0, 0, 0.1);
       border-radius: 12px;
+    }
+
+    @media (min-width: 1024px) {
     }
   }
 
@@ -132,6 +146,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .title__nav__div {

@@ -262,7 +262,7 @@ h2 {
 .info__div__numbers {
   background: #041b8d;
   color: #ffffff !important;
-
+  width: 100%;
   padding-bottom: 30px;
   padding-top: 10px;
   display: flex;
@@ -271,7 +271,7 @@ h2 {
   align-items: center;
 
   div {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -175,6 +175,9 @@ export default {
     font-weight: 900;
     padding: 6px 10px;
     transition: all 0.3s ease-out;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     &:hover {
       border: 3px solid #041b8d;

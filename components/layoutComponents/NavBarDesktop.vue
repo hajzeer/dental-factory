@@ -57,6 +57,7 @@ export default {
   @media (max-width: 1024px) {
     display: none;
   }
+  flex-grow: 10;
 
   width: 700px;
   height: auto;

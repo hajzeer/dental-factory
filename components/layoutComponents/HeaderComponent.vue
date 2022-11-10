@@ -5,7 +5,6 @@
         <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
       </button>
     </a>
-
     <div>
       <NuxtLink to="/">
         <img class="logo" src="/logo.png" alt="logo" />
@@ -358,6 +357,7 @@ export default {
     align-items: center;
     width: 150px;
     margin-right: 60px;
+    flex-grow: 1;
   }
 }
 
@@ -483,6 +483,7 @@ button {
 
   @media (min-width: 1024px) {
     width: 180px;
+    flex-grow: 1;
     margin-left: 40px;
   }
 }

@@ -348,7 +348,7 @@ a {
 }
 
 .info__p {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   font-family: Termina;
   text-transform: uppercase;

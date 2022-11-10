@@ -118,6 +118,7 @@
           </p>
         </div>
       </div>
+      <Experts path="/specjalizacje/higienizacja" />
     </div>
   </div>
 </template>

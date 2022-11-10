@@ -120,6 +120,7 @@
           </p>
         </div>
       </div>
+      <Experts path="/specjalizacje/leczenie-kanalowe" />
     </div>
   </div>
 </template>

@@ -65,9 +65,8 @@ export default {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
     height: 300px;
-    width: 95%;
+    width: 100%;
     gap: 20px;
 
     @media (min-width: 1024px) {
@@ -75,6 +74,7 @@ export default {
     }
 
     img {
+      margin-left: 20px;
       width: 250px;
       height: 250px;
       transition: all 0.3s ease-out;

@@ -185,6 +185,7 @@
           </div>
         </div>
       </div>
+      <Experts path="/specjalizacje/ortodoncja" />
     </div>
   </div>
 </template>

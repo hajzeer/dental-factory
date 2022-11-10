@@ -6,44 +6,57 @@
       do uśmiechu! Leczymy tak, jak sami chcielibyśmy być leczeni. To sprawia,
       że pacjenci do nas wracają.
     </p>
-    <div v-if="moreThan">
-      second
-      <!--              <div><img /></div>-->
-      <!--              <div>-->
-      <!--                <h3></h3>-->
-      <!--                <p></p>-->
-      <!--                <p></p>-->
-      <!--              </div>-->
-    </div>
-    <div
-      class="single__person"
-      v-else
-      v-for="item in specialist.components[0].content.items"
-    >
-      <div>
-        <div class="inner__div">
+    <div v-if="loading">
+      <div v-if="moreThan" class="many__md">
+        <div v-for="item in specialist.components[0].content.items">
           <img :src="item.components[2].content.images[0].url" />
           <div>
             <h3>{{ item.name }}</h3>
-            <p>{{ item.components[1].content.text }}</p>
-            <p v-for="text in item.components[0].content.plainText">
-              {{ text }}
+            <p>
+              {{ item.components[1].content.text }}
             </p>
           </div>
         </div>
-
-        <div class="property__class">
-          <div
-            v-for="property in item.components[3].content.sections[0]
-              .properties"
-          >
-            <h2>{{ property.key }}</h2>
+      </div>
+      <div
+        class="single__person"
+        v-else
+        v-for="item in specialist.components[0].content.items"
+      >
+        <div>
+          <div class="inner__div">
+            <img :src="item.components[2].content.images[0].url" />
             <div>
-              <p>{{ property.value }}</p>
+              <h3>{{ item.name }}</h3>
+              <p v-if="item.components[1].content">
+                {{ item.components[1].content.text }}
+              </p>
+              <div v-if="item.components[0].content">
+                <p v-for="text in item.components[0].content.plainText">
+                  {{ text }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="property__class" v-if="item.components[3].content">
+            <div
+              v-for="property in item.components[3].content.sections[0]
+                .properties"
+            >
+              <h2>{{ property.key }}</h2>
+              <div>
+                <p>{{ property.value }}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div v-else>
+      <p>
+        Nasi eksperci zaraz tu będą
+      </p>
     </div>
   </div>
 </template>
@@ -120,8 +133,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.path);
-
     if (this.loading) {
       console.log(this.specialist);
     }
@@ -136,6 +147,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  div {
+    width: 100%;
+  }
 
   h2 {
     font-family: Termina;
@@ -152,6 +167,59 @@ export default {
   p {
     font-family: Termina;
     font-weight: 600;
+  }
+}
+
+.many__md {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start !important;
+    gap: 300px;
+  }
+
+  div {
+    width: 100%;
+
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      width: 30%;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 25px;
+      border: 2px solid #000000;
+    }
+
+    div {
+      margin: 0;
+      @media (min-width: 1024px) {
+        width: 100%;
+      }
+
+      h3 {
+        width: 80%;
+        align-self: flex-start;
+        margin: 0 !important;
+      }
+
+      p {
+        align-self: flex-start;
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -213,6 +281,10 @@ export default {
 
       h2 {
         left: 170px;
+
+        @media (min-width: 1480px) {
+          margin-left: 100px;
+        }
       }
     }
   }

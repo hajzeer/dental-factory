@@ -294,6 +294,7 @@
           </ul>
         </div>
       </div>
+      <Experts path="/specjalizacje/protezy-zebowe" />
     </div>
   </div>
 </template>

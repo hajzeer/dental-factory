@@ -15,7 +15,10 @@
     <div class="team__div" v-if="loading">
       <div v-for="item in specialist">
         <img :src="item.components[2].content.images[0].url" />
-        <p>{{ item.name }}</p>
+        <h2>{{ item.name }}</h2>
+        <p v-if="item.components[1].content">
+          {{ item.components[1].content.text }}
+        </p>
       </div>
     </div>
     <div v-else><p>NASI SPECJALIŚCI JUŻ DO CIEBIE IDĄ :)</p></div>
@@ -89,6 +92,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
 
@@ -100,7 +104,7 @@ export default {
     align-items: center;
 
     @media (min-width: 1024px) {
-      width: 40% !important;
+      width: 30% !important;
     }
   }
 
@@ -124,20 +128,22 @@ export default {
     }
 
     @media (min-width: 1024px) {
-      width: 40%;
+    }
+  }
+
+  h2 {
+    @media (min-width: 1024px) {
     }
   }
 
   p {
     width: 50%;
-    font-size: 25px;
+    font-size: 15px;
     position: relative;
     align-self: flex-start;
-    left: 20px;
     color: #000000;
 
     @media (min-width: 1024px) {
-      align-self: center;
     }
   }
 }

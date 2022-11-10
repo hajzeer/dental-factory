@@ -78,6 +78,7 @@
           </p>
         </div>
       </div>
+      <Experts path="/specjalizacje/licowki-porcelanowe" />
     </div>
   </div>
 </template>

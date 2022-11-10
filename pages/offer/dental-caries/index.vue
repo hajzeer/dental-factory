@@ -261,6 +261,7 @@
           </p>
         </div>
       </div>
+      <Experts path="/specjalizacje/leczenie-pruchnicy" />
     </div>
   </div>
 </template>

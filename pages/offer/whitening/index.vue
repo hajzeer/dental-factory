@@ -204,6 +204,7 @@
           </div>
         </div>
       </div>
+      <Experts path="/specjalizacje/wybielanie-zebow" />
     </div>
   </div>
 </template>

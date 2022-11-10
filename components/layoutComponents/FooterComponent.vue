@@ -19,6 +19,11 @@
           @mouseleave="smallerThird"
         />
       </div>
+      <reviewsLoader
+        :items="dataGoogle"
+        reviewsName="w Google"
+        href="https://g.page/dentalfactory?share"
+      />
       <div>
         <div>
           <h2 class="social__title">Dołącz do nas na instagramie</h2>
@@ -77,15 +82,38 @@
 <script>
 import gsap from "gsap";
 import ContactForm from "~/components/ContactForms/contactForm";
+import reviewsLoader from "~/components/reviewsLoader";
 
 const url = ``;
 export default {
   name: "FooterComponents",
-  components: { ContactForm },
+  components: { reviewsLoader, ContactForm },
   data() {
     return {
       dataIg: [],
-      dataGoogle: [],
+      dataGoogle: [
+        {
+          name: "Kasia R.",
+          stars: "*****",
+          description:
+            "“Fantastyczne miejsce :) Profesjonalizm, uśmiech i życzliwość na każdym kroku. Doceniam za piękne wnętrze i muzę w tle, ale przede wszystkim za mega wysoki poziom usług. Polecam każdemu. \n" +
+            "Bez stresu i bólu, chce się tu wracać:)”",
+        },
+        {
+          name: "Krysia R.",
+          stars: "*****",
+          description:
+            "“Fantastyczne miejsce :) Profesjonalizm, uśmiech i życzliwość na każdym kroku. Doceniam za piękne wnętrze i muzę w tle, ale przede wszystkim za mega wysoki poziom usług. Polecam każdemu. \n" +
+            "Bez stresu i bólu, chce się tu wracać:)”",
+        },
+        {
+          name: "Misia R.",
+          stars: "*****",
+          description:
+            "“Fantastyczne miejsce :) Profesjonalizm, uśmiech i życzliwość na każdym kroku. Doceniam za piękne wnętrze i muzę w tle, ale przede wszystkim za mega wysoki poziom usług. Polecam każdemu. \n" +
+            "Bez stresu i bólu, chce się tu wracać:)”",
+        },
+      ],
     };
   },
   methods: {

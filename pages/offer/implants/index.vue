@@ -131,6 +131,7 @@
           </p>
         </div>
       </div>
+      <Experts path="/specjalizacje/implany-i-chirurgia" />
     </div>
   </div>
 </template>

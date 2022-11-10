@@ -46,6 +46,7 @@
           </p>
         </div>
       </div>
+      <Experts path="/specjalizacje/szyny-relaksacyjne" />
     </div>
   </div>
 </template>

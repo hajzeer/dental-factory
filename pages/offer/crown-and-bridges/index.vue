@@ -176,7 +176,7 @@
         </div>
         <div class="info__div__outer">
           <div class="info__div__inner">
-            <h2>Wybierz najlepsze korony i mosty najlepsze dla Ciebie!</h2>
+            <h2>Wybierz najlepsze korony i mosty dla Ciebie!</h2>
           </div>
           <p>
             <span>
@@ -295,6 +295,7 @@
           </ul>
         </div>
       </div>
+      <Experts path="/specjalizacje/korony-i-mosty" />
     </div>
   </div>
 </template>

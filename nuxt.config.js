@@ -19,6 +19,9 @@ export default {
   },
   env: {
     CRYSTALLIZE_TENANT_IDENTIFIER: process.env.CRYSTALLIZE_TENANT_IDENTIFIER,
+    EMAIL_USER: process.env.EMAIL_USER,
+    EMAIL_PASS: process.env.EMAIL_PASS,
+    EMAIL_TO: process.env.EMAIL_TO,
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -58,7 +61,7 @@ export default {
       "nuxt-mail",
       {
         message: {
-          to: "hithere.development@gmial.com",
+          to: "hithere.development@gmail.com",
         },
         smtp: {
           service: "gmail",

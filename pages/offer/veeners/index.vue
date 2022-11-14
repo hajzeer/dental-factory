@@ -6,16 +6,15 @@
       <div class="first__div">
         <img src="/veener1.png" />
         <p>
-          Poznaj nową markę na mapie Wrocławia! Zapraszamy do miejsca
-          stworzonego z myślą o profesjonalnym, bezpiecznym wybielaniu zębów i
-          profilaktyce.
+          Chcesz poprawić estetykę swojego uśmiechu? Licówki porcelanowe,
+          przyklejone na przednią powierzchnię zębów, nadają im zupełnie nowy
+          kształt i kolor.
           <br />
           <br />
-          White by Dental Factory wyposażyliśmy w nowoczesny sprzęt -
-          ultrawygodne fotele stomatologiczne, najbezpieczniejszą lampę do
-          wybielania zębów PrevDent, piaskarkę EMS AIRFLOW i delikatne skalery
-          do usuwania kamienia nazębnego w technologii NO-PAIN firmy EMS, lidera
-          profilaktyki stomatologicznej.
+          Licówki porcelanowe to bardzo cienkie płatki porcelany. Dzięki nim
+          możemy zapewnić Ci słynny "holywoodzki uśmiech". Są doskonałym
+          rozwiązaniem dla pacjentów, którzy mają zdrowe zęby, ale są
+          niezadowoleni z ich wyglądu.
         </p>
       </div>
 

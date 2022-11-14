@@ -211,13 +211,23 @@ export default {
 
     div {
       border: 2px solid #ffffff;
-      padding: 20px;
       border-radius: 20px;
+      height: 550px;
+      width: 87vw;
+
+      h2 {
+        padding: 0 20px;
+      }
+
+      p {
+        padding: 0 20px;
+      }
     }
 
     .stars {
       position: relative;
-      left: 55%;
+      left: 45%;
+      top: 20px;
       font-size: 45px;
       font-weight: 600;
       align-self: flex-end;
@@ -228,6 +238,9 @@ export default {
     @media (min-width: 1024px) {
       div {
         padding: 50px;
+        height: 500px;
+        width: 70vw;
+        margin-left: 50px;
       }
       p {
         width: 60%;
@@ -278,7 +291,7 @@ a {
   }
 
   @media (min-width: 1024px) {
-    width: 300px;
+    width: 400px;
     align-self: flex-end;
     position: absolute;
     right: 14.5%;

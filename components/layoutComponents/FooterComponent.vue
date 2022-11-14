@@ -93,25 +93,36 @@ export default {
       dataIg: [],
       dataGoogle: [
         {
-          name: "Kasia R.",
+          name: "Anna P.",
           stars: "*****",
           description:
-            "“Fantastyczne miejsce :) Profesjonalizm, uśmiech i życzliwość na każdym kroku. Doceniam za piękne wnętrze i muzę w tle, ale przede wszystkim za mega wysoki poziom usług. Polecam każdemu. \n" +
-            "Bez stresu i bólu, chce się tu wracać:)”",
+            "“Jestem pod dużym wrażeniem profesjonalnego podejścia oraz ogromnej wiedzy fachowej Pana Doktora. Wszystko to sprawiło, że czułam się bardzo komfortowo. Polecam- 100% profesjonalizm.”",
         },
         {
-          name: "Krysia R.",
+          name: "Aleksander T.",
           stars: "*****",
           description:
-            "“Fantastyczne miejsce :) Profesjonalizm, uśmiech i życzliwość na każdym kroku. Doceniam za piękne wnętrze i muzę w tle, ale przede wszystkim za mega wysoki poziom usług. Polecam każdemu. \n" +
-            "Bez stresu i bólu, chce się tu wracać:)”",
+            "“Do gabinetu Dental Factory trafiłem kierując się opiniami w Internecie.\n" +
+            "Efekty uzyskane po poprawieniu „estetyki uśmiechu” przerosły moje najśmielsze oczekiwania.\n" +
+            "Pełny profesjonalizm i nowoczesność.\n" +
+            "Z czystym sumieniem mogę polecić fachowość i świetne oko pana doktora Burdeńskiego.”",
         },
         {
-          name: "Misia R.",
+          name: "Monika K.",
           stars: "*****",
           description:
-            "“Fantastyczne miejsce :) Profesjonalizm, uśmiech i życzliwość na każdym kroku. Doceniam za piękne wnętrze i muzę w tle, ale przede wszystkim za mega wysoki poziom usług. Polecam każdemu. \n" +
-            "Bez stresu i bólu, chce się tu wracać:)”",
+            "“Pan dr Sebastian to profesjonalny , zaangażowany i bardzo sympatyczny stomatolog. Wizyty zawsze przebiegają w miłej atmosferze. Za każdym razem czuje się spokojna i w pełni zaopiekowana:) Panie asystentki bardzo miłe i kulturalne. :)  Serdecznie dziękuję za dotychczasowe wizyty i do zobaczenia na kolejnych:)\n”",
+        },
+        {
+          name: "Andrzej K.",
+          stars: "*****",
+          description: `"W Dental Factory przeszedłem pełne leczenie. Wizyt było sporo, plan leczenia precyzyjny, żadnych niespodzianek. Zarówno z leczenia jak i z nowego usmiechu jestem bardzo zadowolony. Pozdrowienia dla całego zespołu Doktora Sebastiana!"`,
+        },
+        {
+          name: "Kajetan K.",
+          stars: "*****",
+          description: `"Na leczenie do Sebastiana dojeżdżałem ponad 100 km, ale zawsze warto było. Począwszy od pierwszej higienizacji, przez leczenie.  Aż do estetyki. Jesteście the best!
+"`,
         },
       ],
     };

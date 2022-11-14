@@ -79,7 +79,6 @@ export default {
       item: {
         image: null,
         imageUrl: null,
-        imageSplited: "",
       },
     };
   },
@@ -89,14 +88,12 @@ export default {
       this.item.image = file;
       this.fileName = this.item.image.name;
       const reader = new FileReader();
-      reader.readAsDataURL(file);
+      reader.readAsArrayBuffer(file);
       reader.onload = (e) => {
         this.item.imageUrl = e.target.result;
       };
     },
     send() {
-      this.item.imageSplited = this.item.imageUrl.split("base64,")[1];
-
       this.$axios.$post(`/mail/send`, {
         subject:
           "Konsultacja online: " +
@@ -123,7 +120,7 @@ export default {
         attachments: [
           {
             filename: this.item.image.name,
-            path: this.item.imageUrl,
+            contents: Buffer.from(this.item.imageUrl, "base64"),
           },
         ],
       });
@@ -132,7 +129,8 @@ export default {
       this.surname = "";
       this.phoneNumber = "";
       this.message = "";
-      this.item.imageUrl = null;
+      this.item.imageUrl = "";
+      this.fileName = "Wgraj plik";
     },
   },
 };

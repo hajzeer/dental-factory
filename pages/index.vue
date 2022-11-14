@@ -1,13 +1,8 @@
 <template>
   <div>
     <div class="hero__div">
-      <div class="hero__image">
-        <h2 class="hero__image__title">
-          Twój uśmiech, <br />
-          twoje story.
-        </h2>
-      </div>
-      <div>
+      <div class="hero__image"></div>
+      <div class="hero__image__inner">
         <h2 class="hero__image__title-desktop">
           Twój uśmiech, <br />
           twoje story.
@@ -186,7 +181,7 @@ export default {
 <style scoped lang="scss">
 .hero__div {
   width: 100%;
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,6 +194,12 @@ export default {
     align-items: flex-start;
     height: 80vh;
     border-bottom: none;
+  }
+}
+
+.hero__image__inner {
+  @media (min-width: 1024px) {
+    align-self: center;
   }
 }
 
@@ -385,34 +386,17 @@ a {
   }
 }
 
-.hero__image__title {
+.hero__image__title-desktop {
   font-family: iskra, sans-serif;
   font-style: normal;
-  font-weight: 900;
-  font-size: 35px;
-  line-height: 35px;
-  right: 15px;
-  top: 25%;
   text-align: right;
-  color: #ffffff;
-
-  position: relative;
-
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 35px;
+  margin: 0 0 20px 0 !important;
   @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.hero__image__title-desktop {
-  color: #000000;
-  display: none;
-  @media (min-width: 1024px) {
-    display: block;
-    font-family: iskra, sans-serif;
-
-    font-style: normal;
-    font-weight: 900;
     font-size: 90px;
+    line-height: 95px;
   }
 }
 

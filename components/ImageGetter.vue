@@ -78,6 +78,8 @@ export default {
       width: 250px;
       height: 250px;
       transition: all 0.3s ease-out;
+      border-radius: 20px;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.1);

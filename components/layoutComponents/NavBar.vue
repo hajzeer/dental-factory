@@ -1,35 +1,64 @@
 <template>
   <div class="navbar">
-    <transition-group v-if="visible" appear tag="ul" name="links" @before-enter="beforeEnter" @enter="enter">
+    <transition-group
+      v-if="visible"
+      appear
+      tag="ul"
+      name="links"
+      @before-enter="beforeEnter"
+      @enter="enter"
+    >
       <li v-for="(link, index) in links" :key="link.name" :data-index="index">
-        <button v-if="!link.slug" ref="butt" class="navi" @click="openDiv(index)">{{ link.name }}<span ref="span"
-                                                                                                       class="more__span"/>
+        <button
+          v-if="!link.slug"
+          ref="butt"
+          class="navi"
+          @click="openDiv(index)"
+        >
+          {{ link.name }}<span ref="span" class="more__span" />
         </button>
         <div v-if="!link.slug" class="more__div" ref="second__div">
-          <button @click="openDiv(index)" class="close__button" v-if="index === currentIndex"/>
+          <button
+            @click="openDiv(index)"
+            class="close__button"
+            v-if="index === currentIndex"
+          >
+            <img src="/Path%2052.svg" />
+          </button>
           <ul>
-            <li v-for="inside in link.insideLinks" v-if="index === currentIndex">
+            <li
+              v-for="inside in link.insideLinks"
+              v-if="index === currentIndex"
+            >
               <NuxtLink :to="inside.slug">
-                <button class="navi" @click="$emit('close')">{{ inside.name }}</button>
+                <button class="navi" @click="$emit('close')">
+                  {{ inside.name }}
+                </button>
               </NuxtLink>
             </li>
           </ul>
         </div>
 
-        <NuxtLink v-if="link.slug" @click="$emit('handleClick')" :to="link.slug">
-          <button class="navi" ref="butt" @click="$emit('close')">{{ link.name }}</button>
+        <NuxtLink
+          v-if="link.slug"
+          @click="$emit('handleClick')"
+          :to="link.slug"
+        >
+          <button class="navi" ref="butt" @click="$emit('close')">
+            {{ link.name }}
+          </button>
         </NuxtLink>
       </li>
     </transition-group>
     <NuxtLink to="contact">
-      <button class="contact__button">Umów się</button>
+      <button class="contact__button" @click="$emit('close')">Umów się</button>
     </NuxtLink>
   </div>
 </template>
 
 <script>
-import gsap from 'gsap'
-import {ref} from "vue";
+import gsap from "gsap";
+import { ref } from "vue";
 
 export default {
   props: {
@@ -45,54 +74,53 @@ export default {
       vis: false,
 
       currentIndex: null,
-    }
+    };
   },
   setup() {
-
-
     const beforeEnter = (el) => {
       el.style.opacity = 0;
-      el.style.transform = 'translateY(-60px) translateX(-60px)'
-    }
+      el.style.transform = "translateY(-60px) translateX(-60px)";
+    };
     const enter = (el, done) => {
-      gsap.to(el, {opacity: 1, y: "0", x: "0", duration: .5, onComplete: done, delay: el.dataset.index * 0.15})
-    }
+      gsap.to(el, {
+        opacity: 1,
+        y: "0",
+        x: "0",
+        duration: 0.5,
+        onComplete: done,
+        delay: el.dataset.index * 0.15,
+      });
+    };
 
-
-    return {beforeEnter, enter}
+    return { beforeEnter, enter };
   },
   methods: {
     openDiv(el) {
-      const tl = gsap.timeline()
+      const tl = gsap.timeline();
       if (this.vis === false) {
-        tl.to(this.$refs.butt, {opacity: 0, duration: .2})
-        tl.to(this.$refs.butt, {display: "none", duration: .2})
-        tl.to(this.$refs.second__div, {left: 0, duration: .4})
+        tl.to(this.$refs.butt, { opacity: 0, duration: 0.2 });
+        tl.to(this.$refs.butt, { display: "none", duration: 0.2 });
+        tl.to(this.$refs.second__div, { left: 0, duration: 0.4 });
 
         //.fromTo(this.$refs.open__more__text, { opacity: 0},{ opacity: 1, duration: .5})
-        this.vis = true
-        this.currentIndex = el
-
+        this.vis = true;
+        this.currentIndex = el;
       } else {
-        tl.to(this.$refs.second__div, {left: "100%", duration: .4})
-        tl.to(this.$refs.butt, {display: "flex", duration: .2})
-        tl.to(this.$refs.butt, {opacity: 1, duration: .2})
+        tl.to(this.$refs.second__div, { left: "100%", duration: 0.4 });
+        tl.to(this.$refs.butt, { display: "flex", duration: 0.2 });
+        tl.to(this.$refs.butt, { opacity: 1, duration: 0.2 });
 
-
-        this.vis = false
-
-
+        this.vis = false;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
-
 .navbar {
   width: 100%;
-  height: 68vh;
+  height: 71vh;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -118,7 +146,7 @@ export default {
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: #ffffff;
     border: none;
@@ -140,11 +168,9 @@ export default {
   justify-content: flex-start;
   position: absolute;
   left: 100%;
-  bottom: 180px;
+  bottom: 240px;
   z-index: 9999999;
   background: #000000;
-
-
 }
 
 .close__button {
@@ -153,31 +179,7 @@ export default {
   width: 20px;
   height: 20px;
   position: relative;
-  margin-bottom: 30px;
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: #FFFFFF;
-    position: absolute;
-    top: 2px;
-    border-radius: 25px;
-    left: 20px;
-    rotate: 20deg;
-  }
-
-  &::before {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: #FFFFFF;
-    position: absolute;
-    left: 20px;
-    border-radius: 25px;
-    bottom: 0px;
-    rotate: -20deg;
-  }
+  margin-bottom: 15px;
 }
 
 .more__span {
@@ -189,7 +191,7 @@ export default {
   border-radius: 25px;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 3px;
     height: 25px;
@@ -209,14 +211,12 @@ export default {
   left: 50%;
   margin-left: -44%;
   width: 88%;
-  height: 65px;
-  background: #B4F2CB;
+  height: 50px;
+  background: #b4f2cb;
   border-radius: 8px;
   border: 1px solid #000000;
   font-size: 25px;
   color: #000000;
-
-
+  cursor: pointer;
 }
-
 </style>

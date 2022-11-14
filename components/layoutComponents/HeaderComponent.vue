@@ -332,6 +332,7 @@ export default {
 }
 
 .contact {
+  z-index: -1 !important;
   @media (min-width: 1024px) {
     display: none;
   }

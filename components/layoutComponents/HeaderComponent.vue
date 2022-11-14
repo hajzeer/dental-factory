@@ -18,7 +18,7 @@
     />
     <div class="desktop__nav__div" ref="second__div">
       <div ref="inner__div" v-if="currentIndex !== null">
-        <p>sprawdź również:</p>
+        <p>ZOBACZ:</p>
         <NuxtLink
           :to="item.slug"
           v-for="item in links[currentIndex].insideLinks"
@@ -27,29 +27,6 @@
         </NuxtLink>
 
         <button class="close__button" @click="closeNav"></button>
-      </div>
-      <div ref="inner__div" v-if="currentIndex === 2 && currentIndex !== null">
-        <p>NAJPOPULARNIEJSZE:</p>
-        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
-          <button @click="closeNav">
-            {{ links[currentIndex].insideLinks[0].name }}
-          </button>
-        </NuxtLink>
-        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
-          <button @click="closeNav">
-            {{ links[currentIndex].insideLinks[0].name }}
-          </button>
-        </NuxtLink>
-        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
-          <button @click="closeNav">
-            {{ links[currentIndex].insideLinks[0].name }}
-          </button>
-        </NuxtLink>
-        <NuxtLink :to="links[currentIndex].insideLinks[0].slug">
-          <button @click="closeNav">
-            {{ links[currentIndex].insideLinks[0].name }}
-          </button>
-        </NuxtLink>
       </div>
     </div>
     <div class="desktop__buttons">

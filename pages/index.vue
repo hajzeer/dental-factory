@@ -119,43 +119,42 @@
           najlepszych materiałów i technologii. Zobacz, w czym możemy Ci pomóc!
         </p>
         <div class="grid__outer">
-          <p class="grid__inner">
-            <span>Wybielanie zębów</span>
-          </p>
-
-          <p class="grid__inner">
-            <span>Licówki</span>
-          </p>
-          <p class="grid__inner">
-            <span>Protezy</span>
-          </p>
-          <p class="grid__inner">
-            <span>Korony i mosty</span>
-          </p>
-          <p class="grid__inner">
-            <span>Implanty i chirurgia</span>
-          </p>
-          <p class="grid__inner">
-            <span>Ortodoncja</span>
-          </p>
-          <p class="grid__inner">
-            <span>Leczenie kanałowe</span>
-          </p>
-          <p class="grid__inner">
-            <span>Leczenie próchnicy</span>
-          </p>
-          <p class="grid__inner">
-            <span>Higienizacja</span>
-          </p>
-          <p class="grid__inner">
-            <span>Leczenie bruksizmu</span>
-          </p>
-          <p class="grid__inner">
-            <span>RTG i tomografia</span>
-          </p>
-          <p class="grid__inner">
-            <span>medycyna estetyczna</span>
-          </p>
+          <NuxtLink to="/offer/whitening">
+            <button class="grid__inner">Wybielanie zębów</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/veeners">
+            <button class="grid__inner">Licówki</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/denture">
+            <button class="grid__inner">Protezy</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/crown-and-bridges">
+            <button class="grid__inner">Korony i mosty</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/implants">
+            <button class="grid__inner">Implanty i chirurgia</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/ortodontics">
+            <button class="grid__inner">Ortodoncja</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/root-canal-therapy">
+            <button class="grid__inner">Leczenie kanałowe</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/dental-caries">
+            <button class="grid__inner">Leczenie próchnicy</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/hygiene">
+            <button class="grid__inner">Higienizacja</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/dental-guard">
+            <button class="grid__inner">Leczenie bruksizmu</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/rtg-tomography">
+            <button class="grid__inner">RTG i tomografia</button>
+          </NuxtLink>
+          <NuxtLink to="/offer/aesthetic-medicine">
+            <button class="grid__inner">Medycyna estetyczna</button>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -474,6 +473,10 @@ a {
 .grid__inner {
   margin: 0;
   border: 1px solid #000000;
+  font-family: Termina;
+  font-weight: 600;
+  font-size: 15px;
+  background: transparent;
   border-radius: 20px;
   height: 60px;
   width: 100%;
@@ -482,13 +485,12 @@ a {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 
   &:hover {
     background: #000000;
 
-    span {
-      color: #ffffff !important;
-    }
+    color: #ffffff !important;
   }
 
   span {

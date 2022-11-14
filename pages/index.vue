@@ -389,10 +389,9 @@ a {
 .hero__image__title-desktop {
   font-family: iskra, sans-serif;
   font-style: normal;
-  text-align: right;
   font-weight: 900;
   font-size: 40px;
-  line-height: 35px;
+  line-height: 40px;
   margin: 0 0 20px 0 !important;
   @media (min-width: 1024px) {
     font-size: 90px;

@@ -26,7 +26,9 @@
             towarzyszących. Na pierwszą wizytę prosimy przyjść 15 minut
             wcześniej, aby wypełnić niezbędną dokumentację.
           </p>
-          <button><p>Umów się na wizytę</p></button>
+          <NuxtLink to="/appointment">
+            <button><p>Umów się na wizytę</p></button>
+          </NuxtLink>
         </div>
       </div>
 

@@ -94,6 +94,7 @@ export default {
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 600;
+    margin: 3px 0;
     font-size: 12px;
     text-decoration: none;
     color: #000000;

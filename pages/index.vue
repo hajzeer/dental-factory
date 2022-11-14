@@ -5,7 +5,7 @@
       <div class="hero__image__inner">
         <h2 class="hero__image__title-desktop">
           Twój uśmiech, <br />
-          twoje story.
+          Twoje story.
         </h2>
         <NuxtLink to="/online">
           <button class="active__button">
@@ -458,11 +458,20 @@ a {
   }
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .grid__outer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   padding: 10px;
+
+  a {
+    text-decoration: none !important;
+    color: #000000;
+  }
 
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -486,6 +495,8 @@ a {
   align-items: center;
   transition: all 0.3s ease-out;
   cursor: pointer;
+  text-decoration: none;
+  color: #000000;
 
   &:hover {
     background: #000000;

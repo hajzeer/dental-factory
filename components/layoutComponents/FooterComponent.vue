@@ -197,7 +197,7 @@ h2 {
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 600;
-
+    cursor: pointer;
     width: 100%;
     height: 40px;
     background: #000;

@@ -36,7 +36,7 @@
               </p>
             </button>
           </NuxtLink>
-          <NuxtLink class="links" to="/contact">
+          <NuxtLink class="links" to="/appointment">
             <button class="active__button">
               <p>
                 Umów się na termin <br />

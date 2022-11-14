@@ -18,7 +18,7 @@
     />
     <div class="desktop__nav__div" ref="second__div">
       <div ref="inner__div" v-if="currentIndex !== null">
-        <p>ZOBACZ:</p>
+        <p>Nasza oferta:</p>
         <NuxtLink
           :to="item.slug"
           v-for="item in links[currentIndex].insideLinks"
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="desktop__buttons">
-      <NuxtLink to="contact">
+      <NuxtLink to="appointment">
         <button class="contact__button-inner">
           <img class="inner__image" src="/calender.svg" />
           <span>
@@ -38,12 +38,14 @@
           </span>
         </button>
       </NuxtLink>
-      <NuxtLink to="online">
+      <a href="tel:+48-691-818-488">
         <button class="contact__button-inner">
           <img class="inner__image" src="/phone.svg" />
-          Konsulatacje on-line
+          <span>
+            Zadzwoń
+          </span>
         </button>
-      </NuxtLink>
+      </a>
     </div>
     <button
       class="active__button nav__button"
@@ -73,7 +75,6 @@ export default {
     return {
       visible: false,
       links: [
-        { name: "Strona główna", slug: "/" },
         {
           name: "O nas",
           insideLinks: [
@@ -443,8 +444,9 @@ button {
     border: none;
 
     span {
+      width: 100%;
       position: relative;
-      left: 18%;
+      right: 15px;
     }
   }
 }

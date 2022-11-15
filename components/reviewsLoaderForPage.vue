@@ -217,7 +217,7 @@ export default {
     div {
       border: 2px solid #000000;
       border-radius: 20px;
-      height: 550px;
+      height: 600px;
       width: 87vw;
 
       h2 {

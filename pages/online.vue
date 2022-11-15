@@ -79,6 +79,10 @@ p {
 }
 
 .info__div {
+  h3 {
+    margin: 20px;
+  }
+
   @media (min-width: 1024px) {
     width: 100%;
     display: flex;

@@ -36,13 +36,18 @@
   }
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+}
+
 
 .active__button {
   font-family: termina, sans-serif;
   font-style: normal;
   font-weight: 600;
   width: 90%;
-  height: 40px;
+  height: 55px;
   background: #b4f2cb;
   border-radius: 8px;
   border: 1px solid #000000;
@@ -98,9 +103,8 @@
     height: 60px;
     font-size: 15px;
     justify-self: center;
-    width: 60%;
-    position: relative;
-    left: 40px;
+    width: 80%;
+
     top: 20px;
     text-decoration: none;
   }
@@ -260,7 +264,7 @@ h3 {
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 30px;
     padding: 5px 0;
     position: relative;
     top: 5px;
@@ -323,6 +327,7 @@ ul {
   img {
     border-radius: 20px;
     border: 2px solid #000000;
+    align-self: center;
   }
 
   p {
@@ -333,7 +338,7 @@ ul {
     }
 
     span {
-      font-size: 15px;
+      font-size: 20px;
 
       @media (min-width: 1024px) {
         font-size: 18px;
@@ -430,7 +435,9 @@ ul {
   font-weight: 800;
   border: none;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 20px;
+  margin: 20px 0 0 20px;
+
   width: 70%;
   text-align: left;
 
@@ -447,7 +454,9 @@ ul {
   width: 40px;
   height: 40px;
   position: relative;
-  right: 50px;
+  margin: 20px 0 0 0;
+
+  right: 40px;
 
   &::after {
     background: #FFFFFF;

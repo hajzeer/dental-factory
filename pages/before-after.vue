@@ -16,7 +16,7 @@
 
           <NuxtLink :to="item.slug">
             <button class="active__button">
-              <p>{{ item.name }}</p>
+              <p>Dowiedz się więcej <br />o {{ item.button }}</p>
             </button>
           </NuxtLink>
         </div>
@@ -37,73 +37,82 @@ export default {
           description:
             "Pan Damian zgłosił się do nas w celu poprawy uśmiechu i wykonania licówek porcelanowych na górne zęby. Zależało mu na naturalnym, estetycznym uśmiechu. Wykonaliśmy licówki porcelanowe na górne siekacze (jedynki i dwójki) i trójki.",
           slug: "/offer/veeners",
-          timing: "",
+          timing: "Czas leczenia: 2 wizyty | 7 dni",
           src: `/przed-po/1.jpeg`,
+          button: "licówkach porcelanowych",
         },
         {
           name: "Wybielanie zębów",
           description:
             "Dzięki połączeniu bezpiecznego wybielania PrevDent w gabinecie z nakładkami do domowego wybielania udało nam się rozjaśnić zęby o 5 odcieni.",
           slug: "/offer/whitening",
-          timing: "Czas leczenia: 2 wizyty | 7 dni",
+          timing:
+            "Czas leczenia: Wybielanie w gabinecie - 1 wizyta, wybielanie nakładkowe na noc 7 dni\n",
           src: `/przed-po/2.jpg`,
+          button: "wybielaniu zębów",
         },
         {
           name: "Korony i mosty porcelanowe",
           description:
             "Pacjent przyszedł do nas w celu odbudowy brakujących bocznych zębów i poprawy estetyki przedniej części uśmiechu. Wypełniliśmy wszystkie braki zębowe za pomocą estetycznych koron i mostów porcelanowych.",
           slug: "/offer/crown-and-bridges",
-          timing:
-            "Czas leczenia: Wybielanie w gabinecie - 1 wizyta, wybielanie nakładkowe na noc 7 dni",
+          timing: "Czas leczenia: 3 wizyty | 14 dni",
           src: `/przed-po/3.webp`,
+          button: "koronach i mostach",
         },
         {
           name: "Mosty porcelanowe",
           description:
             "Pan Jarosław przyszedł do nas z zamiarem wymiany starych mostów wykonanych w dolnej szczęce i mocno zniszczonymi sąsiednimi zębami. Wykonaliśmy leczenie kanałowe części zębów, wyleczyliśmy ubytki próchnicowe, a w kolejnym etapie założyliśmy porcelanowy most. Odbudował on brakujące zęby, wzmocnił zęby po leczeniu kanałowym i poprawił estetykę uśmiechu:)",
           slug: "/offer/crown-and-bridges",
-          timing: "Czas leczenia: 3 wizyty | 14 dni",
+          timing: "Czas leczenia protetycznego: 10 dni | 2 wizyty",
           src: `/przed-po/4.webp`,
+          button: "mostach porcelanowych",
         },
         {
           name: "Mosty cyrkonowe",
           description:
             "Pani Beata zgłosiła się do nas, ponieważ była niezadowolona z wyglądu swojego uśmiechu. Miała założone stare mosty na boczne zęby, które były nieszczelne i wymagały wymiany. Zależało jej też na tym, aby przywrócić wygląd zębów jak za dawnych lat. Wykonaliśmy mosty cyrkonowe, które idealnie naśladują własne zęby.",
           slug: "/offer/crown-and-bridges",
-          timing: "Czas leczenia protetycznego: 10 dni | 2 wizyty",
+          timing: "Czas leczenia: 2 wizyty | 10 dni",
           src: `/przed-po/5.webp`,
+          button: "mostach cyrkonowych",
         },
         {
           name: "Licówki porcelanowe",
           description:
             "Pani Marta miała wykonywane licówki kompozytowe wiele lat temu. Zależało jej na tym, aby nowy uśmiech był piękny i biały. Po wysłuchaniu oczekiwań i kompleksowej diagnostyce zdecydowaliśmy się na wykonanie licówek porcelanowych.",
           slug: "/offer/veeners",
-          timing: "Czas leczenia: 2 wizyty | 10 dni",
+          timing: "Czas leczenia protetycznego: 10 dni | 2 wizyty",
           src: `/przed-po/6.webp`,
+          button: "licówkach porcelanowych",
         },
         {
           name: "Bonding kompozytowy",
           description:
             "Pani Asi zależało na poprawie wyglądu przednich zębów, ale nie chciała ich szlifować pod licówki porcelanowe. Zaproponowaliśmy bonding kompozytowy, dzięki któremu bez szlifowania szkliwa mogliśmy delikatnie rozjaśnić zęby, wyrównać je i poprawić ich kształt.",
           slug: "/offer/denture",
-          timing: "Czas leczenia protetycznego: 10 dni | 2 wizyty\n",
+          timing: "Czas leczenia: 1 wizyta",
           src: `/przed-po/7.webp`,
+          button: "bondingu kompozytowym",
         },
         {
           name: "Piaskowanie zębów",
           description:
             "Pan Bartosz zgłosił się do nas w celu usunięcia przebarwień po kawie i herbacie. Usunęliśmy kamień, wykonaliśmy piaskowanie delikatną metodą EMS AIR-FLOW, dobraliśmy zestaw do domowej pielęgnacji i zaplanowaliśmy terminy przyszłych wizyt kontrolnych i higienizacyjnych.",
           slug: "/offer/hygiene",
-          timing: "Czas leczenia: 1 wizyta",
+          timing: "Czas leczenia: 1 wizyta | 45 minut",
           src: `/przed-po/8.jpg`,
+          button: "piaskowaniu zębów",
         },
         {
           name: "Mosty cyrkonowe",
           description:
             "Pani Ania borykała się z problemem mocno startych zębów przednich i brakiem zębów bocznych, który utrudniał jej gryzienie. Nie podobał się jej też kolor i kształt zębów. Zdecydowaliśmy się na wykonanie mostu cyrkonowego. Ze względu na brak bocznych zębów wzmocniliśmy go szklanym popdarciem. Pozostałe zęby odbudowaliśmy bondingiem. Po zakończonym leczeniu Pani Ania w końcu mogła cieszyć się pięknym uśmiechem, który od zawsze był jej marzeniem.",
           slug: "/offer/crown-and-bridges",
-          timing: "Czas leczenia: 1 wizyta | 45 minut",
+          timing: "Czas leczenia protetycznego: 3 wizyty",
           src: `/przed-po/9.jpg`,
+          button: "mostach cyrkonowych",
         },
       ],
     };
@@ -233,11 +242,15 @@ p {
   }
 }
 
+a {
+  width: 90%;
+}
+
 .active__button {
   font-family: termina, sans-serif;
   font-style: normal;
   font-weight: 600;
-  height: 40px;
+  height: 55px;
   width: 100%;
   background: #b4f2cb;
   border-radius: 8px;

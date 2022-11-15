@@ -22,7 +22,7 @@
             </a>
           </div>
           <div>
-            <p>Godziny otwarcia:</p>
+            <p class="hours">Godziny otwarcia:</p>
             <ul>
               <li><span>Pn</span> 9:00 - 20:00</li>
               <li><span>Wt</span> 9:00 - 20:00</li>
@@ -150,8 +150,12 @@ p {
       list-style: none;
       padding: 0;
       font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
 
       li {
+        width: 60%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -259,6 +263,15 @@ p {
     a {
       font-size: 60px;
     }
+  }
+}
+
+.hours {
+  font-weight: 700;
+  font-size: 20px;
+
+  @media (min-width: 1024px) {
+    font-size: 40px !important;
   }
 }
 </style>

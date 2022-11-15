@@ -50,7 +50,7 @@
         </NuxtLink>
       </li>
     </transition-group>
-    <NuxtLink to="contact">
+    <NuxtLink to="/appointment">
       <button class="contact__button" @click="$emit('close')">Umów się</button>
     </NuxtLink>
   </div>

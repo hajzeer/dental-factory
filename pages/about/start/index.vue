@@ -26,7 +26,7 @@
             towarzyszących. Na pierwszą wizytę prosimy przyjść 15 minut
             wcześniej, aby wypełnić niezbędną dokumentację.
           </p>
-          <NuxtLink to="/appointment">
+          <NuxtLink to="/appointment" class="anchor">
             <button><p>Umów się na wizytę</p></button>
           </NuxtLink>
         </div>
@@ -142,13 +142,20 @@ a {
   text-decoration: none;
 }
 
+.anchor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 button {
   font-family: termina, sans-serif;
   font-style: normal;
   font-weight: 600;
   cursor: pointer;
   margin: 15px;
-  width: 88%;
+  width: 90%;
   height: 53px;
   background: #b4f2cb;
   border-radius: 8px;
@@ -158,7 +165,6 @@ button {
   position: relative;
   transition: all 0.2s ease-out;
   overflow: hidden;
-
   display: flex;
   flex-direction: row;
   justify-content: space-around;

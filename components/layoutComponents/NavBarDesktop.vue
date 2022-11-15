@@ -72,7 +72,7 @@ export default {
 
   ul {
     list-style: none;
-    width: 100%;
+    width: 70%;
     padding: 0;
     z-index: 1;
     display: flex;

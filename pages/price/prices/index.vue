@@ -331,37 +331,6 @@
           </p>
         </div>
       </div>
-      <div class="info__div">
-        <div class="info__div__outer">
-          <p>
-            <span>
-              Jakość i bezpieczeństwo
-            </span>
-          </p>
-          <p>
-            Proponujemy Ci wyłącznie takie zabiegi, z których sami korzystamy, i
-            z których korzystają nasi najbliżsi. Są sprawdzone i przede
-            wszystkim bezpieczne.
-          </p>
-          <p>
-            <span>
-              Długotrwały, widoczny efekt leczenia
-            </span>
-          </p>
-          <p>
-            Dzięki wieloletniemu doświadczeniu skupiamy się na tym, aby efekty
-            były widoczne jak najdłużej.
-          </p>
-          <p>
-            <span>
-              Sprawdzone protokoły leczenia
-            </span>
-          </p>
-          <p>
-            Każdy pacjent jest inny, dlatego każdy przypadek traktujemy
-            indywidualnie i indywidualnie dobieramy najskuteczniejszą metodę.
-          </p>
-        </div>
         <h1 class="aestetic__title">
           MEDYCYNA ESTETYCZNA
         </h1>
@@ -496,29 +465,7 @@
             zabieg do mezoterapii igłowej. Efekt zauważalny jest po miesiącu i
             utrzymuje się przez 6-8 miesięcy.
           </p>
-          <p>
-            Kiedy wykonujemy?
-          </p>
-          <ul>
-            <li>
-              ~ Utrata jędrności i gęstości skóry
-            </li>
-            <li>
-              ~ Pogorszenie owalu
-            </li>
-            <li>
-              ~ Wiotka skóra na podbródku
-            </li>
-            <li>
-              ~ Cienka skóra
-            </li>
-            <li>
-              ~ Drobne zmarszczki
-            </li>
-            <li>
-              ~ Lwia zmarszczka
-            </li>
-          </ul>
+
           <p>
             <span>
               CENA: 100zł/nić
@@ -556,36 +503,7 @@
             przebudowę struktury skóry uzyskujemy po wykonaniu serii 3-4
             zabiegów.
           </p>
-          <p>
-            Kiedy wykonujemy?
-          </p>
-          <ul>
-            <li>
-              - profilaktyka i leczenie starzenia się skóry
-            </li>
-            <li>
-              - fotostarzenie – skóra wiotka, przesuszona i pozbawiona
-              elastyczności
-            </li>
-            <li>
-              - korekcja drobnych zmarszczek i fałd
-            </li>
-            <li>
-              - biostymulacyjne leczenie łysienia
-            </li>
-            <li>
-              - włosy zniszczone, pozbawione blasku
-            </li>
-            <li>
-              - blizny i rozstępy
-            </li>
-            <li>
-              - melazma
-            </li>
-            <li>
-              - polecany dla osób z ryzykiem wystąpienia alergii
-            </li>
-          </ul>
+
           <p>
             <span>
               CENA: od 600zł

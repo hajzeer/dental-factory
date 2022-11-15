@@ -91,14 +91,20 @@ p {
 }
 
 .info__paragraph {
-  font-size: 30px;
-  text-align: right;
-  width: 70%;
-  margin: 40px 220px;
+  font-size: 20px;
+  margin: 30px;
+  @media (min-width: 1024px) {
+    font-size: 30px;
+
+    text-align: right;
+    width: 70%;
+    margin: 40px 220px;
+  }
 }
 
 .page__title {
   line-height: 35px;
+  margin: 30px;
   @media (min-width: 1024px) {
     width: 100%;
     font-size: 80px;

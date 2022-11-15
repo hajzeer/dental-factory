@@ -156,6 +156,11 @@ export default {
     font-family: Termina;
     font-size: 40px;
     align-self: flex-start;
+
+    @media (min-width: 1024px) {
+      font-size: 80px;
+      margin: 25px 0;
+    }
   }
 
   h3 {
@@ -167,6 +172,11 @@ export default {
   p {
     font-family: Termina;
     font-weight: 600;
+
+    @media (min-width: 1024px) {
+      width: 60%;
+      align-self: flex-start;
+    }
   }
 }
 
@@ -268,6 +278,10 @@ export default {
     div {
       border: 2px solid #041b8d;
     }
+
+    p {
+      width: 100% !important;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -298,12 +312,12 @@ export default {
     align-items: center;
 
     img {
-      width: 35%;
+      width: 50%;
       margin-right: 80px !important;
     }
 
     p {
-      width: 70%;
+      width: 80%;
     }
     h2 {
     }

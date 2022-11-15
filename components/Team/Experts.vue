@@ -204,7 +204,7 @@ img {
   @media (min-width: 1024px) {
     width: 80%;
     margin-top: 40px;
-    font-size: 80px;
+    font-size: 100px;
     line-height: 85px;
     margin-left: 50px;
   }

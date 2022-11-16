@@ -91,7 +91,7 @@ export default {
           name: "Bonding kompozytowy",
           description:
             "Pani Asi zależało na poprawie wyglądu przednich zębów, ale nie chciała ich szlifować pod licówki porcelanowe. Zaproponowaliśmy bonding kompozytowy, dzięki któremu bez szlifowania szkliwa mogliśmy delikatnie rozjaśnić zęby, wyrównać je i poprawić ich kształt.",
-          slug: "/offer/denture",
+          slug: "/offer/bonding",
           timing: "Czas leczenia: 1 wizyta",
           src: `/przed-po/7.webp`,
           button: "bondingu kompozytowym",
@@ -108,7 +108,7 @@ export default {
         {
           name: "Mosty cyrkonowe",
           description:
-            "Pani Ania borykała się z problemem mocno startych zębów przednich i brakiem zębów bocznych, który utrudniał jej gryzienie. Nie podobał się jej też kolor i kształt zębów. Zdecydowaliśmy się na wykonanie mostu cyrkonowego. Ze względu na brak bocznych zębów wzmocniliśmy go szklanym popdarciem. Pozostałe zęby odbudowaliśmy bondingiem. Po zakończonym leczeniu Pani Ania w końcu mogła cieszyć się pięknym uśmiechem, który od zawsze był jej marzeniem.",
+            "Pani Ania borykała się z problemem mocno startych zębów przednich i brakiem zębów bocznych, który utrudniał jej gryzienie. Nie podobał się jej też kolor i kształt zębów. Zdecydowaliśmy się na wykonanie mostu cyrkonowego. Ze względu na brak bocznych zębów wzmocniliśmy go szklanym podparciem. Pozostałe zęby odbudowaliśmy bondingiem. Po zakończonym leczeniu Pani Ania w końcu mogła cieszyć się pięknym uśmiechem, który od zawsze był jej marzeniem.",
           slug: "/offer/crown-and-bridges",
           timing: "Czas leczenia protetycznego: 3 wizyty",
           src: `/przed-po/9.jpg`,

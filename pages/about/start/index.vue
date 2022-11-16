@@ -8,7 +8,7 @@
           Robimy wszystko, aby wizyta u nas była dla Ciebie komfortowa i
           przyjemna!
         </p>
-        <img class="about__img" src="/start1.png" />
+        <img class="about__img" src="/offer-img/pierwsza-wizyta-2.jpg" />
       </div>
       <div class="inner__info">
         <h2 class="page__title__smaller">Umówienie wizyty</h2>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <img class="about__img__second" src="/start2.png" />
+      <img class="about__img__second" src="/offer-img/pierwsza_wizyta2.jpg" />
       <p class="about__p">
         <span>U nas możesz czuć się bezpiecznie.</span>
         <br />
@@ -72,7 +72,7 @@
         </p>
       </div>
 
-      <img class="about__img__third" src="/start3.png" />
+      <img class="about__img__third" src="/offer-img/pierwsza-wizyta-3.jpg" />
       <h2 class="page__title__smaller">Konsultacja i plan leczenia</h2>
       <p class="last__p">
         Konsultacja to czas, kiedy możemy porozmawiać o Twoich oczekiwaniach

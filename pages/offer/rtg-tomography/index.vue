@@ -5,15 +5,15 @@
       <div class="inner">
         <h2 class="page__title">RTG I TOMOGRAFIA ZĘBÓW</h2>
         <div class="first__div">
-          <img src="/4.png" />
+          <img src="/offer-img/tomografia%20-%20do%20rtg.jpg"/>
           <p>
             Dobra diagnostyka jest podstawą dalszego leczenia. W Dental Factory
             wykorzystujemy wyłącznie cyfrowe aparaty RTG, które ograniczają
             promieniowanie rentgenowskie do minimum, a jednocześnie dają bardzo
             wyraźne i precyzyjne zdjęcia. Umożliwia nam to dokładną ocenę stanu
             Twojej jamy ustnej i dobór odpowiedniego leczenia.
-            <br />
-            <br />
+            <br/>
+            <br/>
             Wszystkie zdjęcia i badania niezbędne do zaplanowania i podczas
             leczenia wykonasz u nas na miejscu.
           </p>
@@ -36,6 +36,7 @@
           <div class="info__div__inner">
             <h2>Skaner wewnątrzustny</h2>
           </div>
+          <img src="/offer-img/rtg.jpg"/>
           <p>
             Cyfrowy skan zębów pozwala nam stworzyć wirtualny model Twojego
             uśmiechu. Dzięki skanerowi obraz Twoich zębów pojawia się
@@ -49,6 +50,7 @@
           <div class="info__div__inner">
             <h2>RTG Panoramiczne</h2>
           </div>
+          <img src="/offer-img/skaner1.jpg"/>
           <p>
             Podstawowe zdjęcie przy planowaniu leczenia. Wykonujemy je każdemu
             pacjentowi co dwa lata. Pozwala na ocenę stanu kości szczęki i
@@ -60,6 +62,7 @@
           <div class="info__div__inner">
             <h2>RTG Cefalometryczne</h2>
           </div>
+
           <p>
             Zdjęcie niezbędne w ortodoncji do zaplanowania leczenia
             ortodontycznego.
@@ -69,6 +72,7 @@
           <div class="info__div__inner">
             <h2>RTG Punktowe</h2>
           </div>
+          <img src="/offer-img/skaner2.jpg"/>
           <p>
             Zdjęcia wewnątrzustne są niezbędne podczas leczenia kanałowego, do
             oceny próchnicy i szczelności wypełnień. Gabinety wyposażyliśmy w
@@ -112,17 +116,17 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleFirst === false) {
-        tl.to(this.$refs.main__text__first, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "0", duration: 0.1 })
+        tl.to(this.$refs.main__text__first, {opacity: 0, duration: 0.1})
+          .to(this.$refs.first__arrow, {rotate: "0", duration: 0.1})
           .to(this.$refs.info__div__outer__first, {
             height: "100px",
             duration: 0.1,
           })
-          .to(this.$refs.main__text__first, { display: "none", duration: 0.1 });
+          .to(this.$refs.main__text__first, {display: "none", duration: 0.1});
         this.visibleFirst = !this.visibleFirst;
       } else {
-        tl.to(this.$refs.main__text__first, { display: "block", duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "180deg", duration: 0.1 })
+        tl.to(this.$refs.main__text__first, {display: "block", duration: 0.1})
+          .to(this.$refs.first__arrow, {rotate: "180deg", duration: 0.1})
           .to(this.$refs.info__div__outer__first, {
             height: "auto",
             duration: 0.2,
@@ -140,8 +144,8 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__second, {opacity: 0, duration: 0.1})
+          .to(this.$refs.second__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__second, {
             height: "100px",
             duration: 0.2,
@@ -153,7 +157,7 @@ export default {
 
         this.visibleSecond = !this.visibleSecond;
       } else {
-        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
+        tl.to(this.$refs.second__arrow, {rotate: "180deg", duration: 0.2})
           .to(this.$refs.main__text__second, {
             display: "block",
             duration: 0.1,
@@ -162,7 +166,7 @@ export default {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__second, {opacity: 1, duration: 0.2});
         this.visibleSecond = !this.visibleSecond;
       }
     },
@@ -170,23 +174,23 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleThird === false) {
-        tl.to(this.$refs.main__text__third, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.third__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__third, {opacity: 0, duration: 0.1})
+          .to(this.$refs.third__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__third, {
             height: "100px",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__third, { display: "none", duration: 0.2 });
+          .to(this.$refs.main__text__third, {display: "none", duration: 0.2});
 
         this.visibleThird = !this.visibleThird;
       } else {
-        tl.to(this.$refs.third__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__third, { display: "block", duration: 0.1 })
+        tl.to(this.$refs.third__arrow, {rotate: "180deg", duration: 0.2})
+          .to(this.$refs.main__text__third, {display: "block", duration: 0.1})
           .to(this.$refs.info__div__outer__third, {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__third, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__third, {opacity: 1, duration: 0.2});
         this.visibleThird = !this.visibleThird;
       }
     },
@@ -194,8 +198,8 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleFourth === false) {
-        tl.to(this.$refs.main__text__fourth, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.fourth__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__fourth, {opacity: 0, duration: 0.1})
+          .to(this.$refs.fourth__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__fourth, {
             height: "100px",
             duration: 0.2,
@@ -207,7 +211,7 @@ export default {
 
         this.visibleFourth = !this.visibleFourth;
       } else {
-        tl.to(this.$refs.fourth__arrow, { rotate: "180deg", duration: 0.2 })
+        tl.to(this.$refs.fourth__arrow, {rotate: "180deg", duration: 0.2})
           .to(this.$refs.main__text__fourth, {
             display: "block",
             duration: 0.1,
@@ -216,7 +220,7 @@ export default {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__fourth, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__fourth, {opacity: 1, duration: 0.2});
         this.visibleFourth = !this.visibleFourth;
       }
     },
@@ -224,23 +228,23 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleFifth === false) {
-        tl.to(this.$refs.main__text__fifth, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.fifth__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__fifth, {opacity: 0, duration: 0.1})
+          .to(this.$refs.fifth__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__fifth, {
             height: "100px",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__fifth, { display: "none", duration: 0.2 });
+          .to(this.$refs.main__text__fifth, {display: "none", duration: 0.2});
 
         this.visibleFifth = !this.visibleFifth;
       } else {
-        tl.to(this.$refs.fifth__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__fifth, { display: "block", duration: 0.1 })
+        tl.to(this.$refs.fifth__arrow, {rotate: "180deg", duration: 0.2})
+          .to(this.$refs.main__text__fifth, {display: "block", duration: 0.1})
           .to(this.$refs.info__div__outer__fifth, {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__fifth, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__fifth, {opacity: 1, duration: 0.2});
         this.visibleFifth = !this.visibleFifth;
       }
     },
@@ -248,23 +252,23 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleSixth === false) {
-        tl.to(this.$refs.main__text__sixth, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.sixth__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__sixth, {opacity: 0, duration: 0.1})
+          .to(this.$refs.sixth__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__sixth, {
             height: "100px",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__sixth, { display: "none", duration: 0.2 });
+          .to(this.$refs.main__text__sixth, {display: "none", duration: 0.2});
 
         this.visibleSixth = !this.visibleSixth;
       } else {
-        tl.to(this.$refs.sixth__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__sixth, { display: "block", duration: 0.1 })
+        tl.to(this.$refs.sixth__arrow, {rotate: "180deg", duration: 0.2})
+          .to(this.$refs.main__text__sixth, {display: "block", duration: 0.1})
           .to(this.$refs.info__div__outer__sixth, {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__sixth, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__sixth, {opacity: 1, duration: 0.2});
         this.visibleSixth = !this.visibleSixth;
       }
     },

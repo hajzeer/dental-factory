@@ -16,7 +16,7 @@
             resekcje. Dzięki zastosowaniu znieczulenia wszystkie zabiegi
             odbywają się całkowicie bezboleśnie.
           </p>
-          <img src="/1.png" />
+          <img src="/offer-img/implanty-zebowe-wroclaw.jpg" />
         </div>
       </div>
       <div class="info__div">

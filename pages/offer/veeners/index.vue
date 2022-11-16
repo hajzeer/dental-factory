@@ -4,7 +4,7 @@
     <div class="inner">
       <h2 class="page__title">LICÓWKI PORCELANOWE WE WROCŁAWIU</h2>
       <div class="first__div">
-        <img src="/veener1.png" />
+        <img src="/offer-img/licowki-porcelanowe-1.jpg" />
         <p>
           Chcesz poprawić estetykę swojego uśmiechu? Licówki porcelanowe,
           przyklejone na przednią powierzchnię zębów, nadają im zupełnie nowy
@@ -28,7 +28,7 @@
         znieczuleniu. Następnie pobieramy wyciski i wykonujemy licówki
         tymczasowe. Nigdy nie opuścisz gabinetu „bez zębów”.
       </p>
-      <img src="/veener2.png" />
+      <img src="/offer-img/licowki-2.jpg" />
       <div class="info__div">
         <div class="info__div__outer">
           <div class="info__div__inner">
@@ -75,6 +75,7 @@
             przyjaciółmi i rodziną. Dopiero po Twojej akceptacji cementujemy na
             stałe licówki ostateczne.
           </p>
+          <img src="/offer-img/licowki-porcelanowe-3.jpg" />
         </div>
       </div>
       <Experts path="/specjalizacje/licowki-porcelanowe" />

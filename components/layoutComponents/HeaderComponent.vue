@@ -90,6 +90,7 @@ export default {
           insideLinks: [
             { name: "Wybielanie zębów", slug: "/offer/whitening" },
             { name: "Licówki porcelanowe", slug: "/offer/veeners" },
+            { name: "Bonding kompozytowy", slug: "/offer/bonding" },
             { name: "Protezy zębowe", slug: "/offer/denture" },
             { name: "Implanty i chirurgia", slug: "/offer/implants" },
             { name: "Korony i mosty", slug: "/offer/crown-and-bridges" },

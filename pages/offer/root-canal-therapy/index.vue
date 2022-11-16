@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">LECZENIE KANAŁOWE</h2>
         <div class="first__div">
-          <img src="/7.png" />
+          <img src="/offer-img/leczenie-kanalowe-1.jpg" />
           <p>
             Leczenie kanałowe pod mikroskopem jest ratunkiem dla zębów mocno
             zniszczonych i z głęboką próchnicą. Prawidłowo przeprowadzone może

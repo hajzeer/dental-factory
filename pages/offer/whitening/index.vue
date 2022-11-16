@@ -8,7 +8,9 @@
           WE WROCŁAWIU
         </h2>
         <div class="first__div">
-          <img src="/whitening1.png" />
+          <img
+            src="/offer-img/wybielanie-zebow-1.jpg%20TO%20KONIECZNIE%20.jpg"
+          />
 
           <p>
             Poznaj nową markę na mapie Wrocławia! Zapraszamy do miejsca
@@ -109,7 +111,7 @@
           </p>
         </div>
         <div class="info__div__outer">
-          <img src="/whitening2.png" />
+          <img src="/offer-img/wybielanie-zebow-3.jpg%20TO%20TEŻ.jpg" />
           <div class="info__div__inner">
             <h2>Wybierz metodę wybielania</h2>
           </div>
@@ -154,6 +156,7 @@
               CENA: 1150zł
             </span>
           </p>
+          <img src="/offer-img/wybielanie-zebow-2.jpg" />
         </div>
       </div>
       <div class="info__div">

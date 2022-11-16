@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">Higienizacja</h2>
         <div class="first__div">
-          <img src="/9.png" />
+          <img src="/offer-img/higienizacja.jpg" />
           <p>
             Doskonale wiemy, że lepiej zapobiegać, niż leczyć. Szczególną rolę
             przykładamy do regularnie wykonywanych zabiegów profilaktycznych.

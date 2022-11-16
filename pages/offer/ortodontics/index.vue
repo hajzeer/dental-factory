@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">ORTODONCJA</h2>
         <div class="first__div">
-          <img src="/6.png" />
+          <img src="/offer-img/ortodoncja-1.jpg" />
           <div>
             <ul>
               <li>
@@ -106,11 +106,13 @@
                 niewidoczny aparat ortodontyczny
               </h2>
             </div>
+
             <p>
               Marzą Ci się proste zęby, ale nie chcesz nosić stałego aparatu
               ortodontycznego? Najlepszym rozwiązaniem będą przezroczyste
               nakładki ortodontyczne Invisalign.
             </p>
+            <img src="/offer-img/ortodoncjqa-2.jpg" />
 
             <h3>
               Co zyskujesz?

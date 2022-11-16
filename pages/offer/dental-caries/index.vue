@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">LECZENIE PRÓCHNICY</h2>
         <div class="first__div">
-          <img src="/8.png" />
+          <img src="/offer-img/leczenie-prochnicy-1.jpg" />
           <p>
             Domeną stomatologii zachowawczej jest leczenie skutów próchnicy -
             najbardziej rozpowszechnionej choroby zębów. Ząb, w którym powstał
@@ -93,6 +93,7 @@
           <div class="info__div__inner">
             <h2>Poznaj metody leczenia ubytków</h2>
           </div>
+          <img src="/offer-img/leczneie-prochnicy-2.jpg" />
           <p>
             <span>
               Wypełnienia kompozytowe

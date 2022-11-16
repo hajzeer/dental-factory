@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">KORONY I MOSTY</h2>
         <div class="first__div">
-          <img src="/10.png" />
+          <img src="/offer-img/korony-1.jpg" />
 
           <p>
             Chcesz uzupełnić brakujące zęby, albo wzmocnić i poprawić wygląd
@@ -178,6 +178,7 @@
           <div class="info__div__inner">
             <h2>Wybierz najlepsze korony i mosty dla Ciebie!</h2>
           </div>
+          <img src="/offer-img/korony-cyrkonowe.jpg" />
           <p>
             <span>
               KORONY CYRKONOWE
@@ -211,7 +212,7 @@
               </span>
             </li>
           </ul>
-
+          <img src="/offer-img/korony-porcelanowe.jpg" />
           <p>
             <span>
               KORONY PORCELANOWE
@@ -243,6 +244,8 @@
               </span>
             </li>
           </ul>
+          <img src="/offer-img/mosty-adhezyjne.jpg" />
+
           <p>
             <span>
               MOSTY BEZ SZLIFOWANIA ZĘBÓW
@@ -268,6 +271,7 @@
               </span>
             </li>
           </ul>
+          <img src="/offer-img/korony-4.jpg" />
           <p>
             <span>
               MOSTY ZE SZKLANYM PODPARCIEM

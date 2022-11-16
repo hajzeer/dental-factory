@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">Protezy zębowe</h2>
         <div class="first__div">
-          <img src="/denture1.png" />
+          <img src="/offer-img/protezy-1.jpg" />
 
           <p>
             Protezy uzupełniają brakujące zęby pacjenta. Mogą być wyjmowane i
@@ -116,6 +116,7 @@
           <div class="info__div__inner">
             <h2>Wybierz protezy najlepsze dla Ciebie</h2>
           </div>
+          <img src="/offer-img/protezy-na-zatrzaskach-wroclaw.jpg" />
           <p>
             <span>
               PROTEZY NA ZATRZASKACH
@@ -158,6 +159,7 @@
               </span>
             </li>
           </ul>
+          <img src="/offer-img/protezy-elastyczne-wroclaw.jpg" />
 
           <p>
             <span>
@@ -193,6 +195,7 @@
               </span>
             </li>
           </ul>
+          <img src="/offer-img/protezy-szkieletowe-wroclaw.jpg" />
 
           <p>
             <span>
@@ -235,6 +238,7 @@
               </span>
             </li>
           </ul>
+          <img src="/offer-img/protezy-calkowite-wroclaw.jpg" />
           <p>
             <span>
               PROTEZY CAŁKOWITE
@@ -262,6 +266,7 @@
               </span>
             </li>
           </ul>
+          <img src="/offer-img/mikroprotezy-wroclaw.jpg" />
           <p>
             <span>
               MIKROPROTEZY

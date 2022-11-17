@@ -5,7 +5,7 @@
       <div class="inner">
         <h2 class="page__title">LECZENIE PRÓCHNICY</h2>
         <div class="first__div">
-          <img src="/offer-img/leczenie-prochnicy-1.jpg" />
+          <img src="/offer-img/leczenie-prochnicy-1.jpg"/>
           <p>
             Domeną stomatologii zachowawczej jest leczenie skutów próchnicy -
             najbardziej rozpowszechnionej choroby zębów. Ząb, w którym powstał
@@ -90,10 +90,15 @@
           </p>
         </div>
         <div class="info__div__outer">
-          <div class="info__div__inner">
+          <div class="info__div__inner flex__inner">
+
+            <img
+              class="dental__caries__image"
+              src="/offer-img/leczneie-prochnicy-2.jpg"
+            />
             <h2>Poznaj metody leczenia ubytków</h2>
           </div>
-          <img src="/offer-img/leczneie-prochnicy-2.jpg" />
+
           <p>
             <span>
               Wypełnienia kompozytowe
@@ -108,7 +113,7 @@
             najnowsze materiały nanokompozytowe (GC G-Aenial, Estelite Asteria,
             3M Filtek), dzięki którym wypełnienie jest nie do odróżnienia od
             własnego zęba i ma wieloletnią trwałość.
-            <br />
+            <br/>
             <span>
               CENA WYPEŁNIENIA TZW. BIAŁEJ PLOMBY: OD 280ZŁ
             </span>
@@ -178,7 +183,7 @@
             wypełnienia amalgamatowe (srebrne plomby) mają bardzo cienkie ściany
             i mikropęknięcia w szkliwie. Wykonanie inlayów chroni je przed
             złamaniem.
-            <br />
+            <br/>
             <span>
               CENA INLAYA KOMPOZYTOWEGO: 1200ZŁ
             </span>
@@ -246,14 +251,14 @@
             szkliwa. Nałożony płyn wnika w mikropory osłabionego szkliwa, zamyka
             je i tworzy izolującą barierę, która jest odporna zarówno na
             działanie kwasów z pożywienia, jak i bakterii próchnicowych.
-            <br />
+            <br/>
             <span>
               CENA: OD 400ZŁ
             </span>
           </p>
         </div>
       </div>
-      <Experts path="/specjalizacje/leczenie-pruchnicy" />
+      <Experts path="/specjalizacje/leczenie-pruchnicy"/>
     </div>
   </div>
 </template>
@@ -276,17 +281,17 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleFirst === false) {
-        tl.to(this.$refs.main__text__first, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "0", duration: 0.1 })
+        tl.to(this.$refs.main__text__first, {opacity: 0, duration: 0.1})
+          .to(this.$refs.first__arrow, {rotate: "0", duration: 0.1})
           .to(this.$refs.info__div__outer__first, {
             height: "100px",
             duration: 0.1,
           })
-          .to(this.$refs.main__text__first, { display: "none", duration: 0.1 });
+          .to(this.$refs.main__text__first, {display: "none", duration: 0.1});
         this.visibleFirst = !this.visibleFirst;
       } else {
-        tl.to(this.$refs.main__text__first, { display: "block", duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "180deg", duration: 0.1 })
+        tl.to(this.$refs.main__text__first, {display: "block", duration: 0.1})
+          .to(this.$refs.first__arrow, {rotate: "180deg", duration: 0.1})
           .to(this.$refs.info__div__outer__first, {
             height: "auto",
             duration: 0.2,
@@ -304,8 +309,8 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__second, {opacity: 0, duration: 0.1})
+          .to(this.$refs.second__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__second, {
             height: "100px",
             duration: 0.2,
@@ -317,7 +322,7 @@ export default {
 
         this.visibleSecond = !this.visibleSecond;
       } else {
-        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
+        tl.to(this.$refs.second__arrow, {rotate: "180deg", duration: 0.2})
           .to(this.$refs.main__text__second, {
             display: "block",
             duration: 0.1,
@@ -326,7 +331,7 @@ export default {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__second, {opacity: 1, duration: 0.2});
         this.visibleSecond = !this.visibleSecond;
       }
     },
@@ -334,23 +339,23 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleThird === false) {
-        tl.to(this.$refs.main__text__third, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.third__arrow, { rotate: "0", duration: 0.2 })
+        tl.to(this.$refs.main__text__third, {opacity: 0, duration: 0.1})
+          .to(this.$refs.third__arrow, {rotate: "0", duration: 0.2})
           .to(this.$refs.info__div__outer__third, {
             height: "100px",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__third, { display: "none", duration: 0.2 });
+          .to(this.$refs.main__text__third, {display: "none", duration: 0.2});
 
         this.visibleThird = !this.visibleThird;
       } else {
-        tl.to(this.$refs.third__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__third, { display: "block", duration: 0.1 })
+        tl.to(this.$refs.third__arrow, {rotate: "180deg", duration: 0.2})
+          .to(this.$refs.main__text__third, {display: "block", duration: 0.1})
           .to(this.$refs.info__div__outer__third, {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__third, { opacity: 1, duration: 0.2 });
+          .to(this.$refs.main__text__third, {opacity: 1, duration: 0.2});
         this.visibleThird = !this.visibleThird;
       }
     },

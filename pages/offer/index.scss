@@ -6,6 +6,17 @@
   justify-content: center;
   align-items: center;
 
+  .flex__inner {
+    @media (min-width: 1024px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        width: 50%;
+      }
+    }
+  }
 
   @media (min-width: 1024px) {
 
@@ -375,6 +386,14 @@ ul {
     font-size: 80px;
     line-height: 85px;
     margin-left: 150px;
+  }
+}
+
+.dental__caries__image {
+  @media (min-width: 1024px) {
+
+    width: 30% !important;
+
   }
 }
 

@@ -344,16 +344,16 @@ h2 {
   position: relative;
   top: 100px;
   width: 100%;
-  height: 300px;
-  padding-bottom: 280px;
+  height: 1000px;
+  padding-bottom: 30px;
 
   font-family: termina, sans-serif;
   font-style: normal;
 
   @media (min-width: 1024px) {
     top: 250px;
-    height: 500px;
-    padding-bottom: 100px;
+    height: 850px;
+    padding-bottom: 0;
   }
 }
 

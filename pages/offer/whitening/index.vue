@@ -241,9 +241,9 @@ export default {
         {
           title: "Jak przebiega wybielanie?",
           desc:
-            "1 KONSULTACJA I HIGIENIZACJA " +
+            "1 KONSULTACJA I HIGIENIZACJA\n " +
             "Delikatne i dokładne czyszczenie zębów z kamienia i osadów. Dopiero po higienizacji możemy dostrzec wszystkie ubytki i nieszczelne wypełnienia, które trzeba wyleczyć przed wybielaniem.\n" +
-            "2 RTG I PLAN LECZENIA " +
+            "2 RTG I PLAN LECZENIA\n " +
             "Cyfrowe, wykonywane w ciągu ułamka sekundy, z 80% mniejszym promieniowaniem. Otrzymasz od nas pełen plan i kosztorys. Nie zaskoczą Cię żadne dodatkowe koszty!\n" +
             "3 WYBIELANIE " +
             "Wybieramy metodę, która Ci najbardziej odpowiada i przystępujemy do zabiegu!:)",

@@ -19,7 +19,7 @@
     />
     <div class="desktop__nav__div" ref="second__div">
       <div ref="inner__div" v-if="currentIndex !== null">
-        <p>Nasza oferta:</p>
+        <p>ZOBACZ:</p>
         <NuxtLink
           :to="item.slug"
           v-for="item in links[currentIndex].insideLinks"

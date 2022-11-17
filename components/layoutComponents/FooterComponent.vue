@@ -45,6 +45,23 @@
               Dąbrowskiego 34/U4 <br />
               50-457, Wrocław
             </p>
+            <p class="paragraph">
+              <span>
+                Wskazówki dotyczące parkowania
+              </span>
+              <br />
+              <br />
+
+              Na osiedlu parkowanie jest dozwolone jedynie na wydzielonych
+              miejscach parkingowych przez pół godziny. Jest to spowodowane
+              uchwałą wspólnoty mieszkańców, od nas niezależną. Jeśli tam
+              parkujesz, poproś naszych pracowników o kartę parkingową.
+
+              <br />
+              <br />
+              Zalecamy parkowanie wjeżdżając od ulicy Małachowskiego lub na
+              skrzyżowaniu między ulicami Kościuszki i Pułaskiego.
+            </p>
             <a class="links" href="https://g.page/dentalfactory?share">
               <button class="active__button">
                 <p><span>Dojazd</span></p>
@@ -64,7 +81,7 @@
         </div>
       </div>
       <div class="contact__div">
-        <a href="tel:+48-691-818-488">+48 691 81 84 88</a
+        <a href="tel:+48-691-818-388">+48 69 18 18 388</a
         ><a href="mailto:kontakt@dental-factory.pl"
           >kontakt@dental-factory.pl</a
         >
@@ -364,7 +381,9 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-
+    div {
+      width: 60%;
+    }
     p {
       font-size: 20px;
     }
@@ -436,5 +455,17 @@ h2 {
 .hours {
   font-weight: 700;
   font-size: 30px !important;
+  text-align: right;
+}
+
+.paragraph {
+  font-size: 15px !important;
+  font-weight: 400;
+  margin-bottom: 30px;
+
+  span {
+    font-weight: 600;
+    font-size: 17px !important;
+  }
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="title">Opinie o nas</h2>
     <button class="prev__button" @click="changePrev">
-      <img src="/Path%2052.svg" />
+      <img src="/Path%2052.svg"/>
     </button>
     <div class="container__inner" :style="lengthList">
       <div
@@ -19,16 +19,16 @@
       </div>
     </div>
     <button class="next__button" @click="changeNext">
-      <img src="/Path%2053.svg" />
+      <img src="/Path%2053.svg"/>
     </button>
     <p class="info__p">
-      przesuń <br />
+      przesuń <br/>
       aby zobaczyć kolejne
     </p>
 
     <a :href="href" target="_blank">
       <button class="anchor__button">
-        <p>Sprawdź więcej <br />opinii {{ reviewsName }}</p>
+        <p>Sprawdź więcej <br/>opinii {{ reviewsName }}</p>
       </button>
     </a>
   </div>
@@ -73,9 +73,9 @@ export default {
     },
     lengthList() {
       if (this.items === null) {
-        return { width: 2 * 100 + "%" };
+        return {width: 2 * 100 + "%"};
       } else {
-        return { width: this.items.length * 100 + "%" };
+        return {width: this.items.length * 100 + "%"};
       }
     },
     currentIndexFunc() {
@@ -240,7 +240,6 @@ export default {
         padding: 50px;
         height: 500px;
         width: 70vw;
-        margin-left: 50px;
       }
       p {
         width: 60%;
@@ -254,6 +253,14 @@ export default {
         justify-self: center;
         margin: 0;
       }
+    }
+    @media (min-width: 1400px) {
+      div {
+
+        margin-left: 50px;
+      }
+
+
     }
   }
 }

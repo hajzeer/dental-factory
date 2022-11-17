@@ -57,7 +57,7 @@ export default {
             "Pacjent przyszedł do nas w celu odbudowy brakujących bocznych zębów i poprawy estetyki przedniej części uśmiechu. Wypełniliśmy wszystkie braki zębowe za pomocą estetycznych koron i mostów porcelanowych.",
           slug: "/offer/crown-and-bridges",
           timing: "Czas leczenia: 3 wizyty | 14 dni",
-          src: `/przed-po/3.webp`,
+          src: `/przed-po/3.png`,
           button: "koronach i mostach",
         },
         {
@@ -66,7 +66,7 @@ export default {
             "Pan Jarosław przyszedł do nas z zamiarem wymiany starych mostów wykonanych w dolnej szczęce i mocno zniszczonymi sąsiednimi zębami. Wykonaliśmy leczenie kanałowe części zębów, wyleczyliśmy ubytki próchnicowe, a w kolejnym etapie założyliśmy porcelanowy most. Odbudował on brakujące zęby, wzmocnił zęby po leczeniu kanałowym i poprawił estetykę uśmiechu:)",
           slug: "/offer/crown-and-bridges",
           timing: "Czas leczenia protetycznego: 10 dni | 2 wizyty",
-          src: `/przed-po/4.webp`,
+          src: `/przed-po/4.png`,
           button: "mostach porcelanowych",
         },
         {
@@ -75,7 +75,7 @@ export default {
             "Pani Beata zgłosiła się do nas, ponieważ była niezadowolona z wyglądu swojego uśmiechu. Miała założone stare mosty na boczne zęby, które były nieszczelne i wymagały wymiany. Zależało jej też na tym, aby przywrócić wygląd zębów jak za dawnych lat. Wykonaliśmy mosty cyrkonowe, które idealnie naśladują własne zęby.",
           slug: "/offer/crown-and-bridges",
           timing: "Czas leczenia: 2 wizyty | 10 dni",
-          src: `/przed-po/5.webp`,
+          src: `/przed-po/5.png`,
           button: "mostach cyrkonowych",
         },
         {
@@ -84,7 +84,7 @@ export default {
             "Pani Marta miała wykonywane licówki kompozytowe wiele lat temu. Zależało jej na tym, aby nowy uśmiech był piękny i biały. Po wysłuchaniu oczekiwań i kompleksowej diagnostyce zdecydowaliśmy się na wykonanie licówek porcelanowych.",
           slug: "/offer/veeners",
           timing: "Czas leczenia protetycznego: 10 dni | 2 wizyty",
-          src: `/przed-po/6.webp`,
+          src: `/przed-po/6.png`,
           button: "licówkach porcelanowych",
         },
         {
@@ -93,7 +93,7 @@ export default {
             "Pani Asi zależało na poprawie wyglądu przednich zębów, ale nie chciała ich szlifować pod licówki porcelanowe. Zaproponowaliśmy bonding kompozytowy, dzięki któremu bez szlifowania szkliwa mogliśmy delikatnie rozjaśnić zęby, wyrównać je i poprawić ich kształt.",
           slug: "/offer/bonding",
           timing: "Czas leczenia: 1 wizyta",
-          src: `/przed-po/7.webp`,
+          src: `/przed-po/7.png`,
           button: "bondingu kompozytowym",
         },
         {

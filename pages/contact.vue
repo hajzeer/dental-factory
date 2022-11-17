@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="contact__div">
-        <a href="tel:+48-691-818-388">+48 69 18 18 488</a
+        <a href="tel:+48-691-818-388">+48 69 18 18 388</a
         ><a href="mailto:kontakt@dental-factory.pl"
           >kontakt@dental-factory.pl</a
         >
@@ -204,8 +204,8 @@ p {
     overflow: hidden;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     &::after {
@@ -232,6 +232,10 @@ p {
       transition: all 0.2s ease-out;
       z-index: 9;
       text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     &:hover {
@@ -302,7 +306,7 @@ p {
 
   span {
     font-weight: 600;
-    font-size: 17px !important;
+    font-size: 25px !important;
   }
 }
 </style>

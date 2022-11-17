@@ -227,8 +227,8 @@ h2 {
     overflow: hidden;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     &::after {
@@ -255,6 +255,10 @@ h2 {
       transition: all 0.2s ease-out;
       z-index: 9;
       text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     &:hover {
@@ -465,7 +469,7 @@ h2 {
 
   span {
     font-weight: 600;
-    font-size: 17px !important;
+    font-size: 25px !important;
   }
 }
 </style>

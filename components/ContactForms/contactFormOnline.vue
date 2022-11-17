@@ -270,7 +270,7 @@ export default {
 .submit__button {
   font-family: termina, sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
 
   width: 88%;
   height: 45px;

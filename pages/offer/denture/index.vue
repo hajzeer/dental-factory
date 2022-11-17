@@ -155,7 +155,7 @@
             </li>
             <li>
               <span>
-                CENA ZA PROTEZY: 2500zł + zatrzaski
+                CENA ZA PROTEZY: 3000ZŁ + KOSZT ZATRZASKÓW
               </span>
             </li>
           </ul>
@@ -191,7 +191,7 @@
             </li>
             <li>
               <span>
-                CENA PROTEZY ELASTYCZNEJ: 1950zł
+                CENA PROTEZY ELASTYCZNEJ: 2400ZŁ
               </span>
             </li>
           </ul>
@@ -234,7 +234,7 @@
             </li>
             <li>
               <span>
-                CENA PROTEZY SZKIELETOWEJ: 1950zł
+                CENA PROTEZY SZKIELETOWEJ: 2400ZŁ
               </span>
             </li>
           </ul>
@@ -262,7 +262,7 @@
             </li>
             <li>
               <span>
-                CENA PROTEZY CAŁKOWITEJ: 1700zł
+                CENA PROTEZY CAŁKOWITEJ: 2000ZŁ
               </span>
             </li>
           </ul>
@@ -290,11 +290,6 @@
             </li>
             <li>
               ~ elastyczne klamry nie ścierają zębów
-            </li>
-            <li>
-              <span>
-                CENA MIKROPROTEZY: 1500zł
-              </span>
             </li>
           </ul>
         </div>

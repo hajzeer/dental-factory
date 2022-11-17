@@ -2,8 +2,8 @@
   <div>
     <div class="title__nav__div"><p>Opinie</p></div>
     <div class="container__inner">
-      <h2 class="page__title">OPINIE</h2>
-      <div class="inner">
+      <h2 class="page__title-rev">OPINIE</h2>
+      <div class="inner-rev">
         <p>
           Leczymy tak, jak sami chcielibyśmy być leczeni. Dokładamy wszelkich
           starań, aby wizyty były komfortowe i bezbolesne, a efekt leczenia

@@ -5,6 +5,7 @@
         <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
       </button>
     </a>
+
     <div>
       <NuxtLink to="/">
         <img class="logo" src="/logo.png" alt="logo" />
@@ -379,8 +380,8 @@ button {
 }
 
 .contact__btn {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: relative;
   top: 0;
   left: 0;
@@ -394,7 +395,7 @@ button {
 .active__button {
   position: relative;
   top: 5px;
-  width: 40px;
+  width: 30px;
   height: 60px;
   padding: 0;
   background: transparent;

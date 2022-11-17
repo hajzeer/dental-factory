@@ -71,8 +71,8 @@ export default {
         { text: "Aromatyzowane wnętrza", icon: Icon6 },
         { text: "Klimatyzacja", icon: Icon8 },
         { text: "MediRaty", icon: Icon1 },
-        { text: "Płatność gotówką", icon: Icon3 },
-        { text: "Płatność kartą oraz przelewem", icon: Icon2 },
+        { text: "Dogodne płatności", icon: Icon3 },
+        { text: "Dostęp do WI-FI ", icon: Icon2 },
       ],
       email: "",
       name: "",
@@ -322,7 +322,7 @@ export default {
 .submit__button {
   font-family: termina, sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
 
   width: 88%;
   height: 45px;

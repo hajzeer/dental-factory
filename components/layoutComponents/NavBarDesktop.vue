@@ -81,7 +81,7 @@ export default {
     flex-wrap: wrap;
 
     li {
-      width: 28%;
+      width: 25%;
       text-align: center;
     }
 

@@ -309,7 +309,7 @@ export default {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
 
     img {
       width: 50%;
@@ -319,7 +319,9 @@ export default {
     p {
       width: 80%;
     }
-    h2 {
+    h3 {
+      margin: 0;
+      font-size: 50px;
     }
   }
 }

@@ -95,7 +95,7 @@
             szyi, opadających kącików ust i koniuszka nosa.
             <br />
             <span>
-              CENA: od 450zł
+              CENA: od 450ZŁ
             </span>
           </p>
 
@@ -114,7 +114,7 @@
             utrzymywać nawet do 12 miesięcy.
             <br />
             <span>
-              CENA: 1300zł
+              CENA: 1100ZŁ
             </span>
           </p>
           <p>
@@ -131,7 +131,7 @@
             aktywność.
             <br />
             <span>
-              CENA: 950zł
+              CENA: 1100ZŁ
             </span>
           </p>
 
@@ -150,7 +150,7 @@
             widocznych dziąseł!
             <br />
             <span>
-              CENA: 450zł
+              CENA: 450ZŁ
             </span>
           </p>
           <p>
@@ -168,7 +168,7 @@
             na zmniejszenie bruzd oraz bardziej napiętą skórę.
             <br />
             <span>
-              CENA: od 900zł
+              CENA: OD 1000zł
             </span>
           </p>
           <p>
@@ -184,7 +184,7 @@
             kształtu nosa, kości policzkowych i żuchwy.
             <br />
             <span>
-              CENA: od 900zł
+              CENA: OD 1200ZŁ
             </span>
           </p>
 
@@ -202,7 +202,7 @@
             stomatologicznego.
             <br />
             <span>
-              CENA: od 900zł
+              CENA: OD 1000ZŁ
             </span>
           </p>
 
@@ -245,7 +245,7 @@
             </li>
             <li>
               <span>
-                CENA: 100zł/nić
+                CENA: 100ZŁ/NIĆ
               </span>
             </li>
           </ul>
@@ -268,7 +268,7 @@
             które mogą się utrzymywać nawet kilka lat.
             <br />
             <span>
-              CENA: 450zł/nić
+              CENA: 500ZŁ/NIĆ
             </span>
           </p>
           <p>
@@ -316,7 +316,7 @@
             </li>
             <li>
               <span>
-                CENA: od 600zł
+                CENA: OD 600ZŁ
               </span>
             </li>
           </ul>
@@ -334,7 +334,7 @@
             pośladków, ud i kolan.
             <br />
             <span>
-              CENA: 350zł/ampułkę
+              CENA: OD 400ZŁ/AMP.
             </span>
           </p>
         </div>

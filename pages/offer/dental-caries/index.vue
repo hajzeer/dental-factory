@@ -110,7 +110,7 @@
             własnego zęba i ma wieloletnią trwałość.
             <br />
             <span>
-              CENA WYPEŁNIENIA TZW. BIAŁEJ PLOMBY: od 250zł
+              CENA WYPEŁNIENIA TZW. BIAŁEJ PLOMBY: OD 280ZŁ
             </span>
           </p>
           <p>
@@ -136,10 +136,6 @@
             kanałowo i wykonywać na nie korony. Wypełnienia bioaktywne, dzięki
             temu, że wbudowują w ząb jony wapnia, fosforu i fluoru, odbudowują
             go i często pozwalają uchronić przed leczeniem kanałowym.
-            <br />
-            <span>
-              CENA WYPEŁNIENIA BIOAKTYWNEGO: od 300zł
-            </span>
           </p>
 
           <p>
@@ -184,7 +180,7 @@
             złamaniem.
             <br />
             <span>
-              CENA INLAYA KOMPOZYTOWEGO: 1100zł
+              CENA INLAYA KOMPOZYTOWEGO: 1200ZŁ
             </span>
           </p>
           <p>
@@ -221,11 +217,6 @@
             dużych wypełnień proponujemy Ci inlaye i onlaye. Pracujemy w osłonie
             - koferdamie, z użyciem ssaków, aby uniknąć dostawania się resztek
             amalgamatu do organizmu.
-            <br />
-            <span>
-              CENA WYMIANY AMALGAMATU NA KOMPOZYTOWE WZMACNIANE WŁÓKNEM
-              SZKLANYM: od 300zł
-            </span>
           </p>
           <p>
             <span>
@@ -257,7 +248,7 @@
             działanie kwasów z pożywienia, jak i bakterii próchnicowych.
             <br />
             <span>
-              CENA: od 350zł
+              CENA: OD 400ZŁ
             </span>
           </p>
         </div>

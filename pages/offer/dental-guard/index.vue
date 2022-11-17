@@ -39,10 +39,6 @@
             noszona w ciągu dnia. Redukuje ona aktywność mięśni, relaksuje je i
             rozluźnia, przez co zmniejsza się napięcie, a tym samym znika
             zaciskanie zębów i zmniejszają się dolegliwości bólowe.
-            <br />
-            <span>
-              CENA SZYNY RELAKSACYJNEJ: 450zł
-            </span>
           </p>
         </div>
       </div>

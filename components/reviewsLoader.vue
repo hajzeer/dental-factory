@@ -28,7 +28,7 @@
 
     <a :href="href" target="_blank">
       <button class="anchor__button">
-        <p>Sprawdź więcej opinii {{ reviewsName }}</p>
+        <p>Sprawdź więcej <br />opinii {{ reviewsName }}</p>
       </button>
     </a>
   </div>
@@ -269,14 +269,14 @@ a {
 .anchor__button {
   font-family: termina, sans-serif;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
   margin: 30px 0 0 0;
   width: 90%;
   height: 70px;
   background: #b4f2cb;
   border-radius: 20px;
   border: 1px solid #000000;
-  font-size: 15px;
+  font-size: 18px;
   color: #000000;
   cursor: pointer;
   transition: all 0.4s ease-out;

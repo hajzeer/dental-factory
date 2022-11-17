@@ -125,7 +125,7 @@
             przypadku silnych przebarwień i zębów, które nie dają się wybielić
             innymi metodami. Jest w pełni bezpieczna i łagodna dla zębów.
             <br />
-            <span>CENA: 2550zł</span>
+            <span>CENA: 2800ZŁ</span>
           </p>
           <p>
             <span>WYBIELANIE GABINETOWE PREVDENT</span>
@@ -139,7 +139,7 @@
             rozjaśnia zęby o nawewt o 4 odcienie. Nie wymaga powtarzania.
             <br />
             <span>
-              CENA: 1750zł
+              CENA: 1900ZŁ
             </span>
           </p>
           <p>
@@ -153,7 +153,7 @@
             proces wybielania trwa około dwóch do trzech tygodni.
             <br />
             <span>
-              CENA: 1150zł
+              CENA: 1200ZŁ
             </span>
           </p>
           <img src="/offer-img/wybielanie-zebow-2.jpg" />

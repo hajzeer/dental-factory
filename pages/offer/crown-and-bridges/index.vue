@@ -206,9 +206,9 @@
             </li>
             <li>
               <span>
-                CENA KORONY: 1800zł
+                CENA KORONY: 2000ZŁ
                 <br />
-                CENA MOSTU: od 5400zł
+                CENA MOSTU: OD 5700ZŁ
               </span>
             </li>
           </ul>
@@ -238,9 +238,9 @@
             </li>
             <li>
               <span>
-                CENA KORONY: 1050zł
+                CENA KORONY: 1350ZŁ
                 <br />
-                CENA MOSTU: od 3150zł
+                CENA MOSTU: OD 4050ZŁ
               </span>
             </li>
           </ul>
@@ -264,11 +264,6 @@
             </li>
             <li>
               ~ bardzo dobra estetyka
-            </li>
-            <li>
-              <span>
-                CENA: 1800zł
-              </span>
             </li>
           </ul>
           <img src="/offer-img/korony-4.jpg" />

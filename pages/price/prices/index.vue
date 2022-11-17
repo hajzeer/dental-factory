@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="title__nav__div"><p>Cennik / Cennik</p></div>
+    <div class="title__nav__div"><p>Ceny / Cennik</p></div>
     <div class="container__inner">
       <h1 class="page__title">CENNIK</h1>
       <p class="prices__paragraph__head">

@@ -130,7 +130,7 @@
           </p>
         </div>
       </div>
-      <Experts path="/specjalizacje/licowki-porcelanowe" />
+      <Experts path="/specjalizacje/bonding" />
     </div>
   </div>
 </template>

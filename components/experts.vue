@@ -76,6 +76,7 @@ export default {
       loading: false,
       specialist: [],
       moreThan: false,
+      specialize: [],
     };
   },
   async fetch() {
@@ -102,6 +103,7 @@ export default {
                   }
                 \t...on PropertiesTableContent {
                     sections {
+                    title
                       properties {
                        value
                         key
@@ -130,11 +132,6 @@ export default {
     this.moreThan = this.specialist.components[0].content.items.length > 1;
     if (this.specialist !== null) {
       this.loading = true;
-    }
-  },
-  mounted() {
-    if (this.loading) {
-      console.log(this.specialist);
     }
   },
 };

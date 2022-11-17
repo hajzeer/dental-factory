@@ -10,7 +10,7 @@
         <NuxtLink to="/online">
           <button class="active__button">
             <p>
-              Umów się na konsultacje
+              Umów się na konsultację
             </p>
           </button>
         </NuxtLink>

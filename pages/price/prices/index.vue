@@ -18,29 +18,43 @@
             <h2>KONSULTACJE</h2>
           </div>
           <p>
-            Chcesz poprawić swoj uśmiech i rozpocząć leczenie? Konsultacja jest
-            najlepszym sposobem na to, abyśmy mogli poznać Twoje oczekiwania i
-            zaproponować odpowiednie leczenie. Jeśli będzie konieczne zdjęcie
-            RTG, wykonasz je u nas na miejscu.
+            Wierzymy, że dokładna diagnostyka i planowanie leczenia gwarantują
+            jego późniejszy sukces. Do zaplanowania leczenia niezbędne jest
+            aktualne zdjęcie panoramiczne. Jeśli nie masz takiego, możesz
+            wykonać je u nas na miejscu. Zapewniamy Ci pełną diagnostykę RTG na
+            miejscu - dysponujemy własną pracownią z RTG i tomografem
+            komputerowym.
+          </p>
+          <p>
+            Podczas pierwszej wizyty nasi lekarze ocenią stan Twoich zębów i
+            dobiorą metodę leczenia najlepszą dla Ciebie. Otrzymasz też plan i
+            kosztorys leczenia, który obejmuje kilka różnych wariantów. Da Ci to
+            pewność, że w trakcie leczenia nie zaskoczą Cię dodatkowe koszty.
           </p>
           <p>
             <span>
-              KONSULTACJA PROTETYCZNA Z PLANEM LECZENIA I KOSZTORYSEM | 100ZŁ
+              PRZEGLĄD PIERWSZORAZOWY | 100ZŁ
             </span>
           </p>
           <p>
             <span>
-              KONSULTACJA IMPLANTOLOGICZNA | 100ZŁ
+              PRZEGLĄD DLA STAŁYCH PACJENTÓW | BEZPŁATNE
             </span>
           </p>
           <p>
             <span>
-              PRZEGLĄD STOMATOLOGICZNY | 100ZŁ | stali Pacjenci - bezpłatnie
+              KONSULTACJA SPECJALISTYCZNA Z PLANEM LECZENIA I KOSZTORYSEM |
+              100-150ZŁ +koszt zdjęć RTG
             </span>
           </p>
           <p>
             <span>
-              RTG PANORAMICZNE | 100ZŁ
+              TOMOGRAFIA KOMPUTEROWA | OD 200ZŁ
+            </span>
+          </p>
+          <p>
+            <span>
+              ZDJĘCIE PANORAMICZNE (PŁYTA CD Z BADANIEM) | 100ZŁ
             </span>
           </p>
         </div>
@@ -51,26 +65,33 @@
             <h2>WYBIELANIE ZĘBÓW</h2>
           </div>
           <p>
-            Metodą wybielania, która daje najlepsze rezultaty jest metoda
-            hybrydowa - połączenie wybielania gabinetowego PrevDent i nakładek
-            do wybielania w domu. W przypadku łagodniejszych przebarwień
-            wystarczające jest wybielanie gabinetowe. Jeśli szukasz
-            ekonomicznych rozwiązań, metodą wybielania odpowiednią dla Ciebie
-            będą nakładki do wybielania domowego.
+            Stosujemy kilka metod wybielania i różne preparaty wybielające, w
+            zależności od wyjściowego koloru zębów i oczekiwań Pacjenta.
+            Wszystkie są skuteczne i bezpieczne dla szkliwa.
+          </p>
+          <p>
+            Jeśli zależy Ci na jak najsilniejszym efekcie, proponujemy metodę
+            łączoną. Jeśli chcesz delikatnie „odświeżyć” kolor swoich zębów,
+            wystarczające może być wybielanie gabinetowe lub nakładkowe.
           </p>
           <p>
             <span>
-              WYBIELANIE METODĄ ŁĄCZONĄ | 2500ZŁ PROMOCJA!
+              WYBIELANIE METODĄ ŁĄCZONĄ | 2800ZŁ
             </span>
           </p>
           <p>
             <span>
-              WYBIELANIE GABINETOWE PREVDENT | 1750ZŁ
+              WYBIELANIE GABINETOWE PREVDENT | 1900ZŁ
             </span>
           </p>
           <p>
             <span>
-              WYBIELANIE NAKŁADKOWE | 1150ZŁ
+              WYBIELANIE NAKŁADKOWE | 1200ZŁ
+            </span>
+          </p>
+          <p>
+            <span>
+              USUWANIE BIAŁYCH PLAM NA SZKLIWIE - ICON | OD 400ZŁ
             </span>
           </p>
         </div>
@@ -81,20 +102,25 @@
             <h2>LICÓWKI I BONDING</h2>
           </div>
           <p>
-            Licówki porcelanowe to cienkie płatki porcelany przyklejane do
-            zewnętrznej powierzchni zęba. Pozwalają poprawić kształt i kolor
-            zębów. Alternatywą dla licówek porcelanowych jest bonding
-            kompozytowy - licówki wykonane z kompozytu podczas jednej wizyty w
-            gabinecie stomatologicznym.
+            Licówki porcelanowe to cienkie płatki porcelany, cementowane na
+            zewnętrznej (wargowej powierzchni zęba). Dzięki nim możemy poprawić
+            kształt, kolor, ustawienie zębów, zamknąć szpary między nimi.
+            Alternatywą dla licówek porcelanowych są licówki wykonane z
+            kompozytu, podczas jednej wizyty w gabinecie, bez szlifowania zębów.
           </p>
           <p>
             <span>
-              LICÓWKA PORCELANOWA | 1950ZŁ
+              LICÓWKA PORCELANOWA | 2100ZŁ
             </span>
           </p>
           <p>
             <span>
-              LICÓWKA KOMPOZYTOWA - BONDING FLOW INJECTION | 500-700ZŁ
+              LICÓWKA KOMPOZYTOWA - BONDING | 700ZŁ
+            </span>
+          </p>
+          <p>
+            <span>
+              ZAMKNIĘCIE DIASTEMY | 800-1000ZŁ
             </span>
           </p>
         </div>
@@ -105,33 +131,30 @@
             <h2>PROTEZY</h2>
           </div>
           <p>
-            Protezy elastyczne to najczęściej wybierany rodzaj protez. Są
-            lekkie, nie ruszają się podczas mówienia i jedzenia, nie uciskają
-            dziąseł i nie uszkadzają zębów. Jeśli masz problemy z przyzębiem i
-            dziąsłami, lepszym rozwiązaniem będzie proteza szkieletowa.
-            Odbudowuje ona brakujące zęby, a dodatkowo chroni kość przed
-            zanikiem. Jeśli nie akceptujesz jakichkolwiek klamer - "haczyków",
-            najlepszym rozwiązaniem będzie proteza na zatrzaskach lub proteza
-            teleskopowa.
+            Jeśli brakuje Ci kilku lub wszystkich zębów, dobrym rozwiązaniem
+            może okazać się proteza. Jeśli nie akceptujesz tradycyjnych protez,
+            najlepsza będzie proteza na zatrzaskach (bez klamer) lub proteza
+            elastyczna (z dużo mniej widocznymi, różowymi klamrami w kolorze
+            dziąsła).
           </p>
           <p>
             <span>
-              PROTEZA ELASTYCZNA | 1950ZŁ
+              PROTEZA ELASTYCZNA | 2400ZŁ
             </span>
           </p>
           <p>
             <span>
-              PROTEZA SZKIELETOWA | 1950ZŁ
+              PROTEZA SZKIELETOWA | 2400ZŁ
             </span>
           </p>
           <p>
             <span>
-              PROTEZA BEZKLAMROWA NA ZATRZASKACH | 2500ZŁ + koszt zatrzasków
+              PROTEZA CAŁKOWITA | 2000ZŁ
             </span>
           </p>
           <p>
             <span>
-              PROTEZA CAŁKOWITA PREMIUM | 1700ZŁ
+              PROTEZA SZKIELETOWA BEZKLAMROWA | 3000ZŁ + koszt zatrzasków
             </span>
           </p>
         </div>
@@ -150,27 +173,22 @@
           </p>
           <p>
             <span>
-              KORONA CYRKONOWA | 1800ZŁ
+              KORONA CYRKONOWA | 2000ZŁ
             </span>
           </p>
           <p>
             <span>
-              KORONA PORCELANOWA (NA METALU) | 1050ZŁ
+              KORONA PORCELANOWA | 1350ZŁ
             </span>
           </p>
           <p>
             <span>
-              MOST PORCELANOWY ODBUDOWUJĄCY JEDEN BRAKUJĄCY ZĄB | 3150ZŁ
+              MOST PEŁNOCERAMICZNY | OD 5700ZŁ
             </span>
           </p>
           <p>
             <span>
-              MOST PORCELANOWY ODBUDOWUJĄCY DWA ZĘBY | 4200ZŁ
-            </span>
-          </p>
-          <p>
-            <span>
-              MOST ADHEZYJNY BEZ SZLIFOWANIA ZĘBÓW | 1800ZŁ
+              MOST PORCELANOWY | OD 4050ZŁ
             </span>
           </p>
         </div>
@@ -197,12 +215,17 @@
           </p>
           <p>
             <span>
-              MOST NA IMPLANTACH | OD 14000ZŁ
+              MOST NA DWÓCH IMPLANTACH | OD 14000ZŁ
             </span>
           </p>
           <p>
             <span>
-              USUNIĘCIE ZĘBA STAŁEGO | OD 250ZŁ
+              ODBUDOWA KOŚCI | OD 2000ZŁ
+            </span>
+          </p>
+          <p>
+            <span>
+              USUNIĘCIE ZĘBA STAŁEGO | OD 300ZŁ
             </span>
           </p>
           <p>
@@ -225,17 +248,17 @@
           </p>
           <p>
             <span>
-              KONSULTACJA ORTODONTYCZNA | 150ZŁ
+              WSTĘPNA KONSULTACJA | 150ZŁ
             </span>
           </p>
           <p>
             <span>
-              APARAT STAŁY METALOWY | 2200ZŁ
+              APARAT STAŁY | OD 2200ZŁ
             </span>
           </p>
           <p>
             <span>
-              APARAT STAŁY KOSMETYCZNY | 3500ZŁ
+              KONTROLA APARATU STAŁEGO | 250ZŁ
             </span>
           </p>
           <p>
@@ -259,27 +282,22 @@
           </p>
           <p>
             <span>
-              WYPEŁNIENIE KOMPOZYTOWE TZW. BIAŁA PLOMBA | OD 250ZŁ
+              WYPEŁNIENIE KOMPOZYTOWE | OD 280ZŁ
             </span>
           </p>
           <p>
             <span>
-              WYPEŁNIENIE BIOAKTYWNE | OD 300ZŁ
+              INLAY KOMPOZYTOWY | 1200ZŁ
             </span>
           </p>
           <p>
             <span>
-              LECZENIE KANAŁOWE POD MIKROSKOPEM | OD 850ZŁ
+              LECZENIE KANAŁOWE POD MIKROSKOPEM | OD 900ZŁ
             </span>
           </p>
           <p>
             <span>
-              POWTRÓRNE LECZENIE KANAŁOWE | OD 950ZŁ
-            </span>
-          </p>
-          <p>
-            <span>
-              INLAY KOMPOZYTOWY | 1000ZŁ
+              POWTÓRNE LECZENIE KANAŁOWE (REENDO) | OD 950ZŁ
             </span>
           </p>
         </div>
@@ -298,17 +316,17 @@
           </p>
           <p>
             <span>
-              KOMPLEKSOWA HIGIENIZACJA | OD 300ZŁ
+              KOMPLEKSOWA HIGIENIZACJA | OD 350ZŁ
             </span>
           </p>
           <p>
             <span>
-              PIASKOWANIE METODĄ AIR-FLOW | 200ZŁ
+              USUNIĘCIE KAMIENIA - SKALING ULTRADŹWIĘKOWY | 200ZŁ
             </span>
           </p>
           <p>
             <span>
-              FLUORYZACJA, REMINERALIZACJA | 100ZŁ
+              PIASKOWANIE ZĘBÓW | OD 200ZŁ
             </span>
           </p>
         </div>
@@ -331,200 +349,244 @@
           </p>
         </div>
       </div>
-        <h1 class="aestetic__title">
-          MEDYCYNA ESTETYCZNA
-        </h1>
+      <div class="info__div">
         <div class="info__div__outer">
-          <h2>
-            Botoks, likwidacja zmarszczek
-          </h2>
+          <div class="info__div__inner">
+            <h2>STOMATOLOGIA DZIECIĘCA</h2>
+          </div>
           <p>
-            Odkryłaś na swojej twarzy zmarszczki? Mogą być to zmarszczki między
-            brwiami (tak zwane lwie zmarszczki), kurze łapki wokół oczu, albo
-            zmarszczki na czole. To efekt naturalnego starzenia się skóry. Za
-            pomocą toksyny botulinowej (botoksu) możemy zablokować kurczliwość
-            mięśni, pozbyć się ich i odmłodzić skórę. Zabieg trwa kilka minut,
-            może być stosowany u kobiet i u mężczyzn. Ostateczny efekt zobaczysz
-            po około tygodniu. Będzie się utrzymywać do 6 miesięcy. Botoks
-            wykorzystujemy też do likwidowania zmarszczek palacza, zmarszczek na
-            szyi, opadających kącików ust i koniuszka nosa.
+            Leczymy dzieci w każdym wieku. Dbamy o ich komfort i zmieniamy
+            nastawienie do wizyt u dentysty.
+          </p>
+          <p>
+            Najmłodszym pacjentom proponujemy wizyty adaptacyjne i kolorowe
+            wypełnienia w zębach mlecznych.
           </p>
           <p>
             <span>
-              CENA: od 450zł
+              WIZYTA ADAPTACYJNA | 150ZŁ
             </span>
           </p>
-          <h2>
-            Leczenie nadpotliwości botoksem
-          </h2>
-          <p>
-            Nadmierna potliwość w okolicy pach, dłoni, stóp czy pleców jest
-            bardzo częstą dolegliwością. Niestety, najczęściej nawet najlepsze
-            antyperspiranty nie są w stanie sobie z tym poradzić. Rozwiązaniem
-            może być podanie w tych obszarach toksyny botulinowej. Efekt będzie
-            widoczny po kilku dniach. Jest to w pełni bezpieczny zabieg,
-            bezpośrednio po nim możesz udać się do domu. Efekt będzie się
-            utrzymywać nawet do 12 miesięcy.
-          </p>
           <p>
             <span>
-              CENA: 1300zł
+              WYPEŁNIENIE W ZĘBIE MLECZNYM | OD 250ZŁ
             </span>
           </p>
-          <h2>
-            Leczenie bruksizmu
-          </h2>
-          <p>
-            Bruksizm to nadmierna aktywność mięśni żwaczy. Występuje najczęściej
-            podczas snu i objawia się zgrzytaniem zębami. Objawia się stopniowym
-            ścieraniem zębów, bólami w okolicy stawów skroniowo-żuchwowych i
-            migrenowymi bólami głowy. Jedną ze skuteczniejszych metod leczenia
-            bruksizmu jest podanie w okolicę mięśni botoksu, który osłabi ich
-            aktywność.
-          </p>
           <p>
             <span>
-              CENA: 950zł
+              WYPEŁNIENIE W ZĘBIE STAŁYM | OD 300ZŁ
             </span>
           </p>
-          <h2>
-            Leczenie gummy-smile (uśmiechu dziąsłowego)
-          </h2>
-          <p>
-            Metod leczenia uśmiechu dziąsłowego może być kilka - od leczenia
-            ortodontycznego, chirurgicznej korekty dziąseł, po zabiegi medycyny
-            estetycznej. Tą metodę polecamy szczególnie u pacjentów, u których
-            przyczyną uśmiechu dziąsłowego jest nadreaktywny mięsień
-            podtrzymujący górną wargę. Wstrzyknięta toksyna botulinowa blokuje
-            nadmierne unoszenie wargi podczas uśmiechu. Efekt? Uśmiech bez
-            widocznych dziąseł!
-          </p>
           <p>
             <span>
-              CENA: 450zł
-            </span>
-          </p>
-          <h2>
-            Niwelowanie zmarszczek kwasem hialuronowym
-          </h2>
-          <p>
-            Kwas hialuronowy nazywany jest eliksirem młodości. Wykorzystujemy go
-            zarówno w medycynie estetycznej, jak i w leczeniu chorób
-            nowotworowych, stawów, kości i oczu. W bardzo wysokim stężeniu
-            występuje naturalnie w skórze. Preparaty do wypełniania zmarszczek
-            kwasem hialuronowym mają postać elastycznego żelu, który po
-            wprowadzeniu do skóry wypełnia zmarszczkę. Po zabiegu możesz liczyć
-            na zmniejszenie bruzd oraz bardziej napiętą skórę.
-          </p>
-          <p>
-            <span>
-              CENA: od 900zł
-            </span>
-          </p>
-          <h2>
-            Wolumetria
-          </h2>
-          <p>
-            Jest to jak najbardziej możliwe! Jeśli czujesz, że jakieś partie
-            Twojej twarzy mogłyby lepiej wyglądać, rekomendujemy zabiegi
-            wolumetryczne z wykorzystaniem kwasu hialuronowego. Pozwalają one na
-            zwiększenie objętości tkanek, podniesienie owalu twarzy, poprawę
-            kształtu nosa, kości policzkowych i żuchwy.
-          </p>
-          <p>
-            <span>
-              CENA: od 900zł
-            </span>
-          </p>
-          <h2>
-            Powiększanie i modelowanie ust
-          </h2>
-          <p>
-            Przeszkadza Ci kształt Twoich ust? Powiększanie ust nie tylko
-            poprawi ich kształt, ale jednocześnie zadba o ich nawilżenie. Możemy
-            wyrównać ich asymetrię, podnieść kąciki, wyrównać dysproporcje.
-            Efekt utrzymuje się do pół roku. Nie musisz obawiać się bólu. Zabieg
-            jest całkowicie bezbolesny, dzięki zastosowaniu znieczulenia
-            stomatologicznego.
-          </p>
-          <p>
-            <span>
-              CENA: od 900zł
-            </span>
-          </p>
-          <h2>
-            Nici rewitalizujące
-          </h2>
-          <p>
-            Służą do stymulacji i przebudowy skóry oraz jej zagęszczenia. Są
-            bardzo cienkie, czasem grubości włosa. Najpopularniejsze są nici
-            PDO. Materiał ten ulega wchłonięciu w ciągu 6-8 miesięcy. Podczas
-            jego działania (rozpuszczania się) w tkankach, pobudzają ją do
-            zwiększonej syntezy kolagenu i elastyny – dzięki temu skóra
-            zagęszcza się i staje się bardziej jędrna. Jest to alternatywny
-            zabieg do mezoterapii igłowej. Efekt zauważalny jest po miesiącu i
-            utrzymuje się przez 6-8 miesięcy.
-          </p>
-
-          <p>
-            <span>
-              CENA: 100zł/nić
-            </span>
-          </p>
-          <h2>
-            Nici liftingujące
-          </h2>
-          <p>
-            Nici liftingujące to mało-inwazyjna metodę niechirurgicznego
-            liftingu twarzy. Dzięki nim można podnieść owal twarzy, opadające
-            policzki, zlikwidować 'chomiki', spłycić bruzdy nosowo-wargowe czy
-            linie marionetki. Nici te są wyposażone w haczyki, wypustki, które
-            kotwiczą wprowadzoną nitkę w tkance, nie pozwalając jej się
-            przesuwać. Dzięki temu możliwe jest mechaniczne uniesienie wybranego
-            obszaru tkanek i uzyskanie pożądanego efektu. Nici utrzymują się w
-            organizmie 180-240 dni. W tym czasie dochodzi do syntezy kolagenu i
-            elastyny, co wpływa na poprawę estetyki skóry. Zabieg daje efekty,
-            które mogą się utrzymywać nawet kilka lat.
-          </p>
-          <p>
-            <span>
-              CENA: 450zł/nić
-            </span>
-          </p>
-          <h2>
-            Wampirzy lifting
-          </h2>
-          <p>
-            Osocze to preparat pozyskiwany z krwi pacjenta. Wykorzystujemy go do
-            stymulacji komórek skóry, jej odbudowy i autoregeneracji. W
-            rezultacie skóra odzyskuje napięcie i witalność, poprawia się jej
-            koloryt i odżywienie. Pierwsze efekty zabiegu widoczne są po dwóch
-            tygodniach. Poprawę napięcia, elastyczności i gęstości skóry,
-            przebudowę struktury skóry uzyskujemy po wykonaniu serii 3-4
-            zabiegów.
-          </p>
-
-          <p>
-            <span>
-              CENA: od 600zł
-            </span>
-          </p>
-          <h2>
-            Lipoliza iniekcyjna
-          </h2>
-          <p>
-            To metoda likwidowania miejscowo nagromadzonej tkanki tłuszczowej za
-            pomocą podawanych podskórnie preparatów. Podawany jest w okolicę
-            tkanki, która ma zostać zredukowana. Możemy w ten sposób zredukować
-            podwójny podbródek, skorygować linię żuchwy, brzuch, biodra, okolice
-            pośladków, ud i kolan.
-          </p>
-          <p>
-            <span>
-              CENA: 350zł/ampułkę
+              HIGIENIZACJA | OD 200ZŁ
             </span>
           </p>
         </div>
+      </div>
+      <h1 class="aestetic__title">
+        MEDYCYNA ESTETYCZNA
+      </h1>
+      <div class="info__div__outer">
+        <h2>
+          KONSULTACJE
+        </h2>
+        <p>
+          <span>
+            KONSULTACJA | 100ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            KONSULTACJA BEZPOŚREDNIO PRZED ZABIEGIEM | BEZPŁATNIE
+          </span>
+        </p>
+        <h2>
+          TOKSYNA BOTULINOWA <br />
+          - BOTOX
+        </h2>
+
+        <p>
+          <span>
+            1 OKOLICA | 550ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            3 OKOLICE | 1400ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            LECZENIE BRUKSIZMU | 1100ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            LECZENIE NADPOTLIWOŚCI - PACHY | 1100ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            LECZENIE GUMMY-SMILE | 450ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            ZMARSZCZKI KRÓLICZE / BRODA BRUKOWANA / OPADAJĄCY KONIUSZEK NOSA /
+            OPADAJĄCE KĄCIKI UST | 450ZŁ
+          </span>
+        </p>
+        <h2>
+          KWAS HIALURONOWY
+        </h2>
+        <p>
+          <span>
+            MODELOWANIE UST (1ML) | OD 1000ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            WYPEŁNIANIE BRUZD NOSOWO-WARGOWYCH (1ML) | OD 1100ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            WYPEŁNIANIE ZMARSZCZEK OKOLICY TWARZY (1ML) | OD 1100ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            WOLUMETRIA (1ML) | OD 1200ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            MODELOWANIE POLICZKÓW (1ML) | OD 1000ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            MODELOWANIE UST (1ML) | 1000ZŁ
+          </span>
+        </p>
+        <p>
+          Podane ceny mogą ulec zmianie w zależności od ilości zużytego
+          materiału.
+        </p>
+        <h2>
+          INNE ZABIEGI
+        </h2>
+
+        <p>
+          <span>
+            OSOCZE BOGATOPŁYTKOWE | OD 600ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            FIBRYNA BOGATOPŁYTKOWA | OD 600ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            STYMULATORY TKANKOWE | OD 1000ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            PEELINGI MEDYCZNE | 350ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            NICI REWITALIZUJĄCE PDO | 100ZŁ/NIĆ
+          </span>
+        </p>
+        <p>
+          <span>
+            NICI LIFTINGUJĄCE | 500ZŁ/NIĆ
+          </span>
+        </p>
+        <p>
+          <span>
+            LIPOLIZA INIEKCYJNA (1 AMPUŁKA) | OD 400ZŁ/AMP.
+          </span>
+        </p>
+        <p>
+          <span>
+            MEZOTERAPIA IGŁOWA TWARZY | OD 400ZŁ
+          </span>
+        </p>
+        <h2>
+          MEZOTERAPIA <br />
+          IGŁOWA TWARZY
+        </h2>
+        <p>
+          <span>
+            DERMAHEAL, RRS | 400ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            NEAUVIA HYDRO DELUXE | 500/800ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            NCTF | 450ZŁ
+          </span>
+        </p>
+        <h2>
+          MEZOTERAPIA OKOLICY OCZU
+        </h2>
+        <p>
+          <span>
+            DERMAHEAL, RRS | 400ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            JALUPRO | 700ZŁ
+          </span>
+        </p>
+        <h2>
+          MEZOTERAPIA SKÓRY OWŁOSIONEJ GŁOWY
+        </h2>
+        <p>
+          <span>
+            RRS | 400ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            OSOCZE BOGATOPŁYTKOWE - 1 ZABIEG / 4 ZABIEGI | 600ZŁ / 2200ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            DRCYJ - 1 ZABIEG / 4 ZABIEGI | 800ZŁ / 3000ZŁ
+          </span>
+        </p>
+        <h2>
+          MEZOTERAPIA MIKROIGŁOWA <br />
+          - DERMAPEN
+        </h2>
+        <p>
+          <span>
+            TWARZ | 350ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            TWARZ + SZYJA | 400ZŁ
+          </span>
+        </p>
+        <p>
+          <span>
+            TWARZ + SZYJA + DEKOLT | 450ZŁ
+          </span>
+        </p>
       </div>
     </div>
   </div>

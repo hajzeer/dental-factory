@@ -230,7 +230,7 @@ export default {
   position: absolute;
   top: 120px;
   width: 100%;
-  height: 530px;
+  height: 560px;
   left: 100%;
 
   display: flex;

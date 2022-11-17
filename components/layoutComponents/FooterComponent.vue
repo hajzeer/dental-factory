@@ -324,7 +324,7 @@ h2 {
   top: 100px;
   width: 100%;
   height: 300px;
-  padding-bottom: 40px;
+  padding-bottom: 280px;
 
   font-family: termina, sans-serif;
   font-style: normal;
@@ -332,6 +332,7 @@ h2 {
   @media (min-width: 1024px) {
     top: 250px;
     height: 500px;
+    padding-bottom: 100px;
   }
 }
 
@@ -357,7 +358,7 @@ h2 {
   }
 
   @media (min-width: 1024px) {
-    margin: 0 75px;
+    margin: 0 80px;
 
     display: flex;
     flex-direction: row;
@@ -371,15 +372,11 @@ h2 {
       list-style: none;
       padding: 0;
       font-size: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
 
       li {
-        width: 60%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
         gap: 10px;
       }
     }
@@ -438,6 +435,6 @@ h2 {
 
 .hours {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 30px !important;
 }
 </style>

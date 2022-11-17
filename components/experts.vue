@@ -41,7 +41,7 @@
 
           <div class="property__class" v-if="item.components[3].content">
             <div
-              v-for="property in item.components[3].content.sections[0]
+              v-for="property in item.components[3].content.sections[specialize]
                 .properties"
             >
               <h2>{{ property.key }}</h2>
@@ -130,8 +130,33 @@ export default {
     });
     this.specialist = data.data.catalogue;
     this.moreThan = this.specialist.components[0].content.items.length > 1;
+    for (
+      let i = 0;
+      i <
+      this.specialist.components[0].content.items[0].components[3].content
+        .sections.length;
+      i++
+    ) {
+      if (
+        this.path ===
+        this.specialist.components[0].content.items[0].components[3].content
+          .sections[i].title
+      ) {
+        this.specialize = i;
+      }
+    }
     if (this.specialist !== null) {
       this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) {
+      console.log(this.specialist);
+      console.log(
+        this.specialist.components[0].content.items[0].components[3].content
+          .sections
+      );
+      console.log(this.specialize);
     }
   },
 };

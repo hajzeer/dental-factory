@@ -59,6 +59,29 @@ export default {
       }, 300);
     },
   },
+  head() {
+    return {
+      title:
+        "DENTAL FACTORY Centrum stomatologiczne | Twój uśmiech, Twoje story",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "DENTAL FACTORY stworzyliśmy w samym centrum Wrocławia z myślą o\n" +
+            "            Pacjentach szukających nowoczesnego i bezbolesnego leczenia\n" +
+            "            stomatologicznego.\n" +
+            "            \n" +
+            "            Leczymy tak, jak sami chcielibyśmy być leczeni. Wykonujemy zabiegi z\n" +
+            "            zakresu stomatologii estetycznej, protetyki, ortodoncji, leczenia\n" +
+            "            kanałowego pod mikroskopem, implantów i chirurgii, stomatologii\n" +
+            "            zachowawczej, profilaktyki. Naszym Pacjentom pomagamy też w nagłych\n" +
+            "            sytuacjach, jak odklejona korona, ból zęba, złamana proteza.",
+        },
+      ],
+    };
+  },
 };
 </script>
 

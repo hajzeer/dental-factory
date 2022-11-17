@@ -373,7 +373,7 @@
           </li>
         </ul>
       </div>
-      <Experts path="/specjalizacje/medytacja-estetyczna" />
+      <Experts path="/specjalizacje/medycyna-estetyczna" />
     </div>
   </div>
 </template>

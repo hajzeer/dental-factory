@@ -41,7 +41,7 @@
 
           <div class="property__class" v-if="item.components[3].content">
             <div
-              v-for="property in item.components[3].content.sections[0]
+              v-for="property in item.components[3].content.sections[specialize]
                 .properties"
             >
               <h2>{{ property.key }}</h2>

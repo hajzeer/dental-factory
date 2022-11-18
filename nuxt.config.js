@@ -61,7 +61,7 @@ export default {
       "nuxt-mail",
       {
         message: {
-          to: "hithere.development@gmail.com",
+          to: "kontakt@dental-factory.pl",
         },
         smtp: {
           service: "gmail",

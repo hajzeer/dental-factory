@@ -93,7 +93,7 @@ export default {
     if (
       this.path === "/dentysta-wroclaw-konsultacja-online-ekonsultacja.html"
     ) {
-      this.$router.push("/online");
+      this.$router.push("/appointment");
     }
     if (this.path === "/dental-factory-umow-wizyte.html") {
       this.$router.push("/appointment");
@@ -112,6 +112,12 @@ export default {
     }
     if (this.path === "/dentysta-wroclaw-cennik.html") {
       this.$router.push("/price/prices");
+    }
+    if (this.path === "/dentysta-wroclaw-o-nas.html") {
+      this.$router.push("/about/center");
+    }
+    if (this.path === "/promocja-2.html") {
+      this.$router.push("/");
     }
   },
   head() {

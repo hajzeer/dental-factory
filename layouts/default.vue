@@ -107,6 +107,12 @@ export default {
     if (this.path === "/gwarancja-na-leczenie-stomatologiczne.html") {
       this.$router.push("/");
     }
+    if (this.path === "/dental-factory-dentysta-protetyk-wroclaw-opinie.html") {
+      this.$router.push("/reviews");
+    }
+    if (this.path === "/dentysta-wroclaw-cennik.html") {
+      this.$router.push("/price/prices");
+    }
   },
   head() {
     return {

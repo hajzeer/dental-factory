@@ -24,6 +24,8 @@ export default {
     EMAIL_TO: process.env.EMAIL_TO,
     HOST: process.env.HOST,
   },
+  target: "server",
+  ssr: true,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [`~/assets/main.scss`],
@@ -67,7 +69,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.HOST || "http://192.168.0.220:3000/",
+    baseURL: "/",
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

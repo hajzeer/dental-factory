@@ -57,21 +57,6 @@ export default {
     "@nuxtjs/pwa",
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
-    [
-      "nuxt-mail",
-      {
-        message: {
-          to: "hithere.development@gmail.com",
-        },
-        smtp: {
-          service: "gmail",
-          auth: {
-            user: process.env.EMAIL_USER || null,
-            pass: process.env.EMAIL_PASS || null,
-          },
-        },
-      },
-    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

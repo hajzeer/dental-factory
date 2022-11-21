@@ -155,6 +155,12 @@ export default {
     if (this.path === "/nakladki-ortodontyczne-invisalign-wroclaw.html") {
       this.$router.push("/offer/ortodontics");
     }
+    if (this.path === "/dentysta-wroclaw-umawianie-wizyty.html") {
+      this.$router.push("/appointment");
+    }
+    if (this.path === "/umow-wizyte.html") {
+      this.$router.push("/appointment");
+    }
   },
   head() {
     return {

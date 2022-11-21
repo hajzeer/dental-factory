@@ -119,6 +119,42 @@ export default {
     if (this.path === "/promocja-2.html") {
       this.$router.push("/");
     }
+    if (this.path === "/korony-i-mosty-protetyczne-wroclaw.html") {
+      this.$router.push("/offer/crown-and-bridges");
+    }
+    if (this.path === "/wybielanie-zebow-wroclaw.html") {
+      this.$router.push("/offer/whitening");
+    }
+    if (this.path === "/protezy-zebowe-elastyczne-szkieletowe-wroclaw.html") {
+      this.$router.push("/offer/denture");
+    }
+    if (this.path === "/leczenie-kanalowe-pod-mikroskopem-wroclaw.html") {
+      this.$router.push("/offer/root-canal-therapy");
+    }
+    if (this.path === "/implanty-stomatologiczne-wroclaw.html") {
+      this.$router.push("/offer/implants");
+    }
+    if (this.path === "/licowki-porcelanowe-wroclaw.html") {
+      this.$router.push("/offer/veeners");
+    }
+    if (this.path === "/bonding-kompozytowy-bonding-zebow-wroclaw.html") {
+      this.$router.push("/offer/bonding");
+    }
+    if (this.path === "/darmowy-przeglad-stomatologiczny-wroclaw.html") {
+      this.$router.push("/appointment");
+    }
+    if (this.path === "/skaling-piaskowanie-wroclaw.html") {
+      this.$router.push("/offer/hygiene");
+    }
+    if (this.path === "/skaling-piaskowanie-wroclaw.html") {
+      this.$router.push("/offer/hygiene");
+    }
+    if (this.path === "/szyny-relaksacyjne-leczenie-bruksizmu-wroclaw.html") {
+      this.$router.push("/offer/dental-guard");
+    }
+    if (this.path === "/nakladki-ortodontyczne-invisalign-wroclaw.html") {
+      this.$router.push("/offer/ortodontics");
+    }
   },
   head() {
     return {

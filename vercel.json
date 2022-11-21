@@ -2,11 +2,11 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/message",
+      "src": "/api",
       "dest": "/api/message.js"
     },
     {
-      "src": "/api/message-attach",
+      "src": "/api",
       "dest": "/api/message-attach.js"
     }
   ],

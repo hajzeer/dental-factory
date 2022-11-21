@@ -1,22 +1,8 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/server-middleware/message",
-      "dest": "/server-middleware/index.js"
-    },
-    {
-      "src": "/server-middleware/message-attach",
-      "dest": "/server-middleware/index.js"
-    }
-  ],
   "builds": [
     {
-      "src": "server-middleware/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "nuxt.config.ts",
+      "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": [

@@ -7,6 +7,7 @@
         name="surname"
         placeholder="Nazwisko"
         v-model="surname"
+        required
       />
 
       <div class="num__mail__div">
@@ -15,12 +16,14 @@
           name="phoneNumber"
           placeholder="Numer telefonu"
           v-model="phoneNumber"
+          required
         />
         <input
           type="email"
           name="email"
           placeholder="Adres e-mail"
           v-model="email"
+          required
         />
       </div>
 
@@ -31,6 +34,7 @@
         v-if="visible"
         placeholder="        Wyślij formularz
 "
+        required
       />
       <p v-else>Wiadomość została wysłana</p>
     </form>

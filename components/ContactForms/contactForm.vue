@@ -253,7 +253,7 @@ export default {
     background: transparent;
     border: 2px solid #ffffff;
     border-radius: 10px;
-    color: #ffffff !important;
+    color: #ffffff;
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -335,9 +335,9 @@ export default {
   height: 45px;
   background: #b4f2cb !important;
   border-radius: 8px;
-  border: 1px solid #000000;
+  border: 1px solid #000000 !important;
   font-size: 18px;
-  color: #000000;
+  color: #000000 !important;
   transition: all 0.4s ease-out;
   cursor: pointer;
 

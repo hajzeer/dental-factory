@@ -22,6 +22,7 @@ export default {
     EMAIL_USER: process.env.EMAIL_USER,
     EMAIL_PASS: process.env.EMAIL_PASS,
     EMAIL_TO: process.env.EMAIL_TO,
+    HOST: process.env.HOST,
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -48,6 +49,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],
+
   /*
    ** Server middleware
    */
@@ -65,7 +67,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/",
+    baseURL: process.env.HOST || "http://192.168.0.220:3000/",
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

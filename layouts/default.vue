@@ -162,6 +162,7 @@ export default {
       this.$router.push("/appointment");
     }
   },
+  
   head() {
     return {
       title:

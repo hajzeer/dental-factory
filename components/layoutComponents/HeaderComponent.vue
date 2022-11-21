@@ -1,6 +1,6 @@
 <template>
   <header class="container">
-    <a href="tel:+48-691-81-84-88">
+    <a href="tel:+48-691-81-83-88">
       <button class="active__button contact">
         <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
       </button>

@@ -7,6 +7,7 @@
         name="surname"
         placeholder="Nazwisko"
         v-model="surname"
+        required
       />
       <div class="num__mail__div">
         <input
@@ -14,52 +15,55 @@
           name="phoneNumber"
           placeholder="Numer telefonu"
           v-model="phoneNumber"
+          required
         />
         <input
           type="email"
           name="email"
           placeholder="Adres e-mail"
           v-model="email"
+          required
         />
       </div>
       <textarea placeholder="Preferowana data i cel" v-model="message" />
       <div class="num__mail__div">
         <label class="attach__input">
-          {{ fileName }}
+          {{ fileName1 }}
           <input
             type="file"
-            name="file"
+            name="image"
             @change="createFile"
             accept="image/*"
           />
         </label>
 
         <label class="attach__input">
-          {{ fileName }}
+          {{ fileName2 }}
 
           <input
             type="file"
             name="file"
-            @change="createFile"
             accept="image/*"
+            @change="createFile2"
           />
         </label>
 
         <label class="attach__input">
-          {{ fileName }}
+          {{ fileName3 }}
 
           <input
             type="file"
             name="file"
-            @change="createFile"
             accept="image/*"
+            @change="createFile3"
           />
         </label>
       </div>
 
-      <button class="submit__button" @click.prevent="send">
+      <button class="submit__button" @click.prevent="send" v-if="visible">
         Wyślij formularz
       </button>
+      <p v-else>Wiadomość została wysłana</p>
     </form>
   </div>
 </template>
@@ -75,62 +79,78 @@ export default {
       phoneNumber: "",
       message: "",
       file: "",
-      fileName: "Wgraj plik",
+      fileName1: "Wgraj plik",
+      fileName2: "Wgraj plik",
+      fileName3: "Wgraj plik",
+      visible: true,
       item: {
         image: null,
-        imageUrl: null,
+        imageUrl1: null,
+        imageUrl2: null,
+        imageUrl3: null,
       },
     };
   },
   methods: {
     async createFile(e) {
       const file = e.target.files[0];
-      this.item.image = file;
-      this.fileName = this.item.image.name;
-      const reader = new FileReader();
-      reader.readAsArrayBuffer(file);
-      reader.onload = (e) => {
-        this.item.imageUrl = e.target.result;
-      };
+      if (file.size > 8500000) {
+        this.fileName1 = "Zbyt duży plik, załącz inny";
+      } else {
+        this.fileName1 = file.name;
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          this.item.imageUrl1 = e.target.result;
+        };
+      }
+    },
+    async createFile2(e) {
+      const file = e.target.files[0];
+      if (file.size > 8500000) {
+        this.fileName2 = "Zbyt duży plik, załącz inny";
+      } else {
+        this.fileName2 = file.name;
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          this.item.imageUrl2 = e.target.result;
+        };
+      }
+    },
+    async createFile3(e) {
+      const file = e.target.files[0];
+      if (file.size > 8333333) {
+        this.fileName3 = "Zbyt duży plik, załącz inny";
+      } else {
+        this.fileName3 = file.name;
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          this.item.imageUrl3 = e.target.result;
+        };
+      }
     },
     send() {
-      this.$axios.$post(`/mail/send`, {
-        subject:
-          "Konsultacja online: " +
-          this.name +
-          " " +
-          this.surname +
-          `(` +
-          this.phoneNumber +
-          " " +
-          this.email +
-          `)`,
-        text:
-          "Imię Nazwisko: " +
-          this.name +
-          " " +
-          this.surname +
-          `\nNumer telefonu: ` +
-          this.phoneNumber +
-          "\nemail " +
-          this.email +
-          `\n\n` +
-          "Konsultacja online w sprawie: \n" +
-          this.message,
-        attachments: [
-          {
-            filename: this.item.image.name,
-            contents: Buffer.from(this.item.imageUrl, "base64"),
-          },
-        ],
+      this.$axios.$post(`/api/message-attach`, {
+        name: this.name,
+        surname: this.surname,
+        phoneNumber: this.phoneNumber,
+        email: this.email,
+        message: this.message,
+        path1: this.item.imageUrl1 || null,
+        path2: this.item.imageUrl2 || null,
+        path3: this.item.imageUrl3 || null,
       });
       this.email = "";
       this.name = "";
       this.surname = "";
       this.phoneNumber = "";
       this.message = "";
-      this.item.imageUrl = "";
-      this.fileName = "Wgraj plik";
+      this.fileName1 = "Wgraj plik";
+      this.fileName2 = "Wgraj plik";
+      this.fileName3 = "Wgraj plik";
+      this.visible = false;
     },
   },
 };
@@ -163,6 +183,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  p {
+    font-family: Termina;
+    font-weight: 600;
+  }
 
   .attach__input {
     border: 2px solid #041b8d;

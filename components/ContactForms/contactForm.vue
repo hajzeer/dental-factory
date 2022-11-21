@@ -33,9 +33,10 @@
         />
       </div>
       <textarea placeholder="Preferowana data i cel" v-model="message" />
-      <button class="submit__button" @click.prevent="send">
+      <button class="submit__button" @click.prevent="send" v-if="visible">
         Umów się na wizytę
       </button>
+      <p v-else>Wiadomość została wysłana</p>
     </form>
 
     <div class="icons__container">
@@ -79,28 +80,24 @@ export default {
       surname: "",
       phoneNumber: "",
       message: "",
+      visible: true,
     };
   },
   methods: {
     send() {
-      this.$axios.$post(`/mail/send`, {
-        subject:
-          "Nowy kontakt od: " +
-          this.name +
-          " " +
-          this.surname +
-          `( ` +
-          this.phoneNumber +
-          " " +
-          this.email +
-          ` )`,
-        text: "Proszę o kontakt w sprawie: \n" + this.message,
+      this.$axios.$post(`/api/message`, {
+        name: this.name,
+        surname: this.surname,
+        phoneNumber: this.phoneNumber,
+        email: this.email,
+        message: this.message,
       });
       this.email = "";
       this.name = "";
       this.surname = "";
       this.phoneNumber = "";
       this.message = "";
+      this.visible = false;
     },
   },
 };
@@ -237,6 +234,12 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  p {
+    font-family: Termina;
+    font-weight: 600;
+    color: #ffffff;
+  }
 
   input {
     margin: 10px 0;

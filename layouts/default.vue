@@ -49,6 +49,11 @@ import FooterComponent from "~/components/layoutComponents/FooterComponent";
 export default {
   name: "default",
   components: { FooterComponent, HeaderComponent },
+  data() {
+    return {
+      path: null,
+    };
+  },
   methods: {
     toTop: function () {
       setTimeout(() => {
@@ -58,6 +63,50 @@ export default {
         });
       }, 300);
     },
+  },
+  mounted() {
+    this.path = this.$route.path.replace("https://www.dental-factory.pl/", "");
+    if (this.path === "/dentysta-protetyk-wroclaw-leczenie.html") {
+      this.$router.push("/");
+    }
+    if (this.path === "/dentysta-stomatolog-wrocław-cennik.html") {
+      this.$router.push("/price/prices");
+    }
+    if (this.path === "/dental-factory-konsultacja.html") {
+      this.$router.push("/online");
+    }
+    if (
+      this.path ===
+      "/dentysta-protetyk-wroclaw-leczenie.html?wbraid=CjgKCAiAjs2bBhA-EigAZTS4teUbyTtLPOfT7Z6Yl6mpCR7tneU9hTqsiWRi45g0QpE-3z8QGgLsCA"
+    ) {
+      this.$router.push("/");
+    }
+    if (
+      this.path ===
+      "/dentysta-protetyk-wroclaw-leczenie.html?wbraid=CjkKCQiAyMKbBhDCARIoADLWtMcGc6Gbp81XI7n-qH64uHFxU_nlcBBy1BqqzeC1fFCBe1b0hxoCSe4"
+    ) {
+      this.$router.push("/");
+    }
+    if (this.path === "/dental-factory-kontakt.html") {
+      this.$router.push("/");
+    }
+    if (
+      this.path === "/dentysta-wroclaw-konsultacja-online-ekonsultacja.html"
+    ) {
+      this.$router.push("/online");
+    }
+    if (this.path === "/dental-factory-umow-wizyte.html") {
+      this.$router.push("/appointment");
+    }
+    if (
+      this.path ===
+      "/dentysta-protetyk-wroclaw-leczenie.html?wbraid=CjgKCAiA68ebBhBpEigAfvzCyIpW4fPU2zsjGue1eX7x2a4CBu0uXaPaSkYeol4OT2ue0bduGgKXsQ"
+    ) {
+      this.$router.push("/");
+    }
+    if (this.path === "/gwarancja-na-leczenie-stomatologiczne.html") {
+      this.$router.push("/");
+    }
   },
   head() {
     return {

@@ -25,7 +25,6 @@ export default {
     HOST: process.env.HOST,
   },
   target: "server",
-  ssr: true,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [`~/assets/main.scss`],
@@ -55,7 +54,10 @@ export default {
   /*
    ** Server middleware
    */
-  serverMiddleware: ["~/server-middleware/index.js"],
+  serverMiddleware: [
+    { path: "/api", handler: "~/api/message.js" },
+    { path: "/api", handler: "~/api/message-attach.js" },
+  ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios

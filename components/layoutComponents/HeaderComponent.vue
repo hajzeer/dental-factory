@@ -40,7 +40,7 @@
           </span>
         </button>
       </NuxtLink>
-      <a href="tel:+48-691-818-488">
+      <a href="tel:+48-691-818-388">
         <button class="contact__button-inner">
           <img class="inner__image" src="/phone.svg" />
           <span>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <form class="form__container">
+    <form class="form__container" @submit.prevent="send">
       <input type="text" name="name" placeholder="Imię" v-model="name" />
       <input
         type="text"
@@ -25,7 +25,10 @@
           required
         />
       </div>
-      <textarea placeholder="Preferowana data i cel" v-model="message" />
+      <textarea
+        placeholder="Tutaj krótko opisz swój problem i oczekiwania"
+        v-model="message"
+      />
       <div class="num__mail__div">
         <label class="attach__input">
           {{ fileName1 }}
@@ -60,9 +63,13 @@
         </label>
       </div>
 
-      <button class="submit__button" @click.prevent="send" v-if="visible">
-        Wyślij formularz
-      </button>
+      <input
+        type="submit"
+        class="submit__button"
+        v-if="visible"
+        placeholder="        Wyślij formularz
+"
+      />
       <p v-else>Wiadomość została wysłana</p>
     </form>
   </div>
@@ -297,9 +304,9 @@ export default {
   font-style: normal;
   font-weight: 600;
 
-  width: 88%;
+  width: 88% !important;
   height: 45px;
-  background: #b4f2cb;
+  background: #b4f2cb !important;
   border-radius: 8px;
   border: 1px solid #000000;
   font-size: 18px;
@@ -307,12 +314,17 @@ export default {
   transition: all 0.4s ease-out;
   cursor: pointer;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     transform: scale(1.1);
   }
 
   @media (min-width: 1024px) {
-    width: 250px;
+    width: 250px !important;
     align-self: flex-end;
     margin-top: 30px;
     position: relative;

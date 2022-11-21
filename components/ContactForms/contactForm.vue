@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     send() {
-      this.$axios.$post(`/api/message`, {
+      this.$axios.$post(`/server-middleware/message`, {
         name: this.name,
         surname: this.surname,
         phoneNumber: this.phoneNumber,

@@ -48,7 +48,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],
-  serverMiddleware: ["~/api/index.js"],
+  /*
+   ** Server middleware
+   */
+  serverMiddleware: ["~/server-middleware/index.js"],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios

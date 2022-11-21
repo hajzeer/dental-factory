@@ -139,7 +139,7 @@ export default {
       }
     },
     send() {
-      this.$axios.$post(`/api/message-attach`, {
+      this.$axios.$post(`/server-middleware/message-attach`, {
         name: this.name,
         surname: this.surname,
         phoneNumber: this.phoneNumber,

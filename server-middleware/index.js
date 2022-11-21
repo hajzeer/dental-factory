@@ -5,8 +5,6 @@ require("dotenv").config();
 
 const app = express();
 
-module.exports = { path: "/api", handler: app };
-
 app.use(bodyParser.json({ limit: "25mb" }));
 app.use(bodyParser.urlencoded({ extended: false, limit: "25mb" }));
 
@@ -73,3 +71,5 @@ app.post("/message-attach", async (req, res) => {
   });
   res.redirect(200, "/online");
 });
+
+module.exports = { path: "/server-middleware", handler: app };

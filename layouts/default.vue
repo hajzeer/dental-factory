@@ -69,7 +69,7 @@ export default {
     if (this.path === "/dentysta-protetyk-wroclaw-leczenie.html") {
       this.$router.push("/");
     }
-    if (this.path === "/dentysta-stomatolog-wrocław-cennik.html") {
+    if (this.path === "/dentysta-stomatolog-wroclaw-cennik.html") {
       this.$router.push("/price/prices");
     }
     if (this.path === "/dental-factory-konsultacja.html") {
@@ -88,7 +88,7 @@ export default {
       this.$router.push("/");
     }
     if (this.path === "/dental-factory-kontakt.html") {
-      this.$router.push("/");
+      this.$router.push("/contact");
     }
     if (
       this.path === "/dentysta-wroclaw-konsultacja-online-ekonsultacja.html"

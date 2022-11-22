@@ -10,7 +10,7 @@
       </h1>
       <div class="container__inner">
         <div class="inner__info">
-          <img class="about__image" src="/about_1.png" />
+          <img class="about__image" src="/about_1.webp" />
           <p class="about__info__p">
             DENTAL FACTORY stworzyliśmy w samym centrum Wrocławia z myślą o
             Pacjentach szukających nowoczesnego i bezbolesnego leczenia

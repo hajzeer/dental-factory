@@ -2,7 +2,7 @@
   <div>
     <div class="hero__div">
       <div class="hero__image">
-        <img src="/about_1.png" />
+        <img src="/about_1.webp" />
       </div>
       <div class="hero__image__inner">
         <h2 class="hero__image__title-desktop">

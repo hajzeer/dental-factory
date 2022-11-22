@@ -6,7 +6,7 @@
           ref="image1"
           alt="cabinet__image"
           class="footer__image"
-          src="/footerImg1.png"
+          src="/footerImg1.webp"
           @mouseenter="grownFirst"
           @mouseleave="smallerFirst"
         />
@@ -14,7 +14,7 @@
           ref="image3"
           alt="cabinet__image"
           class="footer__image"
-          src="/footerImg3.png"
+          src="/footerImg3.webp"
           @mouseenter="grownThird"
           @mouseleave="smallerThird"
         />

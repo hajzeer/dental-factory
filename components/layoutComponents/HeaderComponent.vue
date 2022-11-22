@@ -156,11 +156,7 @@ export default {
   },
   methods: {
     contButt() {
-      if (this.visibility) {
-        this.visibility = false;
-      } else {
-        this.visibility = true;
-      }
+      this.visibility = !this.visibility;
       console.log(this.visibility);
     },
     closeNav() {

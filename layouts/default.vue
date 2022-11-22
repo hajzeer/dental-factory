@@ -287,7 +287,6 @@ textarea {
 .mess__buttons {
   display: none;
   position: fixed;
-
   width: 120px;
   height: 40px;
   border-radius: 30px;

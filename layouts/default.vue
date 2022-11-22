@@ -286,19 +286,17 @@ textarea {
 
 .mess__buttons {
   display: none;
-  position: fixed;
-  width: 120px;
-  height: 40px;
-  border-radius: 30px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-  transition: all 0.2s ease-out;
   @media (min-width: 1024px) {
+    position: fixed;
+
+    border-radius: 30px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
     bottom: 15px;
     left: 15px;
     width: 150px;

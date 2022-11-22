@@ -18,31 +18,31 @@ export default {
     return {
       images: [
         {
-          src: `/igImage/1.png`,
+          src: `/igImage/1.webp`,
         },
         {
-          src: `/igImage/2.png`,
+          src: `/igImage/2.webp`,
         },
         {
-          src: `/igImage/3.png`,
+          src: `/igImage/3.webp`,
         },
         {
-          src: `/igImage/4.png`,
+          src: `/igImage/4.webp`,
         },
         {
-          src: `/igImage/5.png`,
+          src: `/igImage/5.webp`,
         },
         {
-          src: `/igImage/6.png`,
+          src: `/igImage/6.webp`,
         },
         {
-          src: `/igImage/7.png`,
+          src: `/igImage/7.webp`,
         },
         {
-          src: `/igImage/8.png`,
+          src: `/igImage/8.webp`,
         },
         {
-          src: `/igImage/9.png`,
+          src: `/igImage/9.webp`,
         },
       ],
     };

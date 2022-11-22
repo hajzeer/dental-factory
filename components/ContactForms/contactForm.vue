@@ -25,7 +25,6 @@
           name="phoneNumber"
           placeholder="Numer telefonu"
           v-model="phoneNumber"
-          required
         />
         <input
           type="email"

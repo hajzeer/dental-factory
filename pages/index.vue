@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="hero__div">
-      <div class="hero__image"></div>
+      <div class="hero__image">
+        <img src="/about_1.png" />
+      </div>
       <div class="hero__image__inner">
         <h2 class="hero__image__title-desktop">
           Twój uśmiech, <br />
@@ -136,7 +138,7 @@ export default {
 <style scoped lang="scss">
 .hero__div {
   width: 100%;
-  height: 500px;
+  height: 560px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,31 +162,21 @@ export default {
 
 .hero__image {
   position: relative;
-  background-image: url("~assets/about_1.png");
-  background-position: 0 20%;
-  background-size: cover;
   width: 90%;
-  height: 285px;
-  margin: 15px;
-  border-radius: 12px;
   z-index: -2;
-  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  &:after {
-    content: "";
-    position: absolute;
+  img {
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
     border-radius: 12px;
   }
 
   @media (min-width: 1024px) {
     width: 50%;
-    height: 600px;
     top: 40px;
   }
 }

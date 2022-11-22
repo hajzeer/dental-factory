@@ -344,7 +344,7 @@ h2 {
   position: relative;
   top: 100px;
   width: 100%;
-  height: 1000px;
+  height: 1110px;
   padding-bottom: 30px;
 
   font-family: termina, sans-serif;
@@ -352,7 +352,7 @@ h2 {
 
   @media (min-width: 1024px) {
     top: 250px;
-    height: 850px;
+    height: 970px;
     padding-bottom: 0;
   }
 }
@@ -436,7 +436,7 @@ h2 {
 .creator__div {
   width: 90%;
   height: auto;
-  margin: 0 0 0 5%;
+  margin: 0 0 250px 5%;
   font-weight: 600;
   font-size: 10px;
   border: 1px solid #000000;
@@ -459,7 +459,11 @@ h2 {
 .hours {
   font-weight: 700;
   font-size: 30px !important;
-  text-align: right;
+  text-align: left;
+
+  @media (min-width: 1024px) {
+    text-align: right;
+  }
 }
 
 .paragraph {

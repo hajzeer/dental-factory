@@ -1,16 +1,43 @@
 <template>
   <header class="container">
-    <a href="tel:+48-691-81-83-88">
-      <button class="active__button contact">
-        <img class="contact__btn" src="/contactbtn.png" alt="contact button" />
+    <div class="buttons">
+      <a href="tel:+48-691-81-83-88">
+        <button class="active__button contact">
+          <img
+            class="contact__btn"
+            src="/contactbtn.png"
+            alt="contact button"
+          />
+        </button>
+      </a>
+      <button class="active__button contact" @click="contButt()">
+        <img class="chat__btn" src="/chat.png" alt="contact button" />
       </button>
-    </a>
-
-    <div>
-      <NuxtLink to="/">
-        <img class="logo" src="/logo.png" alt="logo" />
-      </NuxtLink>
     </div>
+    <div
+      class="mess__buttons"
+      :class="{
+        active: visibility,
+        desactive: !visibility,
+      }"
+    >
+      <a href="https://m.me/1905733309538689">
+        <button>
+          <img src="/mess.png" />
+        </button>
+      </a>
+      <div class="stripe"></div>
+      <a
+        href="https://wa.me/48691818388?text=Dzień%20dobry,%20zwracam%20się%20do%20Państwa%20w%20sprawie:%20"
+      >
+        <button>
+          <img src="/whatsapp.png" />
+        </button>
+      </a>
+    </div>
+    <NuxtLink to="/">
+      <img class="logo" src="/logo.png" alt="logo" />
+    </NuxtLink>
     <NavBarDesktop
       :visible="visible"
       :links="links"
@@ -76,6 +103,7 @@ export default {
   data() {
     return {
       visible: false,
+      visibility: false,
       links: [
         {
           name: "O nas",
@@ -127,6 +155,14 @@ export default {
     };
   },
   methods: {
+    contButt() {
+      if (this.visibility) {
+        this.visibility = false;
+      } else {
+        this.visibility = true;
+      }
+      console.log(this.visibility);
+    },
     closeNav() {
       const tl = gsap.timeline();
       setTimeout(() => {
@@ -313,7 +349,10 @@ export default {
 }
 
 .contact {
+  margin: 0 0 0 15px;
   z-index: -1 !important;
+  width: 30px !important;
+  height: 30px !important;
   @media (min-width: 1024px) {
     display: none;
   }
@@ -385,6 +424,14 @@ button {
   height: 30px;
   position: relative;
   top: 0;
+  left: 0;
+}
+
+.chat__btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: -5px;
   left: 0;
 }
 
@@ -469,5 +516,78 @@ button {
     flex-grow: 1;
     margin-left: 40px;
   }
+}
+
+.buttons {
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mess__buttons {
+  opacity: 0;
+  position: fixed;
+  top: 75px;
+  left: 20px;
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.2s ease-out;
+  @media (min-width: 1024px) {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .stripe {
+    position: relative;
+    width: 1px;
+    height: 70%;
+    background: #000000;
+    border-radius: 25px;
+    z-index: 999;
+  }
+
+  a {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 76%;
+      height: 65%;
+      background: transparent;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 85%;
+        height: 85%;
+      }
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+}
+
+.desactive {
+  opacity: 0;
 }
 </style>

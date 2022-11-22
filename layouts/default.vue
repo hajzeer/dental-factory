@@ -3,6 +3,7 @@
     <HeaderComponent />
     <div class="children">
       <Nuxt />
+
       <div class="reviews">
         <script
           defer
@@ -229,8 +230,8 @@ textarea {
 
 .scroll__btn {
   position: fixed;
-  bottom: 125px;
-  right: 10px;
+  bottom: 0;
+  right: 5px;
   width: 55px;
   height: 55px;
   border: 1px solid #000;
@@ -238,7 +239,7 @@ textarea {
   background: #b4f2cb;
   cursor: pointer;
   margin: 0 0 10px 0;
-  z-index: 99999;
+  z-index: 999;
 
   &:active {
     transition: all 0.1s ease-out;
@@ -260,11 +261,12 @@ textarea {
 .reviews {
   position: fixed;
   bottom: 5px;
-  right: 5px;
+  margin-left: 5px;
   z-index: 999;
   @media (min-width: 1024px) {
     bottom: 15px;
-    right: 15px;
+    right: 15px !important;
+    width: 200px;
   }
 }
 </style>

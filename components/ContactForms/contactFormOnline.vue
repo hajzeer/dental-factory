@@ -74,7 +74,10 @@
         placeholder="        Wyślij formularz
 "
       />
-      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
+      <p v-else>
+        Formularz chwilowo nieczynny, prosimy o kontakt telefoniczny lub mailowy
+        kontakt@dental-factory.pl
+      </p>
     </form>
   </div>
 </template>
@@ -93,7 +96,7 @@ export default {
       fileName1: "Wgraj plik",
       fileName2: "Wgraj plik",
       fileName3: "Wgraj plik",
-      visible: true,
+      visible: false,
       item: {
         image: null,
         imageUrl1: null,

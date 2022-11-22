@@ -35,7 +35,10 @@
 "
         required
       />
-      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
+      <p v-else>
+        Formularz chwilowo nieczynny, prosimy o kontakt telefoniczny lub mailowy
+        kontakt@dental-factory.pl
+      </p>
     </form>
   </div>
 </template>
@@ -50,7 +53,7 @@ export default {
       surname: "",
       phoneNumber: "",
       message: "",
-      visible: true,
+      visible: false,
     };
   },
   methods: {

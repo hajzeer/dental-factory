@@ -1,13 +1,18 @@
 <template>
   <div class="container">
     <form class="form__container" @submit.prevent="send">
-      <input type="text" name="name" placeholder="Imię" v-model="name" />
+      <input
+        type="text"
+        name="name"
+        placeholder="Imię"
+        v-model="name"
+        required
+      />
       <input
         type="text"
         name="surname"
         placeholder="Nazwisko"
         v-model="surname"
-        required
       />
       <div class="num__mail__div">
         <input
@@ -15,7 +20,6 @@
           name="phoneNumber"
           placeholder="Numer telefonu"
           v-model="phoneNumber"
-          required
         />
         <input
           type="email"
@@ -70,7 +74,7 @@
         placeholder="        Wyślij formularz
 "
       />
-      <p v-else>Wiadomość została wysłana</p>
+      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
     </form>
   </div>
 </template>

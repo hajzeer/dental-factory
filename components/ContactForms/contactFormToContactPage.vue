@@ -16,7 +16,6 @@
           name="phoneNumber"
           placeholder="Numer telefonu"
           v-model="phoneNumber"
-          required
         />
         <input
           type="email"
@@ -36,7 +35,7 @@
 "
         required
       />
-      <p v-else>Wiadomość została wysłana</p>
+      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
     </form>
   </div>
 </template>

@@ -11,13 +11,18 @@
       </div>
     </div>
     <form class="form__container" @submit.prevent="send">
-      <input type="text" name="name" placeholder="Imię" v-model="name" />
+      <input
+        type="text"
+        name="name"
+        placeholder="Imię"
+        v-model="name"
+        required
+      />
       <input
         type="text"
         name="surname"
         placeholder="Nazwisko"
         v-model="surname"
-        required
       />
       <div class="form__container num__mail__div">
         <input
@@ -34,16 +39,19 @@
           required
         />
       </div>
-      <textarea placeholder="Preferowana data i cel" v-model="message" />
+      <textarea
+        placeholder="Preferowana data i cel"
+        v-model="message"
+        required
+      />
       <input
         type="submit"
         class="submit__button"
         v-if="visible"
         placeholder="        Wyślij formularz
 "
-        required
       />
-      <p v-else>Wiadomość została wysłana</p>
+      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
     </form>
 
     <div class="icons__container">

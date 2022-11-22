@@ -131,7 +131,10 @@ export default {
     });
     this.specialist = data.data.catalogue;
     this.moreThan = this.specialist.components[0].content.items.length > 1;
-    if (this.specialist.components[0].content.items[0].components[3].content) {
+    if (
+      this.specialist.components[0].content.items[0].components[3].content
+        .sections.length >= 1
+    ) {
       for (
         let i = 0;
         i <

@@ -143,7 +143,7 @@ export default {
       }
     },
     send() {
-      this.$axios.$post(`/api/message-attach`, {
+      this.$axios.$post(`https://dental-serv-mail.vercel.app/message-attach`, {
         name: this.name,
         surname: this.surname,
         phoneNumber: this.phoneNumber,

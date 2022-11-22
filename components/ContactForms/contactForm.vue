@@ -100,13 +100,22 @@ export default {
   },
   methods: {
     send() {
-      this.$axios.$post(`/api/message`, {
+      const data = {
         name: this.name,
         surname: this.surname,
         phoneNumber: this.phoneNumber,
         email: this.email,
         message: this.message,
-      });
+      };
+      fetch(`https://dental-serv-mail.vercel.app/message`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        credentials: "include",
+        body: JSON.stringify({ data }),
+      }).then((response) => response.json());
       this.email = "";
       this.name = "";
       this.surname = "";

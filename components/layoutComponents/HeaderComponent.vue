@@ -562,7 +562,7 @@ button {
 
     button {
       width: 76%;
-      height: 65%;
+      height: 76%;
       background: transparent;
       border: none;
       border-radius: 50%;

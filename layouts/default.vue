@@ -296,7 +296,7 @@ textarea {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 99999;
     bottom: 15px;
     left: 15px;
     width: 150px;
@@ -322,7 +322,7 @@ textarea {
 
     button {
       width: 76%;
-      height: 65%;
+      height: 76%;
       background: transparent;
       border: none;
       border-radius: 50%;

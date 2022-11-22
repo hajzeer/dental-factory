@@ -176,8 +176,8 @@ export default {
   }
 
   @media (min-width: 1024px) {
-    width: 50%;
-    top: 40px;
+    width: 550px;
+    top: 100px;
   }
 }
 

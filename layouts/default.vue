@@ -89,7 +89,7 @@ export default {
   mounted() {
     this.path = this.$route.path.replace("https://www.dental-factory.pl/", "");
     if (this.path === "/dentysta-protetyk-wroclaw-leczenie.html") {
-      this.$router.push("/");
+      this.$router.push("/offer/denture");
     }
     if (this.path === "/dentysta-stomatolog-wroclaw-cennik.html") {
       this.$router.push("/price/prices");
@@ -101,7 +101,7 @@ export default {
       this.path ===
       "/dentysta-protetyk-wroclaw-leczenie.html?wbraid=CjgKCAiAjs2bBhA-EigAZTS4teUbyTtLPOfT7Z6Yl6mpCR7tneU9hTqsiWRi45g0QpE-3z8QGgLsCA"
     ) {
-      this.$router.push("/");
+      this.$router.push("/offer/denture");
     }
     if (
       this.path ===
@@ -124,7 +124,7 @@ export default {
       this.path ===
       "/dentysta-protetyk-wroclaw-leczenie.html?wbraid=CjgKCAiA68ebBhBpEigAfvzCyIpW4fPU2zsjGue1eX7x2a4CBu0uXaPaSkYeol4OT2ue0bduGgKXsQ"
     ) {
-      this.$router.push("/");
+      this.$router.push("/offer/denture");
     }
     if (this.path === "/gwarancja-na-leczenie-stomatologiczne.html") {
       this.$router.push("/");
@@ -182,6 +182,42 @@ export default {
     }
     if (this.path === "/umow-wizyte.html") {
       this.$router.push("/appointment");
+    }
+    if (this.path === "/stomatolog/protetyk.html") {
+      this.$router.push("/offer/denture");
+    }
+    if (this.path === "/lekrze/stomatolodzy.html") {
+      this.$router.push("/about/team");
+    }
+    if (this.path === "/stomatologia/wrocław.html") {
+      this.$router.push("/about/team");
+    }
+    if (this.path === "/dentyści/wrocław.html") {
+      this.$router.push("/about/team");
+    }
+    if (this.path === "/dentysta/wrocław.html") {
+      this.$router.push("/about/team");
+    }
+    if (this.path === "/stomatolog/wrocław.html") {
+      this.$router.push("/about/team");
+    }
+    if (this.path === "/stomatolog/chirurg.html") {
+      this.$router.push("/offer/implants");
+    }
+    if (this.path === "/wrocław/chirurgia.html") {
+      this.$router.push("/offer/implants");
+    }
+    if (this.path === "/wrocławnakładki/invisalign.html") {
+      this.$router.push("/offer/implants");
+    }
+    if (this.path === "/wybielenie/prev-dent.html") {
+      this.$router.push("/offer/whitening");
+    }
+    if (this.path === "/implanty-stomatologiczne-wroclaw.html") {
+      this.$router.push("/offer/implants");
+    }
+    if (this.path === "/bonding-kompozytowy-bonding-zebow-wroclaw.html") {
+      this.$router.push("/offer/bonding");
     }
   },
 

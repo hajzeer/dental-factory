@@ -276,7 +276,7 @@ textarea {
   position: fixed;
   bottom: 5px;
   margin-left: 5px;
-  z-index: 999;
+  z-index: 9999;
   @media (min-width: 1024px) {
     bottom: 15px;
     right: 15px !important;

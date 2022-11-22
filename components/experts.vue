@@ -50,6 +50,7 @@
               </div>
             </div>
           </div>
+          <div v-else></div>
         </div>
       </div>
     </div>
@@ -130,21 +131,24 @@ export default {
     });
     this.specialist = data.data.catalogue;
     this.moreThan = this.specialist.components[0].content.items.length > 1;
-    for (
-      let i = 0;
-      i <
-      this.specialist.components[0].content.items[0].components[3].content
-        .sections.length;
-      i++
-    ) {
-      if (
-        this.path ===
+    if (this.specialist.components[0].content.items[0].components[3].content) {
+      for (
+        let i = 0;
+        i <
         this.specialist.components[0].content.items[0].components[3].content
-          .sections[i].title
+          .sections.length;
+        i++
       ) {
-        this.specialize = i;
+        if (
+          this.path ===
+          this.specialist.components[0].content.items[0].components[3].content
+            .sections[i].title
+        ) {
+          this.specialize = i;
+        }
       }
     }
+
     if (this.specialist !== null) {
       this.loading = true;
     }

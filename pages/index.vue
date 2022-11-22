@@ -41,6 +41,23 @@
         </span>
       </p>
     </div>
+    <div class="dental__travel__div">
+      <div>
+        <img src="/11.webp" />
+      </div>
+      <div class="hero__image__inner">
+        <h2>
+          Oferta dla osób spoza Wrocławia Zaplanój swój pobyt i wizytę
+        </h2>
+        <NuxtLink to="/dental-travel">
+          <button class="active__button travel">
+            <p>
+              Dental Travel
+            </p>
+          </button>
+        </NuxtLink>
+      </div>
+    </div>
     <div class="info__div">
       <div class="info__div__outer">
         <div class="info__div__inner">
@@ -151,6 +168,60 @@ export default {
     align-items: flex-start;
     height: 80vh;
     border-bottom: none;
+  }
+}
+
+.dental__travel__div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  h2 {
+    font-family: Termina;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 20px 10px;
+
+    @media (min-width: 1024px) {
+      font-size: 75px;
+      line-height: 80px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .travel {
+    width: 100%;
+    @media (min-width: 1024px) {
+      width: 70%;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    @media (min-width: 1024px) {
+      width: 50%;
+    }
+  }
+
+  img {
+    width: 95%;
+    border-radius: 20px;
+    border: 1px solid #000000;
   }
 }
 

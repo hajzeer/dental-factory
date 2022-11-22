@@ -23,7 +23,7 @@
         </li>
       </ul>
       <div class="first__div">
-        <img class="travel__image" src="/11.png" />
+        <img class="travel__image" src="/11.webp" />
         <div>
           <h2>
             Chcesz rozpocząć leczenie?

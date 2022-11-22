@@ -11,7 +11,7 @@
         <div class="info__div">
           <div>
             <p>
-              Dental Factory Censtrum Stomatologiczne <br />
+              Dental Factory Centrum Stomatologiczne <br />
               Dąbrowskiego 34/U4 <br />
               50-457, Wrocław
             </p>

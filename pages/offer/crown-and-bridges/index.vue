@@ -132,7 +132,7 @@
           </p>
           <p>
             <span>
-              TOMATOLOGIA CYFROWA - SKAN ZAMIAST WYCISKU!
+              STOMATOLOGIA CYFROWA ZAMIAST WYCISKU!
             </span>
             <br />
             Nie wykonujemy tradycyjnych wycisków. Cyfrowy skan zębów pozwala nam

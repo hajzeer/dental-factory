@@ -62,7 +62,7 @@
           </p>
           <p>
             <span>
-              UGRYZIEMY KAŻDY PROBLEM!
+              UGRYZIEMY KAŻDY PROBLEM
             </span>
             <br />
             Nie boimy się trudnych przypadków. Nasze doświadczenie i liczne

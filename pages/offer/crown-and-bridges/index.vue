@@ -132,7 +132,7 @@
           </p>
           <p>
             <span>
-              STOMATOLOGIA CYFROWA ZAMIAST WYCISKU!
+              STOMATOLOGIA CYFROWA ZAMIAST WYCISKU
             </span>
             <br />
             Nie wykonujemy tradycyjnych wycisków. Cyfrowy skan zębów pozwala nam
@@ -143,7 +143,7 @@
           </p>
           <p>
             <span>
-              DBAMY O TWÓJ KOMFORT!
+              DBAMY O TWÓJ KOMFORT
             </span>
             <br />
             Robimy wszystko, aby leczenie przebiegło dla Ciebie w sposób

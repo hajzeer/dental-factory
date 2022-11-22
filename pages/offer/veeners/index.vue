@@ -4,13 +4,13 @@
     <div class="inner">
       <h2 class="page__title">LICÓWKI PORCELANOWE WE WROCŁAWIU</h2>
       <div class="first__div">
-        <img src="/offer-img/licowki-porcelanowe-1.jpg"/>
+        <img src="/offer-img/licowki-porcelanowe-1.jpg" />
         <p>
           Chcesz poprawić estetykę swojego uśmiechu? Licówki porcelanowe,
           przyklejone na przednią powierzchnię zębów, nadają im zupełnie nowy
           kształt i kolor.
-          <br/>
-          <br/>
+          <br />
+          <br />
           Licówki porcelanowe to bardzo cienkie płatki porcelany. Dzięki nim
           możemy zapewnić Ci słynny "holywoodzki uśmiech". Są doskonałym
           rozwiązaniem dla pacjentów, którzy mają zdrowe zęby, ale są
@@ -28,7 +28,7 @@
         znieczuleniu. Następnie pobieramy wyciski i wykonujemy licówki
         tymczasowe. Nigdy nie opuścisz gabinetu „bez zębów”.
       </p>
-      <img src="/offer-img/licowki-2.jpg"/>
+      <img src="/offer-img/licowki-2.jpg" />
       <div class="info__div">
         <div class="info__div__outer">
           <div class="info__div__inner">
@@ -38,7 +38,7 @@
             <span>
               GWARANCJA NA LECZENIE
             </span>
-            <br/>
+            <br />
             Porcelana jest równie piękna, co wytrzymała. Na wykonane licówki
             dajemy Ci nawet 5 lat gwarancji. Licówki mogą służyć nawet przez 15
             lat, jeśli będziesz o nie odpowiednio dbać. Udzielimy Ci wszelkich
@@ -47,9 +47,9 @@
           </p>
           <p>
             <span>
-              STOMATOLOGIA CYFROWA - SKAN ZAMIAST WYCISKU!
+              STOMATOLOGIA CYFROWA - SKAN ZAMIAST WYCISKU
             </span>
-            <br/>
+            <br />
             Nie wykonujemy tradycyjnych wycisków. Cyfrowy skan zębów pozwala nam
             stworzyć model 3D Twojego nowego uśmiechu. Laboratorium projektuje i
             frezuje - wycina Twoje licówki. Następnie są ręcznie barwione, aby
@@ -58,9 +58,9 @@
           </p>
           <p>
             <span>
-              DBAMY O TWÓJ KOMFORT!
+              DBAMY O TWÓJ KOMFORT
             </span>
-            <br/>
+            <br />
             Robimy wszystko, aby leczenie przebiegło dla Ciebie w sposób
             komfortowy!
           </p>
@@ -68,7 +68,7 @@
             <span>
               DARMOWA KONSULTACJA ON-LINE
             </span>
-            <br/>
+            <br />
             Poznaj plan, harmonogram i całkowity koszt leczenia bez wychodzenia
             z domu!
           </p>
@@ -76,22 +76,22 @@
             <span>
               PROJEKTOWANIE UŚMIECHU
             </span>
-            <br/>
+            <br />
             Zobacz swój uśmiech zanim wykonamy jakiekolwiek zabiegi!
           </p>
           <p>
             <span>
               LICÓWKI TYMCZASOWE
             </span>
-            <br/>
+            <br />
             Licówki tymczasowe pozwalają przetestować nowy uśmiech z
             przyjaciółmi i rodziną. Dopiero po Twojej akceptacji cementujemy na
             stałe licówki ostateczne.
           </p>
-          <img src="/offer-img/licowki-porcelanowe-3.jpg"/>
+          <img src="/offer-img/licowki-porcelanowe-3.jpg" />
         </div>
       </div>
-      <Experts path="/specjalizacje/licowki-porcelanowe"/>
+      <Experts path="/specjalizacje/licowki-porcelanowe" />
     </div>
   </div>
 </template>
@@ -111,8 +111,8 @@ export default {
       const tl = gsap.timeline();
 
       if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, {opacity: 0, duration: 0.1})
-          .to(this.$refs.second__arrow, {rotate: "0", duration: 0.2})
+        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
+          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
           .to(this.$refs.info__div__outer__second, {
             height: "100px",
             duration: 0.2,
@@ -124,7 +124,7 @@ export default {
 
         this.visibleSecond = !this.visibleSecond;
       } else {
-        tl.to(this.$refs.second__arrow, {rotate: "180deg", duration: 0.2})
+        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
           .to(this.$refs.main__text__second, {
             display: "block",
             duration: 0.1,
@@ -133,7 +133,7 @@ export default {
             height: "auto",
             duration: 0.2,
           })
-          .to(this.$refs.main__text__second, {opacity: 1, duration: 0.2});
+          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
         this.visibleSecond = !this.visibleSecond;
       }
     },

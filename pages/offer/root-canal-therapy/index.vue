@@ -66,7 +66,7 @@
           </p>
           <p>
             <span>
-              UGRYZIEMY KAŻDY PROBLEM!
+              UGRYZIEMY KAŻDY PROBLEM
             </span>
           </p>
           <p>

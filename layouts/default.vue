@@ -3,6 +3,13 @@
     <HeaderComponent />
     <div class="children">
       <Nuxt />
+      <div class="reviews">
+        <script
+          defer
+          async
+          src="https://cdn.trustindex.io/loader.js?3a922be10c3c565bc6663b3ce90"
+        ></script>
+      </div>
       <button class="scroll__btn" @click="toTop">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +169,7 @@ export default {
       this.$router.push("/appointment");
     }
   },
-  
+
   head() {
     return {
       title:
@@ -222,7 +229,7 @@ textarea {
 
 .scroll__btn {
   position: fixed;
-  bottom: 5px;
+  bottom: 125px;
   right: 10px;
   width: 55px;
   height: 55px;
@@ -247,6 +254,17 @@ textarea {
 
   @media (min-width: 1024px) {
     display: none;
+  }
+}
+
+.reviews {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 999;
+  @media (min-width: 1024px) {
+    bottom: 15px;
+    right: 15px;
   }
 }
 </style>

@@ -59,7 +59,7 @@
           <ul>
             <li>
               <span>
-                Jakie są zalety bomdingu?
+                Jakie są zalety bondingu?
               </span>
             </li>
             <li>

@@ -79,7 +79,7 @@ export default {
         { text: "Aromatyzowane wnętrza", icon: Icon6 },
         { text: "Klimatyzacja", icon: Icon8 },
         { text: "MediRaty", icon: Icon1 },
-        { text: "Dogodne płatności", icon: Icon3 },
+        { text: "Płatność gotówką, kartą, przelewem", icon: Icon3 },
         { text: "Dostęp do WI-FI ", icon: Icon2 },
       ],
       email: "",

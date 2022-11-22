@@ -83,8 +83,14 @@
             </span>
             <br />
             Robimy wszystko, aby leczenie przebiegło dla Ciebie w sposób
-            komfortowy! DARMOWA KONSULTACJA ON-LINE - poznaj plan, harmonogram i
-            całkowity koszt leczenia
+            komfortowy!
+          </p>
+          <p>
+            <span>
+              DARMOWA KONSULTACJA ON-LINE
+            </span>
+            <br />
+            poznaj plan, harmonogram i całkowity koszt leczenia
           </p>
           <p>
             <span>

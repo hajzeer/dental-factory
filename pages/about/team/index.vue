@@ -5,11 +5,12 @@
       <h2 class="page__title">Nasz zespół</h2>
       <p>
         Najważniejsi są ludzie. To oni sprawiają, że wizyta u nas daje Ci powody
-        do uśmiechu! Sebastian Burdeński dentysta, założyciel Dental Factory
-        Perfekcjonista. Absolwent Uniwersytetu Medycznego we Wrocławiu. Tworzy
-        kompleksowe plany leczenia dla naszych Pacjentów i czuwa nad ich
-        przebiegiem. Z pasją zajmuje się leczeniem protetycznym i stomatologią
-        estetyczną.
+        do uśmiechu!
+        <br /><br />
+        Sebastian Burdeński dentysta, założyciel Dental Factory Perfekcjonista.
+        Absolwent Uniwersytetu Medycznego we Wrocławiu. Tworzy kompleksowe plany
+        leczenia dla naszych Pacjentów i czuwa nad ich przebiegiem. Z pasją
+        zajmuje się leczeniem protetycznym i stomatologią estetyczną.
       </p>
     </div>
     <div class="team__div" v-if="loading">

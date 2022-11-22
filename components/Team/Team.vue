@@ -4,16 +4,17 @@
       <h2 class="page__title">Nasz zespół</h2>
       <p>
         Najważniejsi są ludzie. To oni sprawiają, że wizyta u nas daje Ci powody
-        do uśmiechu! Sebastian Burdeński dentysta, założyciel Dental Factory
-        Perfekcjonista. Absolwent Uniwersytetu Medycznego we Wrocławiu. Tworzy
-        kompleksowe plany leczenia dla naszych Pacjentów i czuwa nad ich
-        przebiegiem. Z pasją zajmuje się leczeniem protetycznym i stomatologią
-        estetyczną.
+        do uśmiechu!
+        <br/><br/>
+        Sebastian Burdeński dentysta, założyciel Dental Factory Perfekcjonista.
+        Absolwent Uniwersytetu Medycznego we Wrocławiu. Tworzy kompleksowe plany
+        leczenia dla naszych Pacjentów i czuwa nad ich przebiegiem. Z pasją
+        zajmuje się leczeniem protetycznym i stomatologią estetyczną.
       </p>
     </div>
     <div class="team__div" v-if="loading">
       <div v-for="item in specialist">
-        <img :src="item.components[2].content.images[0].url" />
+        <img :src="item.components[2].content.images[0].url"/>
         <h2>{{ item.name }}</h2>
         <p v-if="item.components[1].content">
           {{ item.components[1].content.text }}
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import { getData } from "~/lib/graph/get-data";
+import {getData} from "~/lib/graph/get-data";
 
 export default {
   name: "index",

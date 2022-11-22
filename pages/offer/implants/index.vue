@@ -57,18 +57,31 @@
             implantach, albo ruchomą protezę, która będzie się na nich stabilnie
             i mocno trzymać.
           </p>
-          <p>
-            <span>
-              Jakie są zalety implantów
-            </span>
-            <br />
-            Trwałość. Jeśli będziesz o nie odpowiednio dbać, mogą służyć nawet
-            całe życie. Bezpieczeństwo. Nie wymagają ingerencji w sąsiednie
-            zęby. Komfort. Funkcjonują jak Twoje własne zęby. Wygoda noszenia
-            protez. Jeśli decydujesz się na protezę na implantach, możesz mieć
-            pewność, że nie będzie się ona ruszać. Najlepsza estetyka, wymowa,
-            jedzenie i odczuwanie smaków.
-          </p>
+
+          <ul>
+            <li>
+              <span>
+                Jakie są zalety implantów
+              </span>
+            </li>
+            <li>
+              ~ Trwałość - Jeśli będziesz o nie odpowiednio dbać, mogą służyć
+              nawet całe życie.
+            </li>
+            <li>
+              ~ Bezpieczeństwo - Nie wymagają ingerencji w sąsiednie zęby.
+            </li>
+            <li>
+              ~ Komfort - Funkcjonują jak Twoje własne zęby.
+            </li>
+            <li>
+              ~ Wygoda noszenia protez - Jeśli decydujesz się na protezę na
+              implantach, możesz mieć pewność, że nie będzie się ona ruszać.
+            </li>
+            <li>
+              ~ Najlepsza estetyka, wymowa, jedzenie i odczuwanie smaków.
+            </li>
+          </ul>
         </div>
         <div class="info__div__outer">
           <div class="info__div__inner">

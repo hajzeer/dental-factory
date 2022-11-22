@@ -3,7 +3,21 @@
     <HeaderComponent />
     <div class="children">
       <Nuxt />
-
+      <div class="mess__buttons">
+        <a href="https://m.me/1905733309538689">
+          <button>
+            <img src="/mess.png" />
+          </button>
+        </a>
+        <div class="stripe"></div>
+        <a
+          href="https://wa.me/48691818388?text=Dzień%20dobry,%20zwracam%20się%20do%20Państwa%20w%20sprawie:%20"
+        >
+          <button>
+            <img src="/whatsapp.png" />
+          </button>
+        </a>
+      </div>
       <div class="reviews">
         <script
           defer
@@ -267,6 +281,65 @@ textarea {
     bottom: 15px;
     right: 15px !important;
     width: 200px;
+  }
+}
+
+.mess__buttons {
+  display: none;
+  position: fixed;
+
+  width: 120px;
+  height: 40px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  transition: all 0.2s ease-out;
+  @media (min-width: 1024px) {
+    bottom: 15px;
+    left: 15px;
+    width: 150px;
+    height: 60px;
+  }
+
+  .stripe {
+    position: relative;
+    width: 1px;
+    height: 70%;
+    background: #000000;
+    border-radius: 25px;
+    z-index: 999;
+  }
+
+  a {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      width: 76%;
+      height: 65%;
+      background: transparent;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 85%;
+        height: 85%;
+        cursor: pointer;
+      }
+    }
   }
 }
 </style>

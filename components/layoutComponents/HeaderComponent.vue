@@ -539,8 +539,7 @@ button {
   z-index: 999;
   transition: all 0.2s ease-out;
   @media (min-width: 1024px) {
-    bottom: 15px;
-    left: 15px;
+    display: none;
   }
 
   .stripe {

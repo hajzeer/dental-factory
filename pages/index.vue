@@ -179,6 +179,18 @@ export default {
   align-items: center;
   margin-top: 20px;
 
+  div {
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 1024px) {
+      }
+    }
+  }
+
   h2 {
     font-family: Termina;
     font-weight: 900;
@@ -200,9 +212,11 @@ export default {
   }
 
   .travel {
-    width: 100%;
+    width: 80%;
+    align-self: center !important;
     @media (min-width: 1024px) {
       width: 70%;
+      align-self: flex-start !important;
     }
   }
 

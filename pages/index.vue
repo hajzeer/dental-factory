@@ -52,7 +52,7 @@
         <NuxtLink to="/dental-travel">
           <button class="active__button travel">
             <p>
-              Dental Travel
+              Dowiedź się więcej
             </p>
           </button>
         </NuxtLink>

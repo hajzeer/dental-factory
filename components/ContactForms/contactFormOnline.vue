@@ -74,15 +74,14 @@
         placeholder="        Wyślij formularz
 "
       />
-      <p v-else>
-        Formularz chwilowo nieczynny, prosimy o kontakt telefoniczny lub mailowy
-        kontakt@dental-factory.pl
-      </p>
+      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
     </form>
   </div>
 </template>
 
 <script>
+import Compressor from "compressorjs";
+
 export default {
   name: "ContactFormOnline",
   data() {
@@ -96,7 +95,7 @@ export default {
       fileName1: "Wgraj plik",
       fileName2: "Wgraj plik",
       fileName3: "Wgraj plik",
-      visible: false,
+      visible: true,
       item: {
         image: null,
         imageUrl1: null,
@@ -106,9 +105,9 @@ export default {
     };
   },
   methods: {
-    async createFile(e) {
+    createFile(e) {
       const file = e.target.files[0];
-      if (file.size > 8500000) {
+      if (file.size > 1500000) {
         this.fileName1 = "Zbyt duży plik, załącz inny";
       } else {
         this.fileName1 = file.name;
@@ -121,7 +120,7 @@ export default {
     },
     async createFile2(e) {
       const file = e.target.files[0];
-      if (file.size > 8500000) {
+      if (file.size > 1500000) {
         this.fileName2 = "Zbyt duży plik, załącz inny";
       } else {
         this.fileName2 = file.name;
@@ -134,7 +133,9 @@ export default {
     },
     async createFile3(e) {
       const file = e.target.files[0];
-      if (file.size > 8333333) {
+
+      console.log(file);
+      if (file.size > 1500000) {
         this.fileName3 = "Zbyt duży plik, załącz inny";
       } else {
         this.fileName3 = file.name;
@@ -146,16 +147,20 @@ export default {
       }
     },
     send() {
-      this.$axios.$post(`https://dental-serv-mail.vercel.app/message-attach`, {
+      const data = {
         name: this.name,
         surname: this.surname,
         phoneNumber: this.phoneNumber,
         email: this.email,
         message: this.message,
-        path1: this.item.imageUrl1 || null,
-        path2: this.item.imageUrl2 || null,
-        path3: this.item.imageUrl3 || null,
-      });
+        path1: this.item.imageUrl1,
+        path2: this.item.imageUrl2,
+        path3: this.item.imageUrl3,
+      };
+      console.log(data);
+      this.$axios
+        .$post(`https://real-ruby-cricket-kit.cyclic.app/message-attach`, data)
+        .then((res) => console.log(res));
       this.email = "";
       this.name = "";
       this.surname = "";

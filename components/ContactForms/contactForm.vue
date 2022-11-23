@@ -51,10 +51,7 @@
         placeholder="        Wyślij formularz
 "
       />
-      <p v-else>
-        Formularz chwilowo nieczynny, prosimy o kontakt telefoniczny lub mailowy
-        kontakt@dental-factory.pl
-      </p>
+      <p v-else>Dziękujemy za wiadomość, odpowiemy na nią wkrótce</p>
     </form>
 
     <div class="icons__container">
@@ -98,7 +95,7 @@ export default {
       surname: "",
       phoneNumber: "",
       message: "",
-      visible: false,
+      visible: true,
     };
   },
   methods: {
@@ -110,15 +107,9 @@ export default {
         email: this.email,
         message: this.message,
       };
-      fetch(`https://dental-serv-mail.vercel.app/message`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        mode: "no-cors",
-        credentials: "include",
-        body: JSON.stringify({ data }),
-      }).then((response) => response.json());
+      this.$axios
+        .$post(`https://real-ruby-cricket-kit.cyclic.app/message`, data)
+        .then((res) => console.log(res));
       this.email = "";
       this.name = "";
       this.surname = "";

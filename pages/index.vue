@@ -247,7 +247,7 @@ export default {
   }
 
   @media (min-width: 1024px) {
-    width: 550px;
+    width: 600px;
     top: 100px;
   }
 }

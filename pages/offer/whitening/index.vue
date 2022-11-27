@@ -121,47 +121,7 @@
           <div class="info__div__inner">
             <h2>Wybierz metodę wybielania</h2>
           </div>
-
-          <p>
-            <span>METODA ŁĄCZONA</span>
-            <br />
-            Jest najczęściej polecaną metodą wybielania. Jest to połączenie
-            czyszczenia zębów, wybielania zębów preparatem PrevDent oraz
-            nakładek do wybielania zębów w domu. Jest to metoda polecana także w
-            przypadku silnych przebarwień i zębów, które nie dają się wybielić
-            innymi metodami. Jest w pełni bezpieczna i łagodna dla zębów.
-            <br />
-            <span>CENA: 2800ZŁ</span>
-          </p>
-          <p>
-            <span>WYBIELANIE GABINETOWE PREVDENT</span>
-            <br />
-            PrevDent to najnowsza metoda wybielania w gabinecie. Dzięki
-            delikatnemu i skutecznemu działaniu, wypiera inne preparaty i
-            systemy do wybielania zębów. Poza substancjami wybielającymi
-            preparat zawiera w swoim składzie nano-hydroksyapatyt, który
-            odbudowuje szkliwo, nadaje mu połysk i jednocześnie zmniejsza
-            nadwrażliwość po wybielaniu. Zabieg trwa najczęściej 2 godziny i
-            rozjaśnia zęby o nawewt o 4 odcienie. Nie wymaga powtarzania.
-            <br />
-            <span>
-              CENA: 1900ZŁ
-            </span>
-          </p>
-          <p>
-            <span>WYBIELANIE NAKŁADKOWE</span>
-            <br />
-            Wybielanie nakładkowe to prosta i skuteczna metoda wybielania.
-            Otrzymujesz od nas żel wybielający oraz nakładki dokładnie
-            dopasowane do Twoich zębów, które trzeba nosić kilka godzin w ciągu
-            dnia lub zakładać na noc. Żel wybielający ma znacznie niższe
-            stężenie, niż w przypadku wybielania w gabinecie, dlatego całkowity
-            proces wybielania trwa około dwóch do trzech tygodni.
-            <br />
-            <span>
-              CENA: 1200ZŁ
-            </span>
-          </p>
+          <OfferInfo path="/specjalizacje/wybielanie-zebow" />
           <img src="/offer-img/wybielanie-zebow-2.jpg" />
         </div>
       </div>

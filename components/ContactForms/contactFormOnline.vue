@@ -157,7 +157,6 @@ export default {
         path2: this.item.imageUrl2,
         path3: this.item.imageUrl3,
       };
-      console.log(data);
       this.$axios
         .$post(`https://real-ruby-cricket-kit.cyclic.app/message-attach`, data)
         .then((res) => console.log(res));

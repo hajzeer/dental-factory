@@ -35,33 +35,29 @@
         <img alt="rastr image" src="/rastrFooter.jpg" />
       </div>
     </div>
-    <div class="finisher__container">
+    <div class="finisher__container" v-if="footerInfo">
       <div class="finisher__container-inner">
         <div class="info__div">
           <div>
             <img alt="logo footer" class="logo__image" src="/logoFooter.png" />
-            <p>
-              Dental Factory Centrum Stomatologiczne <br />
-              Dąbrowskiego 34/U4 <br />
-              50-457, Wrocław
+            <p
+              class="address__p"
+              v-for="item in footerInfo[2].content.plainText"
+            >
+              {{ item }} <br />
             </p>
             <p class="paragraph">
               <span>
-                Wskazówki dotyczące parkowania
+                {{ footerInfo[3].content.paragraphs[0].title.text }}
               </span>
-              <br />
-              <br />
-
-              Na osiedlu parkowanie jest dozwolone jedynie na wydzielonych
-              miejscach parkingowych przez pół godziny. Jest to spowodowane
-              uchwałą wspólnoty mieszkańców, od nas niezależną. Jeśli tam
-              parkujesz, poproś naszych pracowników o kartę parkingową.
-
-              <br />
-              <br />
-              Zalecamy parkowanie wjeżdżając od ulicy Małachowskiego lub na
-              skrzyżowaniu między ulicami Kościuszki i Pułaskiego.
             </p>
+            <p
+              class="paragraph"
+              v-for="item in footerInfo[3].content.paragraphs[0].body.plainText"
+            >
+              {{ item }}
+            </p>
+
             <a class="links" href="https://g.page/dentalfactory?share">
               <button class="active__button">
                 <p><span>Dojazd</span></p>
@@ -69,22 +65,22 @@
             </a>
           </div>
           <div>
-            <p class="hours">Godziny otwarcia:</p>
+            <p class="hours">{{ footerInfo[4].content.sections[0].title }}</p>
             <ul>
-              <li><span>Pn</span> 9:00 - 20:00</li>
-              <li><span>Wt</span> 9:00 - 20:00</li>
-              <li><span>Śr</span> 9:00 - 20:00</li>
-              <li><span>Czw</span> 9:00 - 20:00</li>
-              <li><span>Pt</span> 9:00 - 20:00</li>
+              <li v-for="item in footerInfo[4].content.sections[0].properties">
+                <span>{{ item.key }}</span> {{ item.value }}
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="contact__div">
-        <a href="tel:+48-691-818-388">+48 69 18 18 388</a
-        ><a href="mailto:kontakt@dental-factory.pl"
-          >kontakt@dental-factory.pl</a
-        >
+        <a :href="`tel:` + footerInfo[0].content.text">{{
+          footerInfo[0].content.text
+        }}</a
+        ><a :href="`mailto:` + footerInfo[1].content.text">{{
+          footerInfo[1].content.text
+        }}</a>
       </div>
       <div class="creator__div">
         <p>
@@ -93,6 +89,9 @@
         </p>
       </div>
     </div>
+    <div v-else>
+      <Spinner />
+    </div>
   </div>
 </template>
 
@@ -100,14 +99,15 @@
 import gsap from "gsap";
 import ContactForm from "~/components/ContactForms/contactForm";
 import reviewsLoader from "~/components/reviewsLoader";
+import { simplyFetchFromGraph } from "@/lib/graph";
 
-const url = ``;
 export default {
   name: "FooterComponents",
   components: { reviewsLoader, ContactForm },
   data() {
     return {
       dataIg: [],
+      footerInfo: null,
       dataGoogle: [
         {
           name: "Anna P.",
@@ -143,6 +143,48 @@ export default {
         },
       ],
     };
+  },
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query GET_FOOTER {
+  catalogue(path: "/footer-and-contact") {
+    ...on Folder {
+      components {
+        content {
+          ...on SingleLineContent {
+            text
+          }
+          ...on PropertiesTableContent {
+            sections {
+              title
+              properties {
+                key
+                value
+              }
+            }
+          }
+          ...on RichTextContent {
+            plainText
+          }
+          ...on ParagraphCollectionContent {
+            paragraphs {
+              title {
+                text
+              }
+              body {
+                plainText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`,
+    });
+
+    this.footerInfo = data.data.catalogue.components;
   },
   methods: {
     grownFirst: function () {
@@ -475,5 +517,9 @@ h2 {
     font-weight: 600;
     font-size: 25px !important;
   }
+}
+
+.address__p {
+  line-height: 15px;
 }
 </style>

@@ -75,47 +75,11 @@
             znieczuleniem The Wand STA.
           </p>
         </div>
-        <div
-          ref="info__div__outer__third"
-          class="info__div__outer"
-          @click="handleOpenThird"
-        >
+        <div ref="info__div__outer__third" class="info__div__outer">
           <div class="info__div__inner">
             <h2>Poznaj najczęściej wykonywane zabiegi</h2>
           </div>
-          <p>
-            <span>
-              Usuwanie kamienia - skaling
-            </span>
-          </p>
-          <p>
-            Pozwala pozbyć się twardych złogów kamienia, powodujących
-            krwawienie, stan zapalny dziąseł i paradontozę. Wykorzystujemy do
-            tego celu sprzęt pracujący w technologii NO-PAIN, dzięki czemu
-            zabieg jest dużo bardziej komfortowy.
-          </p>
-          <p>
-            <span>
-              Usuwanie osadów - piaskowanie
-            </span>
-          </p>
-          <p>
-            Pozwala usunąć osady po kawie, herbacie, nikotynie, czy czerwonym
-            winie. Piasek dociera w miejsca, których oczyszczenie jest
-            niemożliwe innymi metodami - np. w wąskie przestrzenie między zębami
-            i bruzdy. Do piaskowania wykorzystujemy ultradelikatny piasek
-            AIR-FLOW, który bardzo skutecznie usuwa przebarwienia, a
-            jednocześnie nie drażni dziąseł i śluzówki.
-          </p>
-          <p>
-            <span>
-              Remineralizacja
-            </span>
-          </p>
-          <p>
-            Nieodłączny element higienizacji. Wzmacnia szkliwo zębów, zmniejsza
-            ich wrażliwość i chroni przed próchnicą.
-          </p>
+          <OfferInfo path="/specjalizacje/higienizacja" />
         </div>
       </div>
       <Experts path="/specjalizacje/higienizacja" />

@@ -1,7 +1,7 @@
 <template>
   <div class="info__div" v-if="offerInfo">
     <div class="info__div__outer" v-for="item in offerInfo.chunks">
-      <div v-if="item[3]">
+      <div v-if="item[3]" class="imgDiv">
         <img
           v-if="item[3].content !== null"
           :src="item[3].content.firstImage.url"

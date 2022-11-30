@@ -8,6 +8,11 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
+
+    script: [
+      {src: "https://apps.elfsight.com/p/platform.js", defer: true},
+    ],
+
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {

@@ -19,7 +19,34 @@
         </a>
       </div>
       <div class="reviews">
-        <div class="elfsight-app-864da170-0453-4fc6-a5bc-7b4323bca7a0"></div>
+        <div
+          class="review-widget_net"
+          data-uuid="4f229d63-a82f-4f5a-8dac-70137b5a7a40"
+          data-template="10"
+          data-filter=""
+          data-lang="pl"
+          data-theme="light"
+        >
+          <center>
+            <a
+              href="https://www.review-widget.net/"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://grwapi.net/assets/spinner/spin.svg"
+                title="Google Review Widget"
+                alt="Google Review Widget"
+              />
+            </a>
+          </center>
+        </div>
+
+        <script
+          async
+          type="text/javascript"
+          src="https://grwapi.net/widget.min.js"
+        ></script>
       </div>
       <button class="scroll__btn" @click="toTop">
         <svg
@@ -306,12 +333,12 @@ textarea {
 
 .reviews {
   position: fixed;
-  bottom: 5px;
+  bottom: -10px;
   margin-left: 5px;
   z-index: 9999;
   @media (min-width: 1024px) {
-    bottom: 15px;
-    right: 15px !important;
+    bottom: -10px;
+    right: 45px !important;
     width: 200px;
   }
 }

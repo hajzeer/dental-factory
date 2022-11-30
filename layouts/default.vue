@@ -19,11 +19,7 @@
         </a>
       </div>
       <div class="reviews">
-        <script
-          defer
-          async
-          src="https://cdn.trustindex.io/loader.js?3a922be10c3c565bc6663b3ce90"
-        ></script>
+        <div class="elfsight-app-864da170-0453-4fc6-a5bc-7b4323bca7a0"></div>
       </div>
       <button class="scroll__btn" @click="toTop">
         <svg

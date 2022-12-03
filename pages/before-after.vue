@@ -142,6 +142,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 60px;
 
   img {
     width: 90% !important;

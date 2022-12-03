@@ -97,10 +97,10 @@
             />
             <h2>Poznaj metody leczenia ubytków</h2>
           </div>
-          <OfferInfo path="/specjalizacje/leczenie-pruchnicy" />
+          <OfferInfo path="/specjalizacje/leczenie-prochnicy" />
         </div>
       </div>
-      <Experts path="/specjalizacje/leczenie-pruchnicy" />
+      <Experts path="/specjalizacje/leczenie-prochnicy" />
     </div>
   </div>
 </template>

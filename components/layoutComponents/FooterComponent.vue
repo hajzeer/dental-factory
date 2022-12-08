@@ -6,7 +6,8 @@
           ref="image1"
           alt="cabinet__image"
           class="footer__image"
-          src="/footerImg1.webp"
+          v-if="footerInfo[5].content !== null"
+          :src="footerInfo[5].content.images[0].url"
           @mouseenter="grownFirst"
           @mouseleave="smallerFirst"
         />
@@ -14,7 +15,8 @@
           ref="image3"
           alt="cabinet__image"
           class="footer__image"
-          src="/footerImg3.webp"
+          v-if="footerInfo[5].content !== null"
+          :src="footerInfo[5].content.images[1].url"
           @mouseenter="grownThird"
           @mouseleave="smallerThird"
         />
@@ -107,6 +109,7 @@ export default {
   data() {
     return {
       dataIg: [],
+      loading: false,
       footerInfo: null,
       dataGoogle: [
         {
@@ -176,6 +179,11 @@ export default {
               }
             }
           }
+          ...on ImageContent {
+            images {
+              url
+            }
+          }
         }
       }
     }
@@ -185,6 +193,13 @@ export default {
     });
 
     this.footerInfo = data.data.catalogue.components;
+
+    if (this.footerInfo !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.footerInfo);
   },
   methods: {
     grownFirst: function () {

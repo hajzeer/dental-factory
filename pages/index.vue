@@ -2,7 +2,10 @@
   <div>
     <div class="hero__div">
       <div class="hero__image">
-        <img src="/about_1.webp" />
+        <img
+          v-if="loading && ImgArray.images[0] !== undefined"
+          :src="ImgArray.images[0].url"
+        />
       </div>
       <div class="hero__image__inner">
         <h2 class="hero__image__title-desktop">
@@ -43,7 +46,10 @@
     </div>
     <div class="dental__travel__div">
       <div>
-        <img src="/11.webp" />
+        <img
+          v-if="loading && ImgArray.images[1] !== undefined"
+          :src="ImgArray.images[1].url"
+        />
       </div>
       <div class="hero__image__inner">
         <h2>
@@ -147,8 +153,50 @@
 </template>
 
 <script>
+import { simplyFetchFromGraph } from "@/lib/graph";
+
 export default {
   name: "IndexPage",
+  data() {
+    return {
+      path: "/strona-glowna",
+      loading: false,
+      ImgArray: [],
+    };
+  },
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+
+    this.ImgArray = data.data.catalogue.components[0].content;
+
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
+  },
 };
 </script>
 
@@ -234,7 +282,7 @@ export default {
 
   img {
     width: 95%;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid #000000;
   }
 }
@@ -257,7 +305,7 @@ export default {
   img {
     width: 100%;
     border: 1px solid #000000;
-    border-radius: 12px;
+    border-radius: 15px;
   }
 
   @media (min-width: 1024px) {

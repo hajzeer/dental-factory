@@ -4,7 +4,10 @@
     <div class="inner">
       <h2 class="page__title">LICÓWKI PORCELANOWE WE WROCŁAWIU</h2>
       <div class="first__div">
-        <img src="/offer-img/licowki-porcelanowe-1.jpg" />
+        <img
+          v-if="loading && ImgArray.images[0] !== undefined"
+          :src="ImgArray.images[0].url"
+        />
         <p>
           Chcesz poprawić estetykę swojego uśmiechu? Licówki porcelanowe,
           przyklejone na przednią powierzchnię zębów, nadają im zupełnie nowy
@@ -28,7 +31,10 @@
         znieczuleniu. Następnie pobieramy wyciski i wykonujemy licówki
         tymczasowe. Nigdy nie opuścisz gabinetu „bez zębów”.
       </p>
-      <img src="/offer-img/licowki-2.jpg" />
+      <img
+        v-if="loading && ImgArray.images[1] !== undefined"
+        :src="ImgArray.images[1].url"
+      />
       <div class="info__div">
         <div class="info__div__outer">
           <div class="info__div__inner">
@@ -88,7 +94,10 @@
             przyjaciółmi i rodziną. Dopiero po Twojej akceptacji cementujemy na
             stałe licówki ostateczne.
           </p>
-          <img src="/offer-img/licowki-porcelanowe-3.jpg" />
+          <img
+            v-if="loading && ImgArray.images[2] !== undefined"
+            :src="ImgArray.images[2].url"
+          />
         </div>
       </div>
       <Experts path="/specjalizacje/licowki-porcelanowe" />
@@ -97,46 +106,49 @@
 </template>
 
 <script>
-import gsap from "gsap";
+import { simplyFetchFromGraph } from "@/lib/graph";
 
 export default {
   name: "index",
   data() {
     return {
-      visibleSecond: true,
+      path: "/specjalizacje/licowki-porcelanowe",
+      loading: false,
+      ImgArray: [],
     };
   },
-  methods: {
-    handleOpenSecond: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__second, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__second, {
-            display: "none",
-            duration: 0.2,
-          });
-
-        this.visibleSecond = !this.visibleSecond;
-      } else {
-        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__second, {
-            display: "block",
-            duration: 0.1,
-          })
-          .to(this.$refs.info__div__outer__second, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
-        this.visibleSecond = !this.visibleSecond;
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
       }
-    },
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+
+    this.ImgArray = data.data.catalogue.components[2].content;
+
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
   },
 };
 </script>

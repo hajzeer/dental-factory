@@ -9,7 +9,8 @@
         </h2>
         <div class="first__div">
           <img
-            src="/offer-img/wybielanie-zebow-1.jpg%20TO%20KONIECZNIE%20.jpg"
+            v-if="loading && ImgArray.images[0] !== undefined"
+            :src="ImgArray.images[0].url"
           />
 
           <p>
@@ -117,12 +118,18 @@
           </p>
         </div>
         <div class="info__div__outer">
-          <img src="/offer-img/wybielanie-zebow-3.jpg%20TO%20TEŻ.jpg" />
+          <img
+            v-if="loading && ImgArray.images[1] !== undefined"
+            :src="ImgArray.images[1].url"
+          />
           <div class="info__div__inner">
             <h2>Wybierz metodę wybielania</h2>
           </div>
           <OfferInfo path="/specjalizacje/wybielanie-zebow" />
-          <img src="/offer-img/wybielanie-zebow-2.jpg" />
+          <img
+            v-if="loading && ImgArray.images[2] !== undefined"
+            :src="ImgArray.images[2].url"
+          />
         </div>
       </div>
       <div class="info__div">
@@ -180,6 +187,7 @@
 
 <script>
 import gsap from "gsap";
+import { simplyFetchFromGraph } from "@/lib/graph";
 
 export default {
   name: "index",
@@ -190,7 +198,9 @@ export default {
       visibleThird: true,
       isVisible: false,
       currentIndex: null,
-
+      path: "/specjalizacje/wybielanie-zebow",
+      loading: false,
+      ImgArray: [],
       questions: [
         {
           title: "Czy wybielanie niszczy szkliwo?",
@@ -229,6 +239,39 @@ export default {
         },
       ],
     };
+  },
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+
+    this.ImgArray = data.data.catalogue.components[2].content;
+
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
   },
   methods: {
     toTop: function () {

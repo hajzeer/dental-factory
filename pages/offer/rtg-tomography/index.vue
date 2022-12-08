@@ -5,7 +5,10 @@
       <div class="inner">
         <h2 class="page__title">RTG I TOMOGRAFIA ZĘBÓW</h2>
         <div class="first__div">
-          <img src="/offer-img/skaner1.jpg" />
+          <img
+            v-if="loading && ImgArray.images[0] !== undefined"
+            :src="ImgArray.images[0].url"
+          />
           <p>
             Dobra diagnostyka jest podstawą dalszego leczenia. W Dental Factory
             wykorzystujemy wyłącznie cyfrowe aparaty RTG, które ograniczają
@@ -24,7 +27,10 @@
           <div class="info__div__inner">
             <h2>Tomograf komputerowy</h2>
           </div>
-          <img src="/offer-img/tomografia%20-%20do%20rtg.jpg" />
+          <img
+            v-if="loading && ImgArray.images[1] !== undefined"
+            :src="ImgArray.images[1].url"
+          />
           <p>
             Za pomocą tomografu uzyskujemy trójwymiarowy obraz rentgenowski
             Twoich zębów. Badanie takie jest dużo dokładniejsze od klasycznych
@@ -37,7 +43,10 @@
           <div class="info__div__inner">
             <h2>Skaner wewnątrzustny</h2>
           </div>
-          <img src="/offer-img/skaner2.jpg" />
+          <img
+            v-if="loading && ImgArray.images[2] !== undefined"
+            :src="ImgArray.images[2].url"
+          />
           <p>
             Cyfrowy skan zębów pozwala nam stworzyć wirtualny model Twojego
             uśmiechu. Dzięki skanerowi obraz Twoich zębów pojawia się
@@ -73,7 +82,10 @@
           <div class="info__div__inner">
             <h2>RTG Punktowe</h2>
           </div>
-          <img src="/offer-img/rtg.jpg" />
+          <img
+            v-if="loading && ImgArray.images[3] !== undefined"
+            :src="ImgArray.images[3].url"
+          />
 
           <p>
             Zdjęcia wewnątrzustne są niezbędne podczas leczenia kanałowego, do
@@ -99,181 +111,49 @@
 </template>
 
 <script>
-import gsap from "gsap";
+import { simplyFetchFromGraph } from "@/lib/graph";
 
 export default {
   name: "index",
   data() {
     return {
-      visibleFirst: true,
-      visibleSecond: true,
-      visibleThird: true,
-      visibleFourth: true,
-      visibleFifth: true,
-      visibleSixth: true,
+      path: "/specjalizacje/rtg-i-tomografia-zebow",
+      loading: false,
+      ImgArray: [],
     };
   },
-  methods: {
-    handleOpenFirst: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleFirst === false) {
-        tl.to(this.$refs.main__text__first, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "0", duration: 0.1 })
-          .to(this.$refs.info__div__outer__first, {
-            height: "100px",
-            duration: 0.1,
-          })
-          .to(this.$refs.main__text__first, { display: "none", duration: 0.1 });
-        this.visibleFirst = !this.visibleFirst;
-      } else {
-        tl.to(this.$refs.main__text__first, { display: "block", duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "180deg", duration: 0.1 })
-          .to(this.$refs.info__div__outer__first, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__first, {
-            opacity: 1,
-            delay: 0.2,
-            duration: 0.2,
-          });
-
-        this.visibleFirst = !this.visibleFirst;
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
       }
-    },
-    handleOpenSecond: function () {
-      const tl = gsap.timeline();
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
 
-      if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__second, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__second, {
-            display: "none",
-            duration: 0.2,
-          });
+    this.ImgArray = data.data.catalogue.components[2].content;
 
-        this.visibleSecond = !this.visibleSecond;
-      } else {
-        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__second, {
-            display: "block",
-            duration: 0.1,
-          })
-          .to(this.$refs.info__div__outer__second, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
-        this.visibleSecond = !this.visibleSecond;
-      }
-    },
-    handleOpenThird: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleThird === false) {
-        tl.to(this.$refs.main__text__third, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.third__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__third, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__third, { display: "none", duration: 0.2 });
-
-        this.visibleThird = !this.visibleThird;
-      } else {
-        tl.to(this.$refs.third__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__third, { display: "block", duration: 0.1 })
-          .to(this.$refs.info__div__outer__third, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__third, { opacity: 1, duration: 0.2 });
-        this.visibleThird = !this.visibleThird;
-      }
-    },
-    handleOpenFourth: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleFourth === false) {
-        tl.to(this.$refs.main__text__fourth, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.fourth__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__fourth, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__fourth, {
-            display: "none",
-            duration: 0.2,
-          });
-
-        this.visibleFourth = !this.visibleFourth;
-      } else {
-        tl.to(this.$refs.fourth__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__fourth, {
-            display: "block",
-            duration: 0.1,
-          })
-          .to(this.$refs.info__div__outer__fourth, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__fourth, { opacity: 1, duration: 0.2 });
-        this.visibleFourth = !this.visibleFourth;
-      }
-    },
-    handleOpenFifth: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleFifth === false) {
-        tl.to(this.$refs.main__text__fifth, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.fifth__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__fifth, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__fifth, { display: "none", duration: 0.2 });
-
-        this.visibleFifth = !this.visibleFifth;
-      } else {
-        tl.to(this.$refs.fifth__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__fifth, { display: "block", duration: 0.1 })
-          .to(this.$refs.info__div__outer__fifth, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__fifth, { opacity: 1, duration: 0.2 });
-        this.visibleFifth = !this.visibleFifth;
-      }
-    },
-    handleOpenSixth: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleSixth === false) {
-        tl.to(this.$refs.main__text__sixth, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.sixth__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__sixth, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__sixth, { display: "none", duration: 0.2 });
-
-        this.visibleSixth = !this.visibleSixth;
-      } else {
-        tl.to(this.$refs.sixth__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__sixth, { display: "block", duration: 0.1 })
-          .to(this.$refs.info__div__outer__sixth, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__sixth, { opacity: 1, duration: 0.2 });
-        this.visibleSixth = !this.visibleSixth;
-      }
-    },
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
   },
 };
 </script>

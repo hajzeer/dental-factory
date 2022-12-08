@@ -10,7 +10,11 @@
       </h1>
       <div class="container__inner">
         <div class="inner__info">
-          <img class="about__image" src="/about_1.webp" />
+          <img
+            class="about__image"
+            v-if="loading && ImgArray.images[0] !== undefined"
+            :src="ImgArray.images[0].url"
+          />
           <p class="about__info__p">
             DENTAL FACTORY stworzyliśmy w samym centrum Wrocławia z myślą o
             Pacjentach szukających nowoczesnego i bezbolesnego leczenia
@@ -51,7 +55,11 @@
         </h2>
         <div class="inner__info__second">
           <div>
-            <img class="about__image__second" src="/about_2.png" />
+            <img
+              class="about__image__second"
+              v-if="loading && ImgArray.images[1] !== undefined"
+              :src="ImgArray.images[1].url"
+            />
             <p class="last__about__p desktopView">
               Jesteśmy świadomi tego, jak leczymy, dlatego dajemy Ci gwarancję.
               Większość zabiegów objęta jest gwarancją o przedłużonym terminie.
@@ -122,6 +130,7 @@
 
 <script>
 import { getData } from "~/lib/graph/get-data";
+import { simplyFetchFromGraph } from "@/lib/graph";
 
 export default {
   name: "index",
@@ -135,6 +144,8 @@ export default {
         { number: 5, text: "Doświadczonych lekarzy" },
         { number: "6000+", text: "Zadowolonych pacjentów" },
       ],
+      path: "/o-nas/centrum",
+      ImgArray: [],
     };
   },
   async fetch() {
@@ -148,10 +159,38 @@ export default {
 }
 `,
     });
+
+    const dataImages = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+
     this.specialist = data.data.catalogue;
-    if (this.specialist !== null) {
+    this.ImgArray = dataImages.data.catalogue.components[0].content;
+    if (this.specialist !== null && this.ImgArray !== null) {
       this.loading = true;
     }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
   },
 };
 </script>

@@ -8,7 +8,11 @@
           Robimy wszystko, aby wizyta u nas była dla Ciebie komfortowa i
           przyjemna!
         </p>
-        <img class="about__img" src="/offer-img/pierwsza-wizyta-2.jpg" />
+        <img
+          class="about__img"
+          v-if="loading && ImgArray.images[0] !== undefined"
+          :src="ImgArray.images[0].url"
+        />
       </div>
       <div class="inner__info">
         <h2 class="page__title__smaller">Umówienie wizyty</h2>
@@ -32,7 +36,11 @@
         </div>
       </div>
 
-      <img class="about__img__second" src="/offer-img/pierwsza_wizyta2.jpg" />
+      <img
+        class="about__img__second"
+        v-if="loading && ImgArray.images[1] !== undefined"
+        :src="ImgArray.images[1].url"
+      />
       <p class="about__p">
         <span>U nas możesz czuć się bezpiecznie.</span>
         <br />
@@ -72,7 +80,11 @@
         </p>
       </div>
 
-      <img class="about__img__third" src="/offer-img/pierwsza-wizyta-3.jpg" />
+      <img
+        class="about__img__third"
+        v-if="loading && ImgArray.images[2] !== undefined"
+        :src="ImgArray.images[2].url"
+      />
       <h2 class="page__title__smaller">Konsultacja i plan leczenia</h2>
       <p class="last__p">
         Konsultacja to czas, kiedy możemy porozmawiać o Twoich oczekiwaniach
@@ -94,8 +106,50 @@
 </template>
 
 <script>
+import { simplyFetchFromGraph } from "@/lib/graph";
+
 export default {
   name: "index",
+  data() {
+    return {
+      path: "/o-nas/pierwsza-wizyta",
+      loading: false,
+      ImgArray: [],
+    };
+  },
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+
+    this.ImgArray = data.data.catalogue.components[0].content;
+
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
+  },
 };
 </script>
 

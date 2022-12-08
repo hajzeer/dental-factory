@@ -5,8 +5,10 @@
       <div class="inner">
         <h2 class="page__title">Protezy zębowe</h2>
         <div class="first__div">
-          <img src="/offer-img/protezy-1.jpg" />
-
+          <img
+            v-if="loading && ImgArray.images[0] !== undefined"
+            :src="ImgArray.images[0].url"
+          />
           <p>
             Protezy uzupełniają brakujące zęby pacjenta. Mogą być wyjmowane i
             ponownie umieszczane w jamie ustnej. Poprawiają wygląd twarzy,
@@ -125,100 +127,49 @@
 </template>
 
 <script>
-import gsap from "gsap";
+import { simplyFetchFromGraph } from "@/lib/graph";
 
 export default {
   name: "index",
   data() {
     return {
-      visibleFirst: true,
-      visibleSecond: true,
-      visibleThird: true,
+      path: "/specjalizacje/protezy-zebowe",
+      loading: false,
+      ImgArray: [],
     };
   },
-  methods: {
-    handleOpenFirst: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleFirst === false) {
-        tl.to(this.$refs.main__text__first, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "0", duration: 0.1 })
-          .to(this.$refs.info__div__outer__first, {
-            height: "100px",
-            duration: 0.1,
-          })
-          .to(this.$refs.main__text__first, { display: "none", duration: 0.1 });
-        this.visibleFirst = !this.visibleFirst;
-      } else {
-        tl.to(this.$refs.main__text__first, { display: "block", duration: 0.1 })
-          .to(this.$refs.first__arrow, { rotate: "180deg", duration: 0.1 })
-          .to(this.$refs.info__div__outer__first, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__first, {
-            opacity: 1,
-            delay: 0.2,
-            duration: 0.2,
-          });
-
-        this.visibleFirst = !this.visibleFirst;
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
       }
-    },
-    handleOpenSecond: function () {
-      const tl = gsap.timeline();
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
 
-      if (this.visibleSecond === false) {
-        tl.to(this.$refs.main__text__second, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.second__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__second, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__second, {
-            display: "none",
-            duration: 0.2,
-          });
+    this.ImgArray = data.data.catalogue.components[2].content;
 
-        this.visibleSecond = !this.visibleSecond;
-      } else {
-        tl.to(this.$refs.second__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__second, {
-            display: "block",
-            duration: 0.1,
-          })
-          .to(this.$refs.info__div__outer__second, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__second, { opacity: 1, duration: 0.2 });
-        this.visibleSecond = !this.visibleSecond;
-      }
-    },
-    handleOpenThird: function () {
-      const tl = gsap.timeline();
-
-      if (this.visibleThird === false) {
-        tl.to(this.$refs.main__text__third, { opacity: 0, duration: 0.1 })
-          .to(this.$refs.third__arrow, { rotate: "0", duration: 0.2 })
-          .to(this.$refs.info__div__outer__third, {
-            height: "100px",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__third, { display: "none", duration: 0.2 });
-
-        this.visibleThird = !this.visibleThird;
-      } else {
-        tl.to(this.$refs.third__arrow, { rotate: "180deg", duration: 0.2 })
-          .to(this.$refs.main__text__third, { display: "block", duration: 0.1 })
-          .to(this.$refs.info__div__outer__third, {
-            height: "auto",
-            duration: 0.2,
-          })
-          .to(this.$refs.main__text__third, { opacity: 1, duration: 0.2 });
-        this.visibleThird = !this.visibleThird;
-      }
-    },
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
   },
 };
 </script>

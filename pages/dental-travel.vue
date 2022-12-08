@@ -23,7 +23,11 @@
         </li>
       </ul>
       <div class="first__div">
-        <img class="travel__image" src="/11.webp" />
+        <img
+          class="travel__image"
+          v-if="loading && ImgArray.images[0] !== undefined"
+          :src="ImgArray.images[0].url"
+        />
         <div>
           <h2>
             Chcesz rozpocząć leczenie?
@@ -99,8 +103,51 @@
 </template>
 
 <script>
+import { simplyFetchFromGraph } from "@/lib/graph";
+
 export default {
   name: "dental-travel",
+  data() {
+    return {
+      path: "/dental-travel",
+      loading: false,
+      ImgArray: [],
+    };
+  },
+
+  async fetch() {
+    const data = await simplyFetchFromGraph({
+      query: `query IMAGES__GETTER($specPath: String!) {
+  catalogue(language: "en", path: $specPath) {
+      name
+      ...on Folder {
+        components {
+          content {
+\t\t\t\t\t...on ImageContent {
+            images {
+              url
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+`,
+      variables: {
+        specPath: this.path,
+      },
+    });
+
+    this.ImgArray = data.data.catalogue.components[0].content;
+
+    if (this.ImgArray !== null) {
+      this.loading = true;
+    }
+  },
+  mounted() {
+    if (this.loading) console.log(this.ImgArray);
+  },
 };
 </script>
 

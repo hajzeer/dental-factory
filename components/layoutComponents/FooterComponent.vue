@@ -86,8 +86,11 @@
       </div>
       <div class="creator__div">
         <p>
-          @{{ new Date().getFullYear() }} Wszelkie prawa zastrzeżone BREATH
-          DESIGN STUDIO by Krzysztof Hajder & Oliwia Dittrich
+          @{{ new Date().getFullYear() }} Wszelkie prawa zastrzeżone
+          <a class="creator__link" href="https://www.instagram.com/breath.d.s/"
+            >BREATH DESIGN STUDIO</a
+          >
+          by Krzysztof Hajder & Oliwia Dittrich
         </p>
       </div>
     </div>
@@ -262,6 +265,11 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.footer__image {
+  border-radius: 20px;
+  border: 2px solid #000000;
 }
 
 .links {
@@ -536,5 +544,11 @@ h2 {
 
 .address__p {
   line-height: 15px;
+}
+
+.creator__link {
+  color: #000000;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 </style>

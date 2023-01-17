@@ -3,7 +3,6 @@
     <HeaderComponent />
 
     <div class="children">
-      <noscript v-html="iframeCode" />
       <Nuxt />
       <div class="mess__buttons">
         <a href="https://m.me/1905733309538689">
@@ -99,8 +98,6 @@ export default {
   data() {
     return {
       path: null,
-      iframeCode: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVSFDMX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
     };
   },
   methods: {

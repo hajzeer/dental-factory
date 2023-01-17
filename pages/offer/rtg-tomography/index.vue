@@ -152,9 +152,6 @@ export default {
       this.loading = true;
     }
   },
-  mounted() {
-    if (this.loading) console.log(this.ImgArray);
-  },
 };
 </script>
 

@@ -201,9 +201,7 @@ export default {
       this.loading = true;
     }
   },
-  mounted() {
-    if (this.loading) console.log(this.footerInfo);
-  },
+
   methods: {
     grownFirst: function () {
       this.grown(this.$refs.image1, this.$refs.image2, this.$refs.image3, 1);

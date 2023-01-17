@@ -91,8 +91,8 @@ export default {
     variables: {},
     debug: true,
 
-    pageTracking: false,
-    pageViewEventName: "nuxtRoute",
+    pageTracking: true,
+    pageViewEventName: "routerView",
 
     autoInit: true,
     respectDoNotTrack: true,

@@ -14,6 +14,7 @@
 <script>
 export default {
   name: "ImageGetter",
+
   data() {
     return {
       images: [

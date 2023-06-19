@@ -30,7 +30,16 @@
         <div>
           <h2 class="social__title">Dołącz do nas na instagramie</h2>
         </div>
-        <ImageGetter />
+        <div
+          id="widbox"
+          style="width: 100%; height: 100%;"
+          data-widbox-widget-id="C80yLZFu8jl2GO9r31W5"
+        ></div>
+        <script
+          src="https://widbox.sfo3.cdn.digitaloceanspaces.com/scripts/widbox.min.js"
+          defer
+        ></script>
+        <div class="social__media" />
       </div>
       <contact-form />
       <div class="rastr__image">
@@ -548,5 +557,14 @@ h2 {
   color: #000000;
   text-decoration: none !important;
   cursor: pointer;
+}
+
+.social__media {
+  width: 100%;
+  height: 40px;
+  background: #000000 !important;
+  z-index: 99999;
+  position: relative;
+  bottom: 45px;
 }
 </style>

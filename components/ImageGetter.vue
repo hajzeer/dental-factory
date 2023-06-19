@@ -5,7 +5,8 @@
         v-for="image in images"
         href="https://www.instagram.com/dentalfactorywroclaw/"
       >
-        <img :src="image.src" />
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-152b8b98-6691-42c7-abab-bf288d4444ba"></div>
       </a>
     </div>
   </div>

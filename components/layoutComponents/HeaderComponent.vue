@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="desktop__buttons">
-      <NuxtLink to="appointment">
+      <NuxtLink to="/appointment">
         <button class="contact__button-inner">
           <img class="inner__image" src="/calender.svg" />
           <span>

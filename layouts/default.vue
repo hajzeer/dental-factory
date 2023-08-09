@@ -42,7 +42,6 @@
             </a>
           </center>
         </div>
-
         <script
           async
           type="text/javascript"
